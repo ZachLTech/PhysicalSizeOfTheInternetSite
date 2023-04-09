@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gold;
+    margin-bottom: 5px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightskyblue;
+}
+.size{
+    text-align: center;
+}
+hr{
+    color: darkgoldenrod;
+    width: 30%;
+}
+.sidebox{
+    height: 95%;
+    width: 10px;
+    color: darkgoldenrod;
+    margin-left: 2%;
+}
