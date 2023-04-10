@@ -10,11 +10,11 @@ let LengthInches = SizeTB*4.0;
 let LenghtMiles = LengthInches*1.57828e-5;
 
 function addSizeTB(){
-    SizeTB += 43;
+    SizeTB += 14;
 }
 
-let UpdateInterval = setInterval(addSizeTB, 1000);
-let DocInterval = setInterval(Update, 1000);
+let UpdateInterval = setInterval(addSizeTB, 333.33);
+let DocInterval = setInterval(Update, 333.33);
 function Update() {
     document.getElementById("SizeTB").innerHTML = SizeTB;
 }
