@@ -4,14 +4,22 @@
     </head>
 <header></header>
 <body> 
-    <script src="algorithfunctions.js"></script> 
+
+    <script src="algorithfunctions.js">var line = document.getElementById('line');
+
+document.addEventListener('moveline', function(e){
+    var x = e.clientX;
+    line.style.top = x + "px";
+    }
+);</script> 
     <div class="container">
-        <div class="SizeTEXT"><h1>Size TB</h1></div>
-        <div class="SizeNUM"><p id="SizeTB"></p></div>
-        <div class="WidthTEXT"><h2>Width Miles</h2></div>
-        <div class="WidthNUM"><p id ="WidthMiles"></p></div>
-        <div class="LengthTEXT"><h2>Length Miles</h2></div>
-        <div class="LengthNUM"><p id="LengthMiles"></p></div>
+        <div class="SizeTEXT"><p>Size TB</p></div>
+        <div class="SizeNUM"><h1 id="SizeTB"></h1></div>
+        <div class="WidthTEXT"><p>Width Miles</p></div>
+        <div class="WidthNUM"><h2 id ="WidthMiles"></h2></div>
+        <div class="LengthTEXT"><p>Length Miles</p></div>
+        <div class="LengthNUM"><h2 id="LengthMiles"></h2></div>
+        <div class="follow" id="line"></div>
     </div>
 
 </body>

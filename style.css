@@ -17,7 +17,68 @@ p{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 0.5fr 3fr 3fr 3fr 0.5fr;
-    grid-template-rows: repeat(5,25%);
+    grid-template-columns: minmax(10px, 0.5fr) minmax(10px, 3fr) minmax(10px, 1.5fr) minmax(10px, 1.5fr) minmax(10px, 3fr) minmax(10px,0.5fr);
+    grid-template-rows: repeat(7,1fr);
     grid-gap: 10px
+}
+.SizeNUM{
+    grid-column: 3/5;
+    grid-row: 2/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35%;
+}
+.SizeTEXT{
+    grid-column: 3/5;
+    grid-row: 2/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13%;
+}
+.WidthTEXT{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13%;
+    padding-left: 20%;
+}
+.WidthNUM{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+}
+.LengthTEXT{
+    grid-column: 4/6;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13%;
+    padding-right: 20%;
+}
+.LengthNUM{
+    grid-column: 4/6;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20%;
+}
+.follow{
+    width: 1px;
+    height: 50px;
+    background-image: radial-gradient(
+    rgba(49, 106, 129, 0.822) 1px, 
+    transparent 1px
+  );
 }
