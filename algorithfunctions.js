@@ -19,3 +19,16 @@ function Update() {
     document.getElementById("SizeTB").innerHTML = SizeTB;
 }
 
+function Width() {
+    let WidthInches = SizeTB*2.8;
+    let WidthMiles = WidthInches*1.57828e-5;
+    document.getElementById("WidthMiles").innerHTML = WidthMiles;
+}
+let widthinterval = setInterval(Width,333.33);
+
+function Length() {
+    let LengthInches = SizeTB*4.0;
+    let LenghtMiles = LengthInches*1.57828e-5;
+    document.getElementById("LengthMiles").innerHTML = LenghtMiles;
+}
+let lengthinterval = setInterval(Length,333.33);
