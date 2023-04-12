@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 body{
-    background-color: black;
+    overflow: hidden;
+}
+
+.card{
+    background-color: rgba(0, 0, 0,0.5);
     gap: 1rem;
   background-image: radial-gradient(
     rgba(156, 156, 156, 0.322) 1px, 
@@ -10,6 +14,18 @@ body{
   background-position: 45% 50%;
   background-size: 1.1rem 1.1rem;
   overflow: hidden;
+  grid-row: 2/9;
+  grid-column: 2/6;
+  border: solid transparent;
+  border-radius: 5%;
+  opacity: 1;
+}
+.solidcard{
+    background-color: black;
+    grid-row: 2/9;
+    grid-column: 2/6;
+    border: solid transparent;
+    border-radius: 5%;
 }
 h1,h2{
     text-align: center;
@@ -26,12 +42,12 @@ p{
     height: 100%;
     display: grid;
     grid-template-columns: minmax(10px, 0.5fr) minmax(10px, 3fr) minmax(10px, 1.5fr) minmax(10px, 1.5fr) minmax(10px, 3fr) minmax(10px,0.5fr);
-    grid-template-rows: repeat(7,1fr);
+    grid-template-rows: minmax(10px, 0.5fr) minmax(10px, 0.5fr) repeat(5,1fr) minmax(10px, 0.5fr) minmax(10px, 0.5fr);
     grid-gap: 10px
 }
 .SizeNUM{
     grid-column: 3/5;
-    grid-row: 2/4;
+    grid-row: 3/5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,16 +55,16 @@ p{
 }
 .SizeTEXT{
     grid-column: 3/5;
-    grid-row: 2/4;
+    grid-row: 3/5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10%;
+    padding-bottom: 19.7%;
 }
 .WidthTEXT{
     grid-column: 2/4;
-    grid-row: 3/4;
+    grid-row: 3/5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +74,7 @@ p{
 }
 .WidthNUM{
     grid-column: 2/4;
-    grid-row: 3/4;
+    grid-row: 3/5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +82,7 @@ p{
 }
 .LengthTEXT{
     grid-column: 4/6;
-    grid-row: 3/4;
+    grid-row: 3/5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +92,7 @@ p{
 }
 .LengthNUM{
     grid-column: 4/6;
-    grid-row: 3/4;
+    grid-row: 3/5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,8 +104,8 @@ p{
     background-image: linear-gradient(transparent, mediumslateblue, transparent);
     opacity: 1;
     position:absolute;
-    top: 10%;
-    left: 2%;
+    top: 18%;
+    left: 6.8%;
 }
 .followTOP{
     width: 69px;
@@ -98,6 +114,7 @@ p{
     opacity: 1;
     position:absolute;
     left: 10%;
+    top: 12%;
 }
 .containerflex{
     display: flex;
@@ -109,10 +126,8 @@ p{
 }
 .title{
     color: rgb(105, 67, 131);
-    font-family: "Montserrat", sans-serif;
-    padding-top: 4rem;
-    justify-content: center;
-    justify-self: center;
+    grid-row: 2/3;
+    grid-column: 3/5;
 }
 .menuico{
     box-sizing: border-box;
@@ -133,7 +148,61 @@ p{
     box-shadow: 0 4px 0, 0 8px 0
    }
 .menubutton{
+    background-color: black;
     padding: 0 0 0 0;
-    background-color: transparent;
-    background: transparent;
 }
+.menubutton:hover{
+    background-color: rgb(105, 67, 131);
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  #app {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .starfield.debug {
+    z-index: -1;
+  }
+  
+  .starfield-debug {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #fff;
+    font-size: 16px;
+    z-index: 1;
+    line-height: 2em;
+    font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+    font-weight: 300;
+  }
+  
+  .starfield {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  .starfield canvas {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
