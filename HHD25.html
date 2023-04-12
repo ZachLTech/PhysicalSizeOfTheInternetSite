@@ -1,26 +1,29 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+            </style>
+            
     </head>
-<header></header>
+<header>
+    <div class="containerflex">
+        <div><h1 class="title">2.5" HHD Stats</h1></div>
+    </div>
+</header>
+
 <body> 
-
-    <script src="algorithfunctions.js">var line = document.getElementById('line');
-
-document.addEventListener('moveline', function(e){
-    var x = e.clientX;
-    line.style.top = x + "px";
-    }
-);</script> 
-    <div class="container">
+    <script src="algorithfunctions.js"></script>
+    
+    <div class="followSIDE" id="lineSIDE"></div>
+    <div class="followTOP" id="lineTOP"></div>
+    <div class="containerGRID">
         <div class="SizeTEXT"><p>Size TB</p></div>
         <div class="SizeNUM"><h1 id="SizeTB"></h1></div>
         <div class="WidthTEXT"><p>Width Miles</p></div>
         <div class="WidthNUM"><h2 id ="WidthMiles"></h2></div>
         <div class="LengthTEXT"><p>Length Miles</p></div>
         <div class="LengthNUM"><h2 id="LengthMiles"></h2></div>
-        <div class="follow" id="line"></div>
     </div>
-
 </body>
 </html>
