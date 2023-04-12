@@ -102,13 +102,38 @@ p{
 .containerflex{
     display: flex;
     align-content: space-around;
-    justify-content: center;
+    justify-content: end;
     height: 1em;
+    margin-right: 1em;
+    gap: 13.58em;
 }
 .title{
     color: rgb(105, 67, 131);
     font-family: "Montserrat", sans-serif;
     padding-top: 4rem;
+    justify-content: center;
+    justify-self: center;
 }
-
-
+.menuico{
+    box-sizing: border-box;
+    justify-content: end;
+   }
+   
+   .gg-menu-boxed::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 3px;
+    top:2px;
+    left: 2px;
+    box-shadow: 0 4px 0, 0 8px 0
+   }
+.menubutton{
+    padding: 0 0 0 0;
+    background-color: transparent;
+    background: transparent;
+}
