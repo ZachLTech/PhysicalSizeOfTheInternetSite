@@ -4,7 +4,7 @@ body{
     overflow: hidden;
 }
 .backgroundimg{
-    background: url(assets/datacenter.jpg) no-repeat center center fixed; 
+    background: url(../assets/datacenter.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -135,28 +135,10 @@ p{
     grid-row: 2/3;
     grid-column: 3/5;
 }
-.menuico{
-    box-sizing: border-box;
-    justify-content: end;
-   }
-   
-   .gg-menu-boxed::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    background: currentColor;
-    border-radius: 3px;
-    top:2px;
-    left: 2px;
-    box-shadow: 0 4px 0, 0 8px 0
-   }
 .menubutton{
     background-color: black;
     padding: 0 0 0 0;
-    z-index: 10;
+    z-index: 1000;
 }
 .menubutton:hover{
     background-color: rgb(105, 67, 131);
@@ -165,55 +147,3 @@ p{
 .menubutton:active{
     background-color: lightgreen;
 }
-
-
-
-
-
-* {
-    box-sizing: border-box;
-  }
-  #app {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-  }
-  
-  .starfield.debug {
-    z-index: -1;
-  }
-  
-  .starfield-debug {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    color: #fff;
-    font-size: 16px;
-    z-index: 1;
-    line-height: 2em;
-    font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
-    font-weight: 300;
-  }
-  
-  .starfield {
-    height: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-  }
-  
-  .starfield canvas {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }

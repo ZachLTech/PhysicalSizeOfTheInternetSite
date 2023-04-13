@@ -1,3 +1,7 @@
+
+
+
+
 let color = one.color;
 let stats = new Stats();
 
