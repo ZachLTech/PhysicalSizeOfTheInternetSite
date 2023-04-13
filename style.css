@@ -3,7 +3,13 @@
 body{
     overflow: hidden;
 }
-
+.backgroundimg{
+    background: url(assets/datacenter.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .card{
     background-color: rgba(0, 0, 0,0.5);
     gap: 1rem;
@@ -150,9 +156,14 @@ p{
 .menubutton{
     background-color: black;
     padding: 0 0 0 0;
+    z-index: 10;
 }
 .menubutton:hover{
     background-color: rgb(105, 67, 131);
+    transition: 0.25s;
+}
+.menubutton:active{
+    background-color: lightgreen;
 }
 
 
