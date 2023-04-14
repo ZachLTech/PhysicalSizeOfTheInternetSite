@@ -3,12 +3,14 @@
 body{
     overflow: hidden;
 }
-.backgroundimg{
-    background: url(../assets/datacenter.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.vidspace{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
 }
 .card{
     background-color: rgba(0, 0, 0,0.5);
@@ -27,7 +29,9 @@ body{
   opacity: 1;
 }
 .solidcard{
-    background-color: black;
+        background: linear-gradient(336deg, rgb(0, 0, 0), rgb(19, 8, 29)),
+        linear-gradient(336deg, rgb(19, 8, 29), rgb(0, 0, 0)),
+        linear-gradient(90deg, rgb(19, 8, 29), rgb(0, 0, 0) 20.71%);
     grid-row: 2/9;
     grid-column: 2/6;
     border: solid transparent;

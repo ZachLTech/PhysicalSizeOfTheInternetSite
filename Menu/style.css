@@ -23,12 +23,3 @@ div, svg {
   top:50%;
   transform:translate(-50%,-50%);
 }
-
-@media(maxwidth: 1400px){
-  perspective: 2000px;
-  width: 200px;
-  height: 300px;  
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-}
