@@ -6,10 +6,10 @@
 import time
 
 HDD35Stack14 = 14*3
-SizeTB = 9196800
+SizeTB = 106000000000
 
 def addSizeTB():
-    SizeTB = 9196800 + 43
+    SizeTB = 106000000000 + 43
 
 def GetWidth25():
     WidthInches = SizeTB*2.8
