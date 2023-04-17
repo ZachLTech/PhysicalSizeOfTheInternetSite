@@ -34,26 +34,26 @@ let priceUSD = HHDsNeeded*4000;
 
 function Width() {
     let HHDsNeeded = SizeTB/30.72;
-    let amountbor = amountadded*14;
+    let amountbor = (amountadded-1)*14;
     let HHDsNeeded1b4 = (SizeTB-amountbor)/30.72;
     let growth = (HHDsNeeded-HHDsNeeded1b4)/2;
     let WidthHHDS = 65536;
     WidthHHDS += growth;
     let WidthInches = WidthHHDS*2.8;
-    let WidthMiles = WidthInches*1.57828e-5;
-    return WidthMiles;
+    //let WidthMiles = WidthInches*1.57828e-5;
+    return WidthInches;
 }
 
 function Length() {
     let HHDsNeeded = SizeTB/30.72;
-    let amountbor = amountadded*14;
+    let amountbor = (amountadded-1)*14;
     let HHDsNeeded1b4 = (SizeTB-amountbor)/30.72;
     let growth = (HHDsNeeded-HHDsNeeded1b4)/2;
     let LengthHHDS = 52650.76955159505;
     LengthHHDS += growth;
     let LengthInches = LengthHHDS*4.0;
-    let LengthMiles = LengthInches*1.57828e-5;
-    return LengthMiles;
+    //let LengthMiles = LengthInches*1.57828e-5;
+    return LengthInches;
 }
 
 let i = 0;
