@@ -1,7 +1,8 @@
 ## Fix
-- algorithm/ JS
 - purple streak follow cursor
 - sizes of fonts and placement
+- make width work and not be 0
+- make width and length actually update and change based on time and input/ find a way to overrite a function interval if something else is happening (TRY PUTTING THE INTERVAL INTO AN IF STATEMENT)
 
 ## Add
 - HTML  title and pic
@@ -11,6 +12,4 @@
 
 ## Test
 - make sure input box is working
-- don't forget to put JS back from terminal mode
-- add more js intervals to make work perhaps 
-- hand calculate w/ formula & such to check if operation order in code is laid out correctly
+- use if statment in check function to do smth with stackheight so it updates down when input change down
