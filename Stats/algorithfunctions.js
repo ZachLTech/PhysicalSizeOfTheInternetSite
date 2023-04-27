@@ -63,7 +63,7 @@ function updateVariable() {
 function addSizeTB(){
     SizeTB += 14;
     amountadded += 1;
-} let UpdateInterval = setInterval(addSizeTB, 333.3);
+} let UpdateInterval = setInterval(addSizeTB, 333.33);
 
 
 let HHDsNeeded = 0;
