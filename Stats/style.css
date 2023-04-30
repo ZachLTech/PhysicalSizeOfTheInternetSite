@@ -38,6 +38,7 @@ body{
     border-radius: 5%;
 }
 h1,h2{
+    font-size: 3vw;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     color: rgb(245, 245, 245);
@@ -45,6 +46,7 @@ h1,h2{
 }
 p{
     font-family: 'Rubik', sans-serif;
+    font-size: 1.65vw;
     color: rgb(105, 67, 131);
 }
 .containerGRID{
@@ -56,21 +58,23 @@ p{
     grid-gap: 10px
 }
 .SizeNUM{
+    font-size: 3.5vw;
     grid-column: 3/5;
-    grid-row: 3/5;
+    grid-row: 2/3;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 35%;
+    padding-bottom: min(50%);
+    padding-top: min(10%);
 }
 .SizeTEXT{
     grid-column: 3/5;
-    grid-row: 3/5;
+    grid-row: 2/4;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 19.7%;
+    padding-bottom: 15%;
 }
 .WidthTEXT{
     grid-column: 2/4;
@@ -176,8 +180,11 @@ p{
 }
 .title{
     color: rgb(105, 67, 131);
-    grid-row: 2/3;
+    font-size: 3.5vw;
+    grid-row: 1/2;
     grid-column: 3/5;
+    padding: max(10,10,10,10);
+    padding: min(10,10,10,10);
 }
 .menubutton{
     background-color: black;
