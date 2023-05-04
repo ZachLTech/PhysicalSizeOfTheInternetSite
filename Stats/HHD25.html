@@ -6,28 +6,27 @@
           @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
           </style>
   </head>
-<header>
-  <div class="containerflex">
-      <div><button class="menubutton" onclick="location.href = '../Menu/Menu.html';"><img class="menuico" src="../assets/menu.svg"></button></div>
-    </div>
-    </div>
-</header>
-<body>
 
+<body>
+  <div class="containerflex">
+    <div><button class="menubutton" onclick="location.href = '../Menu/Menu.html';"><img class="menuico" src="../assets/menu.svg"></button></div>
+  </div>
+  </div>
 
   <script src="algorithfunctions.js"></script>
-  <div class="followSIDE" id="lineSIDE"></div>
-  <div class="followTOP" id="lineTOP"></div>
+ <!-- <div class="followSIDE" id="lineSIDE"></div>
+  <div class="followTOP" id="lineTOP"></div> -->
+
+  <h1 class="title">2.5" HHD Stats</h1>
   <div class="containerGRID">
       <div class="vidspace">
-        <video playsinline autoplay muted loop poster="../assets/datacenter.jpg" class="vidspace">
+        <video playsinline autoplay muted loop poster="https://cdn.wallpapersafari.com/1/97/co341S.jpg" class="vidspace">
           <source src="../assets/spacebackground.mp4" type="video/webm">
           Your browser does not support the video tag.
       </video>
       </div>
       <div class="solidcard"></div>
       <div class="card"></div>
-      <h1 class="title">2.5" HHD Stats</h1>
       <div class="SizeTEXT"><p>Size TB</p></div>
       <div class="SizeNUM"><h1 id="SizeTB"></h1></div>
       <div class="WidthTEXT"><p>Width Miles</p></div>
@@ -38,7 +37,7 @@
       <div class="HeightNUM"><h2 id="HeightStack"></h2></div>
       <div class="PriceTEXT"><p>Price USD</p></div>
       <div class="PriceNUM"><h2 id="PriceHHDs"></h2></div>
-      <div><input type="number" id="inputNumber" min="1" max="1,807.228915662651" onchange="updateVariable()" /></div>
+      <div class="heightinput"><input type="number" id="inputNumber" min="1" max="1,807.228915662651" onchange="updateVariable()" /></div>
   </div>
 </body>
 </html>
