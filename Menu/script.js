@@ -4,13 +4,13 @@ let rotationSpeed = 0.5; // adjust this value to change the rotation speed
 gsap.timeline()
     .set('.ring', { rotationY:1, cursor:'grab' }) //set initial rotationY so the parallax jump happens off screen
     .set('.img',  { // apply transform rotations to each image
-        rotateY: (i)=> i*-36,
-        transformOrigin: '50% 50% 1000px',
-        z: -1000,
-        backgroundImage:(i)=>'url(https://picsum.photos/id/'+(i+32)+'/600/400/)',
-        backgroundPosition:(i)=>getBgPos(i),
-        backfaceVisibility:'hidden'
-    })    
+      rotateY: (i)=> i*-36,
+      transformOrigin: '50% 50% 1000px',
+      z: -1000,
+      backgroundImage:(i)=>'url(../assets/containerimg'+(i+32)+'.jpg)',
+      backgroundPosition:(i)=>getBgPos(i),
+      backfaceVisibility:'hidden'
+    })  
     .from('.img', {
         duration:1.5,
         y:200,
@@ -80,11 +80,43 @@ document.querySelectorAll('.btn').forEach(function(btn) {
     switch (containerId) {
       case 'container1':
         // Code to be executed for container1
-        alert('Container 1 clicked');
+        window.location.href = "../Stats/HHD25.html";
         break;
       case 'container2':
         // Code to be executed for container2
         alert('Container 2 clicked');
+        break;
+      case 'container3':
+        // Code to be executed for container1
+        alert('Container 3 clicked');
+        break;
+      case 'container4':
+        // Code to be executed for container2
+        alert('Container 4 clicked');
+        break;
+      case 'container5':
+            // Code to be executed for container1
+        alert('Container 5 clicked');
+        break;
+      case 'container6':
+            // Code to be executed for container2
+        alert('Container 6 clicked');
+        break;
+      case 'container7':
+        // Code to be executed for container1
+        alert('Container 7 clicked');
+        break;
+      case 'container8':
+        // Code to be executed for container2
+        alert('Container 8 clicked');
+        break;
+      case 'container9':
+        // Code to be executed for container1
+        alert('Container 9 clicked');
+        break;
+      case 'container10':
+        // Code to be executed for container2
+        alert('Container 10 clicked');
         break;
       // ... add more cases for other containers ...
       default:
