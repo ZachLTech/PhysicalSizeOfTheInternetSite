@@ -23,3 +23,308 @@ div, svg {
   top:50%;
   transform:translate(-50%,-50%);
 }
+
+
+
+
+
+
+
+.HHDCard25{
+  position: relative;
+  float: left;
+  width: 590px;
+  height: 790px;
+  border-style: solid;
+  border-color: rgb(20, 20, 20);
+  border-width: 5px;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+.Pic25{
+  object-fit: cover;
+  position: absolute;
+  width: 590px;
+  height: 540px;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/e/ec/Seagate_ST33232A_hard_disk_head_and_platters_detail.jpg);
+  background-position: right 200% bottom 55%;
+  background-attachment: fixed;
+}
+.cover25{
+  right: -170px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  top: 170px;
+  position: absolute;
+  width: 790px;
+  height: 690px;
+  background: radial-gradient(black 60%, #B4B771 100%);
+  z-index: 15;
+  margin-top: 10%;
+  margin-right: 20%;
+  transform: rotate(20deg);
+}
+.title25{
+  top: 200px;
+  left: 20px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+.line25{
+  left: 10px;
+  border-style: solid;
+  border-color: #B4B771;
+  border-width: 1px;
+  position: absolute;
+  top: 50px;
+  width: 460px;
+  color: #3D5287;
+  z-index: 40;
+}
+.description25{
+  width: 510px;
+  top: 350px;
+  left: 50px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+
+
+
+
+.HHDCard35{
+  position: relative;
+  float: left;
+  width: 590px;
+  height: 790px;
+  border-style: solid;
+  border-color: rgb(20, 20, 20);
+  border-width: 5px;
+  overflow: hidden;
+  background-color: black;
+}
+.Pic35{
+  object-fit: cover;
+  position: absolute;
+  width: 590px;
+  height: 540px;
+  background: url(https://pbblogassets.s3.amazonaws.com/uploads/2020/06/30055409/shutterstock_10323187-1.jpg);
+  background-position: right 210% bottom -90%;
+  background-attachment: fixed;
+}
+.cover35{
+  right: -170px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  top: 170px;
+  position: absolute;
+  width: 790px;
+  height: 690px;
+  background: radial-gradient(black 60%, #3D5287 100%);
+  z-index: 15;
+  margin-top: 10%;
+  margin-right: 20%;
+  transform: rotate(20deg);
+}
+.title35{
+  top: 200px;
+  left: 20px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+.line35{
+  left: 10px;
+  border-style: solid;
+  border-color: #3D5287;
+  border-width: 1px;
+  position: absolute;
+  top: 50px;
+  width: 460px;
+  color: #3D5287;
+  z-index: 40;
+}
+.description35{
+  width: 510px;
+  top: 350px;
+  left: 50px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+
+
+
+
+
+.HHDCardSSD{
+  position: relative;
+  float: left;
+  width: 590px;
+  height: 790px;
+  border-style: solid;
+  border-color: rgb(20, 20, 20);
+  border-width: 5px;
+  overflow: hidden;
+  background-color: black;
+}
+.PicSSD{
+  object-fit: cover;
+  position: absolute;
+  width: 590px;
+  height: 540px;
+  background: url(https://i.extremetech.com/imagery/content-types/02r6FKjtjzWHtFDnhfAqJXM/hero-image.fill.size_1200x675.jpg);
+  background-position: right 150% bottom 110%;
+  background-attachment: fixed;
+}
+.coverSSD{
+  right: -170px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  top: 170px;
+  position: absolute;
+  width: 790px;
+  height: 690px;
+  background: radial-gradient(black 60%, #4A9843 100%);
+  z-index: 15;
+  margin-top: 10%;
+  margin-right: 20%;
+  transform: rotate(20deg);
+}
+.titleSSD{
+  top: 200px;
+  left: 20px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+.lineSSD{
+  left: 10px;
+  border-style: solid;
+  border-color: #4A9843;
+  border-width: 1px;
+  position: absolute;
+  top: 50px;
+  width: 460px;
+  color: #3D5287;
+  z-index: 40;
+}
+.descriptionSSD{
+  width: 510px;
+  top: 350px;
+  left: 50px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+
+
+
+
+
+
+.vidspace{
+  object-fit: cover;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+
+
+
+.HomeCard{
+position: relative;
+float: left;
+width: 590px;
+height: 790px;
+border-style: solid;
+border-color: black;
+border-width: 5px;
+overflow: hidden;
+}
+
+.titleHome{
+top: 205px;
+left: 226px;
+position: absolute;
+color: white;
+z-index: 50;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 3em;
+}
+
+
+
+
+
+
+
+
+.MathCard{
+position: relative;
+float: left;
+width: 590px;
+height: 790px;
+border-style: solid;
+border-color: black;
+border-width: 5px;
+overflow: hidden;
+}
+
+.titleMath{
+top: 175px;
+left: 181px;
+position: absolute;
+color: white;
+z-index: 50;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 3em;
+}
+
+
+
+
+.HowitWorksCard{
+position: relative;
+float: left;
+width: 590px;
+height: 790px;
+border-style: solid;
+border-color: rgba(0,0,0,0.2);
+border-width: 5px;
+overflow: hidden;
+}
+
+.titleHowitWorks{
+top: 175px;
+left: 235.5px;
+position: absolute;
+color: white;
+z-index: 50;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 3em;
+}
