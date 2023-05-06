@@ -80,11 +80,11 @@ document.querySelectorAll('.btn').forEach(function(btn) {
     switch (containerId) {
       case 'container1':
         // Code to be executed for container1
-        window.location.href = "../Stats/HHD25.html";
+        alert('Container 1 clicked');
         break;
       case 'container2':
         // Code to be executed for container2
-        alert('Container 2 clicked');
+        window.location.href = "../Stats/HHD25.html";
         break;
       case 'container3':
         // Code to be executed for container1

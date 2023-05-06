@@ -26,8 +26,12 @@ div, svg {
 
 
 
-
-
+@font-face {
+  font-family: 'CedarvilleCursive-Regular';
+  font-style: normal;
+  font-weight: 10;
+  src: url(../assets/CedarvilleCursive-Regular.woff2) format('woff2');
+}
 
 
 .HHDCard25{
@@ -35,9 +39,11 @@ div, svg {
   float: left;
   width: 590px;
   height: 790px;
+/*
   border-style: solid;
   border-color: rgb(20, 20, 20);
   border-width: 5px;
+*/
   overflow: hidden;
   background-color: rgb(0, 0, 0);
 }
@@ -105,9 +111,11 @@ div, svg {
   float: left;
   width: 590px;
   height: 790px;
+  /*
   border-style: solid;
   border-color: rgb(20, 20, 20);
   border-width: 5px;
+  */
   overflow: hidden;
   background-color: black;
 }
@@ -117,7 +125,7 @@ div, svg {
   width: 590px;
   height: 540px;
   background: url(https://pbblogassets.s3.amazonaws.com/uploads/2020/06/30055409/shutterstock_10323187-1.jpg);
-  background-position: right 210% bottom -90%;
+  background-position: right 50% bottom -150%;
   background-attachment: fixed;
 }
 .cover35{
@@ -176,9 +184,11 @@ div, svg {
   float: left;
   width: 590px;
   height: 790px;
+  /*
   border-style: solid;
   border-color: rgb(20, 20, 20);
   border-width: 5px;
+*/
   overflow: hidden;
   background-color: black;
 }
@@ -188,7 +198,7 @@ div, svg {
   width: 590px;
   height: 540px;
   background: url(https://i.extremetech.com/imagery/content-types/02r6FKjtjzWHtFDnhfAqJXM/hero-image.fill.size_1200x675.jpg);
-  background-position: right 150% bottom 110%;
+  background-position: right 45% bottom -30%;
   background-attachment: fixed;
 }
 .coverSSD{
@@ -252,7 +262,24 @@ div, svg {
   width: 100%;
   z-index: -100;
 }
-
+.vidspaceMATH{
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+.vidspaceSOCIALS{
+  object-fit: cover;
+  position: absolute;
+  top: -75px;
+  left: -55px;
+  height: 119%;
+  width: 119%;
+  z-index: -100;
+}
 
 
 
@@ -261,20 +288,23 @@ position: relative;
 float: left;
 width: 590px;
 height: 790px;
+
 border-style: solid;
 border-color: black;
 border-width: 5px;
+
 overflow: hidden;
 }
 
 .titleHome{
 top: 205px;
-left: 226px;
+left: 180px;
 position: absolute;
 color: white;
 z-index: 50;
 font-family: Arial, Helvetica, sans-serif;
-font-size: 3em;
+font-size: 5em;
+font-weight: bold;
 }
 
 
@@ -289,19 +319,21 @@ position: relative;
 float: left;
 width: 590px;
 height: 790px;
+/*
 border-style: solid;
-border-color: black;
+border-color: rgb(20, 20, 20);
 border-width: 5px;
+*/
 overflow: hidden;
 }
 
 .titleMath{
-top: 175px;
-left: 181px;
+top: 140px;
+left: 200px;
 position: absolute;
 color: white;
 z-index: 50;
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'CedarvilleCursive-Regular';
 font-size: 3em;
 }
 
@@ -313,18 +345,46 @@ position: relative;
 float: left;
 width: 590px;
 height: 790px;
-border-style: solid;
-border-color: rgba(0,0,0,0.2);
-border-width: 5px;
 overflow: hidden;
+/*
+border-style: solid;
+border-color: rgb(20, 20, 20);
+border-width: 5px;
+*/
 }
 
 .titleHowitWorks{
-top: 175px;
-left: 235.5px;
+top: 205px;
+left: 190px;
 position: absolute;
 color: white;
 z-index: 50;
 font-family: Arial, Helvetica, sans-serif;
-font-size: 3em;
+font-size: 5em;
+font-weight: bold;
+}
+
+
+
+
+.SocialsCard{
+  position: relative;
+  float: left;
+  width: 590px;
+  height: 790px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.2);
+  border-width: 5px;
+  overflow: hidden;
+}
+
+.titleSocials{
+  top: 340px;
+  left: 100px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5em;
+  font-weight: bold;
 }

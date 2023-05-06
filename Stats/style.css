@@ -1,5 +1,7 @@
+/*--------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 body{
     overflow: hidden;
 }
@@ -12,6 +14,8 @@ body{
     width: 100%;
     z-index: -100;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 .card{
     background-color: rgba(0, 0, 0,0.5);
     gap: 1rem;
@@ -29,14 +33,14 @@ body{
   opacity: 1;
 }
 .solidcard{
-        background: linear-gradient(336deg, rgb(0, 0, 0), rgb(19, 8, 29)),
-        linear-gradient(336deg, rgb(19, 8, 29), rgb(0, 0, 0)),
-        linear-gradient(90deg, rgb(19, 8, 29), rgb(0, 0, 0) 20.71%);
+    background: linear-gradient(336deg, rgb(0, 0, 0), rgb(49, 64, 104));
     grid-row: 1/8;
     grid-column: 2/6;
     border: solid transparent;
-    border-radius: 5%;
+    border-radius: 3%;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 h1,h2{
     font-size: 3vw;
     text-align: center;
@@ -47,8 +51,11 @@ h1,h2{
 p{
     font-family: 'Rubik', sans-serif;
     font-size: 1.65vw;
-    color: rgb(105, 67, 131);
+    /*color: rgb(105, 67, 131);*/
+    color: #3D5287;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 .containerGRID{
     width: 100%;
     height: 100%;
@@ -57,7 +64,6 @@ p{
     grid-template-rows: minmax(10px, 0.5fr) minmax(10px, 0.5fr) repeat(4,1fr) minmax(10px, 0.5fr) minmax(10px, 0.5fr);
     grid-gap: 10px
 }
-
 .flexsizeContainer{
     grid-column: 3/5;
     grid-row: 2/3;
@@ -67,6 +73,39 @@ p{
     align-items: center;
     align-content: space-around;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.containerflex{
+    display: flex;
+    align-content: space-around;
+    justify-content: end;
+    height: 1em;
+    margin-right: 1em;
+    gap: 13.58em;
+}
+.title{
+    color: #3D5287;
+    font-size: 3.5vw;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.menubutton{
+    background-color: black;
+    padding: 0 0 0 0;
+    z-index: 1000;
+    transition: 0.25s;
+}
+.menubutton:hover{
+    background-color: rgb(71, 92, 150);
+    
+}
+.menubutton:active{
+    background-color: lightgreen;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 .SizeNUM{
     font-size: 3.5vw;
 }
@@ -74,6 +113,8 @@ p{
     color: purple;
     text-align: center;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 .WidthTEXT{
     grid-column: 2/4;
     grid-row: 3/5;
@@ -92,6 +133,8 @@ p{
     align-items: center;
     padding-left: 20%;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 .LengthTEXT{
     grid-column: 4/6;
     grid-row: 3/5;
@@ -110,8 +153,8 @@ p{
     align-items: center;
     padding-right: 20%;
 }
-
-
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 .HeightTEXT{
     grid-column: 2/4;
     grid-row: 5/7;
@@ -130,6 +173,8 @@ p{
     align-items: center;
     padding-left: 20%;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 .PriceTEXT{
     grid-column: 4/6;
     grid-row: 5/7;
@@ -148,8 +193,8 @@ p{
     align-items: center;
     padding-right: 20%;
 }
-
-
+/*--------------------------------------------*/
+/*--------------------------------------------
 .followSIDE{
     width: 1px;
     height: 69px;
@@ -168,33 +213,8 @@ p{
     left: 10%;
     top: 12%;
 }
-.containerflex{
-    display: flex;
-    align-content: space-around;
-    justify-content: end;
-    height: 1em;
-    margin-right: 1em;
-    gap: 13.58em;
-}
-.title{
-    color: rgb(105, 67, 131);
-    font-size: 3.5vw;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-}
-.menubutton{
-    background-color: black;
-    padding: 0 0 0 0;
-    z-index: 1000;
-    transition: 0.25s;
-}
-.menubutton:hover{
-    background-color: rgb(105, 67, 131);
-    
-}
-.menubutton:active{
-    background-color: lightgreen;
-}
+  --------------------------------------------*/
+/*--------------------------------------------*/
 .centerInput{
     grid-column: 3/5;
     grid-row: 6/8;
@@ -209,12 +229,12 @@ p{
     border-style: solid;
     border-width: 3px;
     border-radius: 5%;
-    border-color: rgb(88, 42, 119);
+    border-color: #314068;
     transition: 0.5s;
 
 }
 .heightInput:hover{
-    background-color: rgba(122, 97, 145, 0.5);
+    background-color: rgba(49, 64, 104, 0.5);
     
 }
 .heightInput, select, textarea{
@@ -230,6 +250,8 @@ input:focus::placeholder{
 input::placeholder{
     transition: color 0.3s ease;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 .CopyrightContainer{
     grid-column: 2/6;
     grid-row: 7/8;
@@ -243,3 +265,5 @@ input::placeholder{
     font-size: 1.5vw;
     font-family: "Times New Roman", Times, serif;
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/

@@ -104,7 +104,7 @@ function Length() {
 function Update() {
     document.getElementById("SizeTB").innerHTML = SizeTB;
     document.getElementById("HeightStack").innerHTML = HeightFt;
-    document.getElementById("WidthMiles").innerHTML = WidthMi;
-    document.getElementById("LengthMiles").innerHTML = LengthMi;
-    document.getElementById("PriceHHDs").innerHTML = priceUSD;
+    document.getElementById("WidthMiles").innerHTML = WidthMi.toFixed(5);
+    document.getElementById("LengthMiles").innerHTML = LengthMi.toFixed(5);
+    document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
 } let DocInterval = setInterval(Update, 333.33);
