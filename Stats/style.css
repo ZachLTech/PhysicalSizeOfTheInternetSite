@@ -29,7 +29,7 @@ body{
   grid-row: 1/8;
   grid-column: 2/6;
   border: solid transparent;
-  border-radius: 5%;
+  border-radius: 15px;
   opacity: 1;
 }
 .solidcard{
@@ -37,7 +37,7 @@ body{
     grid-row: 1/8;
     grid-column: 2/6;
     border: solid transparent;
-    border-radius: 3%;
+    border-radius: 15px;
 }
 /*--------------------------------------------*/
 /*--------------------------------------------*/
@@ -228,7 +228,7 @@ p{
     background-color: rgba(255, 255, 255, 0.2);
     border-style: solid;
     border-width: 3px;
-    border-radius: 5%;
+    border-radius: 10px;
     border-color: #314068;
     transition: 0.5s;
 
@@ -242,7 +242,7 @@ p{
     text-align: center;
 }
 .heightInput button{
-    border-radius: 5%;
+    border-radius: 5px;
 }
 input:focus::placeholder{
     color: transparent;
@@ -267,3 +267,85 @@ input::placeholder{
 }
 /*--------------------------------------------*/
 /*--------------------------------------------*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /*--------------------------------------------*/
+  .dropdown-toggle {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: #314068;
+    transition: 0.23s;
+  }
+  .dropdown-toggle:hover{
+    background-color: rgba(49, 64, 104, 0.5);
+  }
+  /*--------------------------------------------*/
+  /*--------------------------------------------*/
+  .dropdown-list {
+    grid-row: 4/6;
+    grid-column: 2/6;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    width: 360px;
+    height: auto;
+    max-height: 240px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: #314068;
+    transition: 0.45s ease-in;
+    display: none;
+    overflow: hidden;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    opacity: 1;
+    transform: translate(-120px, 170px);
+  }
+  /*--------------------------------------------*/
+  .dropdown-list button {
+    width: calc(33.33% - 10px);
+    height: calc(50% - 10px);
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(49, 64, 104);
+    color: white;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .dropdown-list button:hover {
+    background-color: rgb(71, 92, 150);
+  }
+  /*--------------------------------------------*/
+  /*--------------------------------------------*/
+  .show {
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+  /*--------------------------------------------*/
+  /*--------------------------------------------*/
+  .moveUnits1{
+    justify-self: center;
+    grid-column: 3/5;
+    grid-row: 3/4;
+    transform: translate(0px, 50px);
+  }

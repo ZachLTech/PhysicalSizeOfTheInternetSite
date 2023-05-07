@@ -108,3 +108,40 @@ function Update() {
     document.getElementById("LengthMiles").innerHTML = LengthMi.toFixed(5);
     document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
 } let DocInterval = setInterval(Update, 333.33);
+
+
+
+
+
+let dropdown = document.querySelector('.dropdown');
+let dropdownList = dropdown.querySelector('.dropdown-list');
+
+function change(buttonId) {
+ let dropdownList = document.querySelector('.dropdown-list');
+ document.getElementById('DropdownTitle').textContent = buttonId;
+ dropdownList.classList.toggle('show');
+
+ //var stylesheet = document.styleSheets[1];
+ //stylesheet.cssRules[0].style.backgroundColor="blue";
+
+ switch(buttonId){
+    case("Units: Miles"):
+        document.getElementById("button1").style.transform = "translate(-143px, 170px)";
+        break;
+    case("Units: Square Ft"):
+        document.getElementById("button2").style.transform = "translate(-125px, 170px)";
+        break;
+    case("Units: Inches"):
+        document.getElementById("button3").style.transform = "translate(-130px, 170px)";
+        break;
+    case("Units: Kilometers"):
+        document.getElementById("button4").style.transform = "translate(-120px, 170px)";
+        break;
+ }
+
+}
+
+function toggle(){
+  let dropdownList = document.querySelector('.dropdown-list');
+  dropdownList.classList.toggle('show');
+}
