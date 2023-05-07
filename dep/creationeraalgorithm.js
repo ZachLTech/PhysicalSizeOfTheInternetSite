@@ -142,3 +142,35 @@ function Update() {
     document.getElementById("PriceHHDs").innerHTML = priceUSD;
 }
 let DocInterval = setInterval(Update, 333.33);
+
+
+
+
+
+        /*
+        document.getElementById("button1").style.transform = "translate(-143px, 170px)";
+        document.getElementById("button1").style[grid-row] = "4/6";
+        document.getElementById("button1").style[grid-column]= "2/6";
+        document.getElementById("button1").style.position= "absolute";
+        document.getElementById("button1").style[z-index]= "1";
+        document.getElementById("button1").style.top= "50px";
+        document.getElementById("button1").style.left= "0";
+        document.getElementById("button1").style.width= "360px";
+        document.getElementById("button1").style.height= "auto";
+        document.getElementById("button1").style[max-height]= "240px";
+        document.getElementById("button1").style[overflow-y]= "auto";
+        document.getElementById("button1").style[background-color]= "rgba(255, 255, 255, 0.2)";
+        document.getElementById("button1").style[border-style]= "solid";
+        document.getElementById("button1").style[border-width]= "3px";
+        document.getElementById("button1").style[border-radius]= "10px";
+        document.getElementById("button1").style[border-color]= "#314068";
+        document.getElementById("button1").style.transition= "0.45s ease-in";
+        document.getElementById("button1").style.display= "none";
+        document.getElementById("button1").style.overflow= "hidden";
+        document.getElementById("button1").style.padding= "12px";
+        document.getElementById("button1").style.display= "flex";
+        document.getElementById("button1").style[flex-wrap]= "wrap";
+        document.getElementById("button1").style[align-items]= "flex-start";
+        document.getElementById("button1").style[justify-conten]= "space-between";
+        document.getElementById("button1").style.opacity= "1";
+        */

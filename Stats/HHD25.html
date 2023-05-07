@@ -40,12 +40,12 @@
       <div class="centerInput"><input class="heightInput" placeholder="Amount Stacked" type="number" id="inputNumber" min="1" max="3,614.457831325302" onchange="updateVariable()" /></div>
       <div class="CopyrightContainer"><p class="Copyright">Copyright © 2023 - 2099 | No Rights Reserved | owned by Me シ</p></div>
       <div class="moveUnits1">
-        <div class="dropdown">
+        <div class="dropdown" id="dropdownList">
           <button class="dropdown-toggle" id="DropdownTitle" onclick="toggle()">Units (Default Miles)</button>
           <div class="moveUnits2">
           <div class="dropdown-list">
             <button onclick="change(this.value)" id="button1" value="Units: Miles">Miles</button>
-            <button onclick="change(this.value)" id="button2" value="Units: Square Ft">Square Ft</button>
+            <button onclick="change(this.value)" id="button2" value="Units: Feet">Square Ft</button>
             <button onclick="change(this.value)" id="button3" value="Units: Inches">Inches</button>
             <button onclick="change(this.value)" id="button4" value="Units: Kilometers">Kilometers</button>
             <button onclick="change(this.value)" id="button5" value="Units: Meters">Meters</button>

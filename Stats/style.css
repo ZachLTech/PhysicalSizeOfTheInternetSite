@@ -315,7 +315,7 @@ input::placeholder{
     align-items: flex-start;
     justify-content: space-between;
     opacity: 1;
-    transform: translate(-120px, 170px);
+    transform: translate(-110px, 100px);
   }
   /*--------------------------------------------*/
   .dropdown-list button {

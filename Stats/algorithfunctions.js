@@ -107,7 +107,7 @@ function Update() {
     document.getElementById("WidthMiles").innerHTML = WidthMi.toFixed(5);
     document.getElementById("LengthMiles").innerHTML = LengthMi.toFixed(5);
     document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
-} let DocInterval = setInterval(Update, 333.33);
+} let DocMilesInterval = setInterval(Update, 333.33); 
 
 
 
@@ -124,20 +124,119 @@ function change(buttonId) {
  //var stylesheet = document.styleSheets[1];
  //stylesheet.cssRules[0].style.backgroundColor="blue";
 
+ var link = document.createElement('link');
+ link.setAttribute('rel', 'stylesheet');
+ link.setAttribute('type', 'text/css');
+ link.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+ document.head.appendChild(link);
+
  switch(buttonId){
     case("Units: Miles"):
-        document.getElementById("button1").style.transform = "translate(-143px, 170px)";
+    function UpdateMiles() {
+        //document.getElementById("SizeTB").innerHTML = SizeTB;
+        //document.getElementById("HeightStack").innerHTML = HeightFt;
+        document.getElementById("WidthMiles").innerHTML = WidthMi.toFixed(5);
+        document.getElementById("LengthMiles").innerHTML = LengthMi.toFixed(5);
+        //document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+    } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateMiles, 333.33);
+    document.querySelector(".WidthTEXT").textContent = "Width Miles";
+    document.querySelector(".LengthTEXT").textContent = "Length Miles";
+    document.querySelector(".WidthTEXT").style.color = "#3D5287";
+    document.querySelector(".LengthTEXT").style.color = "#3D5287";
+    document.querySelector(".WidthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".LengthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
+    document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
         break;
-    case("Units: Square Ft"):
-        document.getElementById("button2").style.transform = "translate(-125px, 170px)";
+    case("Units: Feet"):
+    function UpdateSquareFt() {
+        //document.getElementById("SizeTB").innerHTML = SizeTB;
+        //document.getElementById("HeightStack").innerHTML = HeightFt;
+        document.getElementById("WidthMiles").innerHTML = (WidthMi*5280).toFixed(5);
+        document.getElementById("LengthMiles").innerHTML = (LengthMi*5280).toFixed(5);
+        //document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+    } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateSquareFt, 333.33);
+    document.querySelector(".WidthTEXT").textContent = "Width Feet";
+    document.querySelector(".LengthTEXT").textContent = "Length Feet";    
+    document.querySelector(".WidthTEXT").style.color = "#3D5287";
+    document.querySelector(".LengthTEXT").style.color = "#3D5287";
+    document.querySelector(".WidthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".LengthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
+    document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
         break;
     case("Units: Inches"):
-        document.getElementById("button3").style.transform = "translate(-130px, 170px)";
+    function UpdateInches() {
+        //document.getElementById("SizeTB").innerHTML = SizeTB;
+        //document.getElementById("HeightStack").innerHTML = HeightFt;
+        document.getElementById("WidthMiles").innerHTML = (WidthMi*63360).toFixed(5);
+        document.getElementById("LengthMiles").innerHTML = (LengthMi*63360).toFixed(5);
+        //document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+    } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateInches, 333.33);
+    document.querySelector(".WidthTEXT").textContent = "Width Inches";
+    document.querySelector(".LengthTEXT").textContent = "Length Inches";    
+    document.querySelector(".WidthTEXT").style.color = "#3D5287";
+    document.querySelector(".LengthTEXT").style.color = "#3D5287";
+    document.querySelector(".WidthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".LengthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
+    document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
         break;
     case("Units: Kilometers"):
-        document.getElementById("button4").style.transform = "translate(-120px, 170px)";
+    function UpdateKilometers() {
+        //document.getElementById("SizeTB").innerHTML = SizeTB;
+        //document.getElementById("HeightStack").innerHTML = HeightFt;
+        document.getElementById("WidthMiles").innerHTML = (WidthMi*1.60934).toFixed(5);
+        document.getElementById("LengthMiles").innerHTML = (LengthMi*1.60934).toFixed(5);
+        //document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+    } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateKilometers, 333.33);
+    document.querySelector(".WidthTEXT").textContent = "Width Kilometers";
+    document.querySelector(".LengthTEXT").textContent = "Length Kilometers";    
+    document.querySelector(".WidthTEXT").style.color = "#3D5287";
+    document.querySelector(".LengthTEXT").style.color = "#3D5287";
+    document.querySelector(".WidthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".LengthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
+    document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
         break;
- }
+    case("Units: Meters"):
+    function UpdateMeters() {
+        //document.getElementById("SizeTB").innerHTML = SizeTB;
+        //document.getElementById("HeightStack").innerHTML = HeightFt;
+        document.getElementById("WidthMiles").innerHTML = (WidthMi*1609).toFixed(5);
+        document.getElementById("LengthMiles").innerHTML = (LengthMi*1609).toFixed(5);
+        //document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+    } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateMeters, 333.33);
+    document.querySelector(".WidthTEXT").textContent = "Width Meters";
+    document.querySelector(".LengthTEXT").textContent = "Length Meters";
+    document.querySelector(".WidthTEXT").style.color = "#3D5287";
+    document.querySelector(".LengthTEXT").style.color = "#3D5287";
+    document.querySelector(".WidthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".LengthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
+    document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
+        break;
+    case("Units: Yards"):
+    function UpdateYards() {
+        //document.getElementById("SizeTB").innerHTML = SizeTB;
+        //document.getElementById("HeightStack").innerHTML = HeightFt;
+        document.getElementById("WidthMiles").innerHTML = (WidthMi*1760).toFixed(5);
+        document.getElementById("LengthMiles").innerHTML = (LengthMi*1760).toFixed(5);
+        //document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+    } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateYards, 333.33);
+    document.querySelector(".WidthTEXT").textContent = "Width Yards";
+    document.querySelector(".LengthTEXT").textContent = "Length Yards";    
+    document.querySelector(".WidthTEXT").style.color = "#3D5287";
+    document.querySelector(".LengthTEXT").style.color = "#3D5287";
+    document.querySelector(".WidthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".LengthTEXT").style[font-size] = "1.65vw";
+    document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
+    document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
+        break;
+    default:
+        document.getElementById("drowdownList").style.transform = "translate(-110px, 100px)";
+        break;
+    }
 
 }
 
