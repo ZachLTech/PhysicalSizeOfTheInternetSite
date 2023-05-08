@@ -127,6 +127,9 @@ function Update() {
  *                                  - TOGGLE SHOWS AND HIDES DROPDOWN                                  *
  * - CHANGE HANDLES EDITING THE TEXT CSS, INTERVALS, AND VALUES NEEDED WHEN A DIFFERENT UNIT IS CHOSEN *
  *******************************************************************************************************/
+
+
+
 let dropdown = document.querySelector('.dropdown');
 let dropdownList = dropdown.querySelector('.dropdown-list');
 let dropdownSize = document.querySelector('.dropdownSize')
@@ -135,6 +138,8 @@ let dropdownListSize = dropdownSize.querySelector('.dropdown-listSize');
 function toggleSize(){
     let dropdownListSize = document.querySelector('.dropdown-listSize');
     dropdownListSize.classList.toggle('showSize');
+    let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
+    dropdownListSizeButtons.classList.toggle('showSizeButtons');
   }
 function toggle(){
     let dropdownList = document.querySelector('.dropdown-list');
@@ -142,10 +147,12 @@ function toggle(){
   }
 
 function change(buttonId) {
-    let dropdownList = document.querySelector('.dropdown-list');
     document.getElementById('DropdownTitle').textContent = buttonId;
-    dropdownList.classList.toggle('show');
-
+    let dropdownListSize = document.querySelector('.dropdown-listSize');
+    dropdownListSize.classList.toggle('showSize');
+    let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
+    dropdownListSizeButtons.classList.toggle('showSizeButtons');
+    /*
     switch(buttonId){
         case("HHD Distance Unit: Miles"):
             function UpdateMiles() {
@@ -261,41 +268,57 @@ function change(buttonId) {
             document.getElementById("drowdownList").style.transform = "translate(-110px, 100px)";
             break;
         }
-
+*/
 }
 
 function changeSize(buttonId) {
+    document.getElementById('dropdown-listSize').textContent = buttonId;
     let dropdownListSize = document.querySelector('.dropdown-listSize');
-    document.getElementById('DropdownTitleSize').textContent = buttonId;
-    dropdownListSize.classList.toggle('show');
+    dropdownListSize.classList.toggle('showSize');
+    let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
+    dropdownListSizeButtons.classList.toggle('showSizeButtons');
+
+    document.addEventListener('click', function(event) {
+        if (document.querySelector('#dropdown-listSize').contains(event.target)) {
+            return 0;
+        } else {
+            document.querySelector('.dropdown-listSizeButtonContainer').style.opacity = '0';
+            document.querySelector('.dropdown-listSizeButtonContainer').style.transition = '0';
+            document.querySelector('.dropdown-listSizeButtonContainer').style.transform = 'translate(0px,-1000px)';
+            document.querySelector('.dropdown-listSize').style.color = 'white';
+            document.querySelector('.dropdown-listSize').style.transform = 'translate(0px,0px)';
+            document.querySelector('.dropdown-listSize').style.height = '75';
+            document.querySelector('.dropdown-listSize').style.width = '75'; 
+        }
+    });
 
     switch(buttonId){
-        case("Internet Size Unit: Petabytes"):
+        case("PB"):
             function UpdatePetabytes() {
                 document.getElementById("SizeTB").innerHTML = (SizeTB/1000);
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdatePetabytes, 333.33);
                 break;
-        case("Internet Size Unit: Terabytes"):
+        case("TB"):
             function UpdateTerabytes() {
                 document.getElementById("SizeTB").innerHTML = (SizeTB);
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdateTerabytes, 333.33);
             break;
-        case("Internet Size Unit: Gigabytes"):
+        case("GB"):
             function UpdateGigabytes() {
                 document.getElementById("SizeTB").innerHTML = (SizeTB*1000);
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdateGigabytes, 333.33);
             break;
-        case("Internet Size Unit: Megabytes"):
+        case("MB"):
             function UpdateMegabytes() {
                 document.getElementById("SizeTB").innerHTML = (SizeTB*1000000);
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdateMegabytes, 333.33);
             break;
-        case("Internet Size Unit: Kilobytes"):
+        case("KB"):
             function UpdateKilobytes() {
                 document.getElementById("SizeTB").innerHTML = (SizeTB*1000000000);
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdateKilobytes, 333.33);
             break;
-        case("Internet Size Unit: Bytes"):
+        case("B"):
             function Updatebytes() {
                 document.getElementById("SizeTB").innerHTML = (SizeTB*1000000000000);
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(Updatebytes, 333.33);

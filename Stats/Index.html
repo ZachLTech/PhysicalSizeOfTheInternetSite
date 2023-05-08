@@ -1,6 +1,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="algorithfunctions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <header>
     <button class="menubutton" onclick="location.href = '../Menu/Menu.html';">
@@ -15,7 +16,15 @@
         </div>
         <div class="centerCard">
             <div class="spaceCard">
-                <button class="changeSizeUnit">TB</button>
+                <div class="dropdown-listSizeButtonContainer">
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="PB">Petabytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="TB">Terabytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="GB">Gigabytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="MB">Megabytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="KB">Kilobytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="B">Bytes</button>
+                </div>
+                <button class="dropdown-listSize" id="dropdown-listSize" onclick="toggleSize()">TB</button>
                 <div class="spaceVid">
                     <video playsinline autoplay muted loop poster="https://cdn.wallpapersafari.com/1/97/co341S.jpg" class="spaceVid">
                         <source src="../assets/spacebackground.mp4" type="video/webm">

@@ -89,6 +89,7 @@ body{
     border: transparent solid 0px;
     border-radius: 75px;
     overflow: hidden;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
 }
 .centerCard{
     position: absolute;
@@ -103,7 +104,7 @@ body{
     font-family: 'Rubik', sans-serif;
     font-size: 6em;
 }
-.changeSizeUnit{
+.dropdown-listSize{
     font-size: 1.72em;
     color: white;
     font-family: 'Rubik', sans-serif;
@@ -116,17 +117,56 @@ body{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: 0.3s;
+    z-index: 5;
 }
 .changeSizeUnit:hover{
     background-color: rgba(143, 8, 8, 0.726); 
 }
-.changeSizeUnit:active{
+.dropdown-listSizeButtonContainer{
+    margin-left: 75%;
+    top: -1005;
+    position:absolute;
+    z-index: 2;
+    width: 300px;
+    height: 150px;
+    overflow-y: auto;
+    transition: 0.45s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 0;
+}
+.showSizeButtons{
+    opacity: 1;
+    transition: 0.238s;
+    transform: translate(0px,1000px);
+}
+.showSize{
     color: transparent;
     height: 150px;
     width: 300px;
     transform: translate(-140px, 0px);
 }
-
+.sizeChangeOptionButton{
+    width: calc(33.33% - 20px);
+    height: calc(50% - 30px);
+    margin: 5px;
+    padding: 5px;
+    background-color: #080c22;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.sizeChangeOptionButton:hover{
+    background-color: #0b1238;
+    transition: 0.3s;
+}
 .sectionBackground1 {
     height: 1650px;
     width: 100%;
