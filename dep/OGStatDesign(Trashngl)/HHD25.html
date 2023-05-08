@@ -28,7 +28,25 @@
       <div class="solidcard"></div>
       <div class="card"></div>
       <!--<div class="followSIDE"></div>-->
-      <div class="flexsizeContainer"><div class="SizeNUM"><h1 id="SizeTB"></h1><div class="SizeTEXT"><p>Size TB</p></div></div></div>
+      <div class="flexsizeContainer">
+        <div class="SizeNUM">
+          <h1 id="SizeTB"></h1>
+        </div>
+      </div>
+      
+        <button class="dropdown-toggleSize" id="DropdownTitleSize" onclick="toggleSize()">Internet Size Unit: TB</button>
+      
+      <div class="dropdown2Size" id="dropdownList2">
+        <div class="dropdown-listSize">
+        <button onclick="changeSize(this.value)" id="button1" value="Internet Size Unit: Petabytes">Petabytes</button>
+        <button onclick="changeSize(this.value)" id="button2" value="Internet Size Unit: Terabytes">Terabytes</button>
+        <button onclick="changeSize(this.value)" id="button3" value="Internet Size Unit: Gigabytes">Gigabytes</button>
+        <button onclick="changeSize(this.value)" id="button4" value="Internet Size Unit: Megabytes">Megabytes</button>
+        <button onclick="changeSize(this.value)" id="button5" value="Internet Size Unit: Kilobytes">Kilobytes</button>
+        <button onclick="changeSize(this.value)" id="button6" value="Internet Size Unit: Bytes">Bytes</button>
+      </div>
+      </div>
+      
       <div class="WidthTEXT"><p>Width Miles</p></div>
       <div class="WidthNUM"><h2 id ="WidthMiles"></h2></div>
       <div class="LengthTEXT"><p>Length Miles</p></div>
@@ -39,17 +57,17 @@
       <div class="PriceNUM"><h2 id="PriceHHDs"></h2></div>
       <div class="centerInput"><input class="heightInput" placeholder="Amount Stacked" type="number" id="inputNumber" min="0" max="3,614.457831325302" onchange="updateVariable()" /></div>
       <div class="CopyrightContainer"><p class="Copyright">Copyright © 2023 - 2099 | No Rights Reserved | owned by Me シ</p></div>
-      <div class="moveUnits1">
         <div class="dropdown" id="dropdownList">
-          <button class="dropdown-toggle" id="DropdownTitle" onclick="toggle()">Units (Default Miles)</button>
-          <div class="moveUnits2">
+          <button class="dropdown-toggle" id="DropdownTitle" onclick="toggle()">HHD Distance Unit: Miles</button>
+        </div>
+        <div class="dropdown2" id="dropdownList2">
           <div class="dropdown-list">
-            <button onclick="change(this.value)" id="button1" value="Units: Miles">Miles</button>
-            <button onclick="change(this.value)" id="button2" value="Units: Feet">Square Ft</button>
-            <button onclick="change(this.value)" id="button3" value="Units: Inches">Inches</button>
-            <button onclick="change(this.value)" id="button4" value="Units: Kilometers">Kilometers</button>
-            <button onclick="change(this.value)" id="button5" value="Units: Meters">Meters</button>
-            <button onclick="change(this.value)" id="button6" value="Units: Yards">Yards</button>
+            <button onclick="change(this.value)" id="button1" value="HHD Distance Unit: Miles">Miles</button>
+            <button onclick="change(this.value)" id="button2" value="HHD Distance Unit: Feet">Feet</button>
+            <button onclick="change(this.value)" id="button3" value="HHD Distance Unit: Inches">Inches</button>
+            <button onclick="change(this.value)" id="button4" value="HHD Distance Unit: Kilometers">Kilometers</button>
+            <button onclick="change(this.value)" id="button5" value="HHD Distance Unit: Meters">Meters</button>
+            <button onclick="change(this.value)" id="button6" value="HHD Distance Unit: Yards">Yards</button>
           </div>
           </div>
         </div>

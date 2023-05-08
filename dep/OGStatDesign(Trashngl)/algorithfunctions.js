@@ -113,7 +113,7 @@ function Length() {
 } let Lengthinterval = setInterval(Length, 333.33)
 
 function UpdateTB() {
-    document.getElementById("SizeTB").innerHTML = (SizeTB.toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    document.getElementById("SizeTB").innerHTML = SizeTB;
 } let DocTeBInterval = setInterval(UpdateTB, 333.33);
 
 function Update() {

@@ -364,6 +364,17 @@ font-size: 5em;
 font-weight: bold;
 }
 
+.descriptionWHY{
+  width: 510px;
+  top: 350px;
+  left: 215px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
 
 
 

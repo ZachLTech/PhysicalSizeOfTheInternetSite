@@ -1,0 +1,441 @@
+/*--------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+body{
+    overflow: hidden;
+}
+.vidspace{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.card{
+    background-color: rgba(0, 0, 0,0.5);
+    gap: 1rem;
+  background-image: radial-gradient(
+    rgba(156, 156, 156, 0.322) 1px, 
+    transparent 1px
+  );
+  background-position: 45% 50%;
+  background-size: 1.1rem 1.1rem;
+  overflow: hidden;
+  grid-row: 1/8;
+  grid-column: 2/6;
+  border: solid transparent;
+  border-radius: 15px;
+  opacity: 1;
+}
+.solidcard{
+    background: linear-gradient(336deg, rgb(0, 0, 0), rgb(49, 64, 104));
+    grid-row: 1/8;
+    grid-column: 2/6;
+    border: solid transparent;
+    border-radius: 15px;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+h1,h2{
+    font-size: 3vw;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(245, 245, 245);
+    margin-bottom: 5px;
+}
+p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.65vw;
+    /*color: rgb(105, 67, 131);*/
+    color: #3D5287;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.containerGRID{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(10px, 0.5fr) minmax(10px, 3fr) minmax(10px, 1.5fr) minmax(10px, 1.5fr) minmax(10px, 3fr) minmax(10px,0.5fr);
+    grid-template-rows: minmax(10px, 0.5fr) minmax(10px, 0.5fr) repeat(4,1fr) minmax(10px, 0.5fr) minmax(10px, 0.5fr);
+    grid-gap: 10px
+}
+.flexsizeContainer{
+    grid-column: 3/5;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.containerflex{
+    display: flex;
+    align-content: space-around;
+    justify-content: end;
+    height: 1em;
+    margin-right: 1em;
+    gap: 13.58em;
+}
+.title{
+    color: #3D5287;
+    font-size: 3.5vw;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.menubutton{
+    background-color: black;
+    padding: 0 0 0 0;
+    z-index: 1000;
+    transition: 0.25s;
+    position: sticky;
+}
+.menubutton:hover{
+    background-color: rgb(71, 92, 150);
+}
+.menubutton:active{
+    background-color: #3D5287;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.SizeNUM{
+    font-size: 3.5vw;
+}
+.SizeTEXT{
+    color: transparent;
+    text-align: center;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.WidthTEXT{
+    grid-column: 2/4;
+    grid-row: 3/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13%;
+    padding-left: 20%;
+}
+.WidthNUM{
+    grid-column: 2/4;
+    grid-row: 3/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.LengthTEXT{
+    grid-column: 4/6;
+    grid-row: 3/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13%;
+    padding-right: 20%;
+}
+.LengthNUM{
+    grid-column: 4/6;
+    grid-row: 3/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20%;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.HeightTEXT{
+    grid-column: 2/4;
+    grid-row: 5/7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13%;
+    padding-left: 20%;
+}
+.HeightNUM{
+    grid-column: 2/4;
+    grid-row: 5/7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.PriceTEXT{
+    grid-column: 4/6;
+    grid-row: 5/7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13%;
+    padding-right: 20%;
+}
+.PriceNUM{
+    grid-column: 4/6;
+    grid-row: 5/7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20%;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------
+.followSIDE{
+    width: 1px;
+    height: 69px;
+    background-image: linear-gradient(transparent, mediumslateblue, transparent);
+    opacity: 1;
+    position:absolute;
+    top: 18%;
+    left: 6.8%;
+}
+.followTOP{
+    width: 69px;
+    height: 1px;
+    background-image: linear-gradient(90deg,transparent, mediumslateblue, transparent);
+    opacity: 1;
+    position:absolute;
+    left: 10%;
+    top: 12%;
+}
+  --------------------------------------------*/
+/*--------------------------------------------*/
+.centerInput{
+    grid-column: 3/5;
+    grid-row: 6/8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heightInput{
+    height: 7vh;
+    width: 15vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: #314068;
+    transition: 0.5s;
+    font-size: 1.65vw;
+}
+.heightInput:hover{
+    background-color: rgba(49, 64, 104, 0.5);
+    
+}
+.heightInput, select, textarea{
+    color: white;
+    text-align: center;
+}
+.heightInput button{
+    border-radius: 5px;
+}
+input:focus::placeholder{
+    color: transparent;
+}
+input::placeholder{
+    transition: color 0.3s ease;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.CopyrightContainer{
+    grid-column: 2/6;
+    grid-row: 7/8;
+    display: flex;
+    justify-content: center;
+    align-items:last baseline;
+    padding-top: 14%;
+}
+.Copyright{
+    color: whitesmoke;
+    font-size: 1.5vw;
+    font-family: "Times New Roman", Times, serif;
+}
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+.dropdown {
+    position: relative;
+    justify-self: center;
+    grid-column: 3/5;
+    grid-row: 3/6;
+    transform: translate(0px, 50px);
+  }
+  .dropdown2 {
+    position: absolute;
+    justify-self:left;
+    grid-row: 3/5;
+    transform: translate(0px, 50px);
+  }
+  /*--------------------------------------------*/
+  .dropdown-toggle {
+    transform: translate(0px,75px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1vw;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: #314068;
+    transition: 0.5s;
+  }
+  .dropdown-toggle:hover{
+    background-color: rgba(49, 64, 104, 0.5);
+  }
+  /*--------------------------------------------*/
+  /*--------------------------------------------*/
+  .dropdown-list {
+    position:absolute;
+    top: 47%;
+    z-index: 2;
+    grid-row: 3/6;
+    grid-column: 3/5;
+    width: 360px;
+    height: auto;
+    min-height: 100px;
+    max-height: 100px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    transition: 0.45s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    opacity: 1;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transform: translate(0px, 121px);
+  }
+  /*--------------------------------------------*/
+  .dropdown-list button {
+    width: calc(33.33% - 10px);
+    height: calc(50% - 10px);
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(49, 64, 104);
+    color: white;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .dropdown-list button:hover {
+    background-color: rgb(71, 92, 150);
+  }
+  /*--------------------------------------------*/
+  /*--------------------------------------------*/
+  .show {
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    transform: translate(-500px, 0px);
+  }
+  /*--------------------------------------------*/
+  /*--------------------------------------------*/
+ .dropdownSize{
+    position: relative;
+    justify-self: center;
+    grid-column: 3/5;
+    grid-row: 2/5;
+    transform: translate(0px, 175px);
+ }
+ .dropdown2Size {
+    position: absolute;
+    justify-self:left;
+    grid-row: 3/5;
+    transform: translate(0px, 50px);
+  }
+ .dropdown-listSize{
+    position:absolute;
+    top: 47%;
+    z-index: 2;
+    grid-row: 3/6;
+    grid-column: 3/5;
+    height: auto;
+    width: 360px;
+    min-height: 100px;
+    max-height: 100px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    transition: 0.45s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    opacity: 1;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+ }
+ .dropdown-listSize button{
+    width: calc(33.33% - 10px);
+    height: calc(50% - 10px);
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(49, 64, 104);
+    color: white;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+ }
+ .dropdown-listSize button:hover {
+    background-color: rgb(71, 92, 150);
+  }
+ .dropdown-toggleSize {
+ background-color: rgba(255, 255, 255, 0.2);
+ color: white;
+ padding: 1vw;
+ font-size: 1vw;
+ border: none;
+ cursor: pointer;
+ border-style: solid;
+ border-width: 3px;
+ border-radius: 10px;
+ border-color: #314068;
+ transition: 0.5s;
+ z-index: 1;
+ position: absolute;
+ justify-self: center;
+ grid-column: 3/5;
+ grid-row: 2/5;
+ transform: translate(0px, 200px);
+ }
+ .dropdown-toggleSize:hover{
+ background-color: rgba(49, 64, 104, 0.5);
+ }
+ .showSize {
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    transform: translate(-500px, -56px);
+  }
