@@ -177,16 +177,25 @@ const myFunction = (e) => {
 
 
 function toggle(){
-    let dropdownList = document.querySelector('.dropdown-list');
+    let dropdownList = document.querySelector('.dropdownList');
     dropdownList.classList.toggle('show');
+    let dropdownListButtons = document.querySelector('.dropdownListButtonContainer')
+    dropdownListButtons.classList.toggle('showButtons')
   }
 
 function change(buttonId) {
-    document.getElementById('DropdownTitle').textContent = buttonId;
-    let dropdownListSize = document.querySelector('.dropdown-listSize');
-    dropdownListSize.classList.toggle('showSize');
-    let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
-    dropdownListSizeButtons.classList.toggle('showSizeButtons');
+    if(buttonId == "Kilometers"){
+        document.querySelector(".dropdownList").style["font-size"] = "3.5em";
+        document.querySelector(".dropdownList").style.transition = "0s";
+    }
+    else{
+        document.querySelector(".dropdownList").style["font-size"] = "5.5em";
+    }
+    document.getElementById('dropdownList').textContent = buttonId;
+    let dropdownListSize = document.querySelector('.dropdownList');
+    dropdownListSize.classList.toggle('show');
+    let dropdownListSizeButtons = document.querySelector('.dropdownListButtonContainer');
+    dropdownListSizeButtons.classList.toggle('showButtons');
     /*
     switch(buttonId){
         case("HHD Distance Unit: Miles"):

@@ -119,7 +119,7 @@ body{
     transition: 0.3s;
     z-index: 5;
 }
-.changeSizeUnit:hover{
+.dropdown-listSize:hover{
     background-color: rgba(143, 8, 8, 0.726); 
 }
 .dropdown-listSizeButtonContainer{
@@ -167,9 +167,146 @@ body{
     background-color: #0b1238;
     transition: 0.3s;
 }
+
+
+/* Section 1: Distance, Height, Layer/Individual HHD Capacity Adjustments */
+
 .sectionBackground1 {
-    height: 1650px;
+    height: 1900px;
     width: 100%;
     background-color: #080c22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.flexVerticalDistanceContainer{
+    margin-top: 660px;
+    width: 1465px;
+    height: 1000px;
+    border: rgb(75, 12, 12) solid 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.distanceTitleFlexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:red solid 5px;
+    height: 200px;
+    width: 1465px;
+}
+.distanceTitle{
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 7em;
+}
+.dropdownList{
+    transform: translate(30px, 0px);
+    z-index: 5;
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 5.5em;
+    width: 300px;
+    height: 130px;
+    border:rgba(143, 8, 8, 0.726) solid 5px;
+    background-color: rgba(143, 8, 8, 0.603);
+    border-radius: 15px;
+    transition: 0.2s;
+}
+.dropdownList:hover{
+    background-color: rgba(143, 8, 8, 0.726); 
+}
+.show{
+    color: transparent;
+}
+.showButtons{
+    transform: translate(335px, 8px);
+    position:absolute;
+    z-index: 12;
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 1;
+    height: 130;
+    width: 290;
+    transition: 0.3s;
+}
+.dropdownListButtonContainer{
+    transform: translate(335px, 8px);
+    position:absolute;
+    z-index: 12;
+    width: 0px;
+    height: 0px;
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 0;
+}
+.changeChangeOptionButton{
+    width: calc(33.33% - 20px);
+    height: calc(50% - 25px);
+    margin: 5px;
+    background-color: #080c22;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+    font-size: 1em;
+}
+.changeChangeOptionButton:hover{
+    background-color: #0b1238;
+    transition: 0.3s;
+}
+.distanceNumbersFlexContainer{
+    display: flex;
+    justify-content: space-around;
+    border:rgba(143, 8, 8, 0.726) solid 5px;
+    height: 400px;
+    width: 1465px;
+}
+.widthCard{
+    display: flex;
+    border:rgb(75, 12, 12) solid 5px;
+    width: 732.5px;
+    height: 400px;
+}
+.lengthCard{
+    display: flex;
+    border:rgb(75, 12, 12) solid 5px;
+    width: 732.5px;
+    height: 400px;
+}
+.AdjustmentsContainer{
+    display: flex;
+    justify-content: space-around;
+    border:rgba(143, 8, 8, 0.726) solid 5px;
+    height: 400px;
+    width: 1465px;
+}
+.adjustmentsCard{
+    display: flex;
+    border:rgb(75, 12, 12) solid 5px;
+    width: 732.5px;
+    height: 400px;
+}
+.heightCard{
+    display: flex;
+    border:rgb(75, 12, 12) solid 5px;
+    width: 732.5px;
+    height: 400px;
+}
