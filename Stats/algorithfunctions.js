@@ -127,20 +127,55 @@ function Update() {
  *                                  - TOGGLE SHOWS AND HIDES DROPDOWN                                  *
  * - CHANGE HANDLES EDITING THE TEXT CSS, INTERVALS, AND VALUES NEEDED WHEN A DIFFERENT UNIT IS CHOSEN *
  *******************************************************************************************************/
-
-
-
 let dropdown = document.querySelector('.dropdown');
-let dropdownList = dropdown.querySelector('.dropdown-list');
+let dropdownList = document.querySelector('.dropdown-listSizeButtonContainer');
 let dropdownSize = document.querySelector('.dropdownSize')
-let dropdownListSize = dropdownSize.querySelector('.dropdown-listSize');
+let dropdownListSize = document.querySelector('.dropdown-listSize');
+let toggledAmount = 1;
+
+let sizebuttonClass= document.querySelector(".dropdown-listSize");
+    
 
 function toggleSize(){
     let dropdownListSize = document.querySelector('.dropdown-listSize');
     dropdownListSize.classList.toggle('showSize');
     let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
     dropdownListSizeButtons.classList.toggle('showSizeButtons');
+    toggledAmount += 1;
+}
+function hideSize(){
+    let dropdownListSize = document.querySelector('.dropdown-listSize');
+    dropdownListSize.classList.remove('showSize');
+    let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
+    dropdownListSizeButtons.classList.remove('showSizeButtons');
+}  
+
+
+const myFunction = (e) => {
+
+    let containsActiveClass = false;
+    let reviewNode = e.target;
+    
+    while (reviewNode.nodeName !== 'BODY') {
+    
+      if (reviewNode.classList.contains('dropdown-listSize') || reviewNode.classList.contains('dropdown-listSizeButtonContainer')) {
+        containsActiveClass = true;
+        break;
+      }
+      
+      reviewNode = reviewNode.parentNode;
+    }
+    
+    if (containsActiveClass === false) {
+      hideSize();
+    }
   }
+  
+  document.addEventListener('click', myFunction, false);
+
+
+
+
 function toggle(){
     let dropdownList = document.querySelector('.dropdown-list');
     dropdownList.classList.toggle('show');
@@ -277,20 +312,6 @@ function changeSize(buttonId) {
     dropdownListSize.classList.toggle('showSize');
     let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
     dropdownListSizeButtons.classList.toggle('showSizeButtons');
-
-    document.addEventListener('click', function(event) {
-        if (document.querySelector('#dropdown-listSize').contains(event.target)) {
-            return 0;
-        } else {
-            document.querySelector('.dropdown-listSizeButtonContainer').style.opacity = '0';
-            document.querySelector('.dropdown-listSizeButtonContainer').style.transition = '0';
-            document.querySelector('.dropdown-listSizeButtonContainer').style.transform = 'translate(0px,-1000px)';
-            document.querySelector('.dropdown-listSize').style.color = 'white';
-            document.querySelector('.dropdown-listSize').style.transform = 'translate(0px,0px)';
-            document.querySelector('.dropdown-listSize').style.height = '75';
-            document.querySelector('.dropdown-listSize').style.width = '75'; 
-        }
-    });
 
     switch(buttonId){
         case("PB"):
