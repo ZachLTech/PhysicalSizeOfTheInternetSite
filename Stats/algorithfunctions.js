@@ -11,73 +11,75 @@ let size = (106000000000*1.000000000003185279359525295179);
  *                   SO THAT EVERY TIME THE SITE IS OPENNED, THE SIZE IS UP TO DATE~                   *
  *******************************************************************************************************/
 const date = new Date();
-
+/* Year to Sec */
 let yearnow = date.getFullYear();
 let yearsec = yearnow.toString();
 let yearnum = Number(yearsec);
 let yearnumsec = yearnum*31540000;
-
+/* Month to Sec */
 let monthnow = date.getMonth();
 let monthsec = monthnow.toString();
 let monthnum = Number(monthsec);
 let monthnumsec = monthnum*2628000;
-
+/* Day to Sec */
 let daynow = date.getDay();
 let daysec = daynow.toString();
 let daynum = Number(daysec);
 let daynumsec = daynum*86400;
-
+/* Hour to Sec */
 let hournow = date.getHours();
 let hoursec = hournow.toString();
 let hournum = Number(hoursec);
 let hournumsec = hournum*3600;
-
+/* Minute to Sec */
 let minutenow = date.getMinutes();
 let minutesec = minutenow.toString();
 let minutenum = Number(minutesec);
 let minutenumsec = minutenum*60;
-
+/* Second to Sec (teehee) */
 let secondnow = date.getSeconds();
 let secondsec = secondnow.toString();
 let secondnumsec = Number(secondsec);
-
+/* Adding them */
 let nowsec = (yearnumsec+monthnumsec+daynumsec+hournumsec+minutenumsec+secondnumsec);
+/* Declaring the original amount of seconds that passed to have the original value*/
 let ogsec = 6.3797e+10;
-
+/* So u can see the OG time it's based from */
 let yearog = "2023"
 let monthog = "01"
 let dayog = "01"
 let hourog = "00"
 let secondog = "01"
-
+/* Gets and adds difference (multiplied by 43 to convert into TB) between OG seconds 
+   and Now seconds to the Size so it can be Up to date everytime you open the page :) */
 let difference = nowsec-ogsec;
-
 let SizeTB = (difference*43)+size;
 /***********************************************************************************************************************
  *                          ~FOLLOWING CODE SETS UP VARIABLES THAT INCLUDE THE MATH NEEDED TO                          *
  *                          CONVERT TB INTO PHYSICAL STORAGE DEVICE WIDTH, LENGTH, & HEIGHT~                           *
- *                             - WIDTH AND HEIGHT IS MAINTAINED TO FOLLOW THE GOLDEN RATIO                             *
+ *                          - WIDTH AND HEIGHT IS MAINTAINED TO FOLLOW THE GOLDEN RATIO                                *
  *                          - CODE UTILIZES LAYERED AREA DISTRIBUTION FORMULA (ADJUSTABLE W&H                          *
- *                           BASED ON THE AMOUNT OF LAYERS OF ITEMS WANTED WHILE MAINTAINING                           *
- *                          THE SAME AREA WHEN ADDING THE AREA OF EACH LAYER) WHICH KEEPS THE                          *
- *                          GOLDEN RATIO AS WELL (FORMULA CREATED BY ME ;) AND IMPROVED UPON                           *
- *                                              BY A GOOD FRIEND OF MINE)                                              *
- *             - WITH MY FORMULA, LAYER HEIGHT IS UNIFORMLY ADJUSTABLE BY DIFFERENT STORAGE DEVICE HEIGHT              *
- * - UPDATE FUNCTION HANDLES AND SETS THE INTERVAL TO UPDATE THE HEIGHT, WIDTH, LENGTH, AND PRICE STATS EVERY 333.33MS *
+ *                             BASED ON THE AMOUNT OF LAYERS OF ITEMS WANTED WHILE MAINTAINING                         *
+ *                             THE SAME AREA WHEN ADDING THE AREA OF EACH LAYER) WHICH KEEPS THE                       *
+ *                             GOLDEN RATIO AS WELL (FORMULA CREATED BY ME ;) AND IMPROVED UPON                        *
+ *                             BY A GOOD FRIEND OF MINE)                                                               *
+ *                          - WITH MY FORMULA, LAYER HEIGHT IS UNIFORMLY ADJUSTABLE BY DIFFERENT STORAGE DEVICE HEIGHT *
+ *                          - UPDATE FUNCTION HANDLES AND SETS THE INTERVAL TO UPDATE THE HEIGHT,                      *
+ *                             WIDTH, LENGTH, AND PRICE STATS EVERY 333.33MS                                           *
  ***********************************************************************************************************************/
 let amountadded = 0;
 let stackHeight = 1;
-
+/* Update User Stack Input */
 function updateVariable() {
     const inputValue = parseInt(document.getElementById("inputNumber").value);
     stackHeight = inputValue/2;
 }
-
+/* TB adding Interval */
 function addSizeTB(){
     SizeTB += 14;
     amountadded += 1;
 } let UpdateInterval = setInterval(addSizeTB, 333.33);
-
+/* Declarations (Slightly cursed ik) */
 let HHDsNeeded = 0;
 let HHDsNeeded1b4 = 0;
 let growth =0;
@@ -85,17 +87,17 @@ let WidthInches =0;
 let WidthMiles =0;
 let priceUSD = 0;
 let HeightFt = 0;
-
+let HHDSizeEach = 30.72;
 let WidthMi = 0;
 let LengthMi = 0;
-
+/* Math Functions */
 function HeightAndPrice(){
     HeightFt = stackHeight*(0.0332);
     priceUSD = HHDsNeeded*4000; 
 } let HeightAndPriceinterval = setInterval(HeightAndPrice, 333.33);
 function Width() {
-    HHDsNeeded = SizeTB/30.72;
-    HHDsNeeded1b4 = ((SizeTB-14)/30.72);
+    HHDsNeeded = SizeTB/HHDSizeEach;
+    HHDsNeeded1b4 = ((SizeTB-14)/HHDSizeEach);
     growth = ((HHDsNeeded-HHDsNeeded1b4)/2);
     WidthHHDS = 65536+(growth*amountadded);
     WidthInches = WidthHHDS*2.8;
@@ -103,15 +105,15 @@ function Width() {
     WidthMi = ((WidthMiles*(1/stackHeight))-((WidthMiles*(1/stackHeight))*(1/(stackHeight+1))));
 } let Widthinterval = setInterval(Width, 333.33)
 function Length() {
-    HHDsNeeded = SizeTB/30.72;
-    HHDsNeeded1b4 = (SizeTB-14)/30.72;
+    HHDsNeeded = SizeTB/HHDSizeEach;
+    HHDsNeeded1b4 = (SizeTB-14)/HHDSizeEach;
     growth = (HHDsNeeded-HHDsNeeded1b4)/2;
     LengthHHDS = 52650.76955159505+(growth*amountadded);
     LengthInches = LengthHHDS*4.0;
     LengthMiles = LengthInches*1.57828e-5;
     LengthMi = ((LengthMiles*(1/stackHeight))-((LengthMiles*(1/stackHeight))*(1/(stackHeight+1))));
 } let Lengthinterval = setInterval(Length, 333.33)
-
+/* Intervals */
 function UpdateTB() {
     document.getElementById("SizeTB").innerHTML = (SizeTB.toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 } let DocTeBInterval = setInterval(UpdateTB, 333.33);
@@ -128,7 +130,8 @@ function Update() {
 /*******************************************************************************************************
  *                                  ~HANDLES THE UNIT DROPDOWN MENU~                                   *
  *                                  - TOGGLE SHOWS AND HIDES DROPDOWN                                  *
- * - CHANGE HANDLES EDITING THE TEXT CSS, INTERVALS, AND VALUES NEEDED WHEN A DIFFERENT UNIT IS CHOSEN *
+ *                                  - CHANGE HANDLES EDITING THE TEXT CSS, INTERVALS, AND              *
+ *                                     VALUES NEEDED WHEN A DIFFERENT UNIT IS CHOSEN                   *
  *******************************************************************************************************/
 let dropdown = document.querySelector('.dropdown');
 let dropdownList = document.querySelector('.dropdown-listSizeButtonContainer');
