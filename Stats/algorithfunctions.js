@@ -116,8 +116,11 @@ function UpdateTB() {
     document.getElementById("SizeTB").innerHTML = (SizeTB.toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 } let DocTeBInterval = setInterval(UpdateTB, 333.33);
 
-function Update() {
+function UpdateHeight(){
     document.getElementById("HeightStack").innerHTML = HeightFt;
+} let DocHeightInterval = setInterval(UpdateHeight, 333.33);
+
+function Update() {
     document.getElementById("WidthMiles").innerHTML = WidthMi.toFixed(5);
     document.getElementById("LengthMiles").innerHTML = LengthMi.toFixed(5);
     document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
@@ -153,7 +156,13 @@ function hide(){
     let dropdownListSize = document.querySelector('.dropdownList');
     dropdownListSize.classList.remove('show');
     let dropdownListSizeButtons = document.querySelector('.dropdownListButtonContainer');
-    dropdownListSizeButtons.classList.remove('showButtons');
+    dropdownListSizeButtons.classList.remove('show2');
+}  
+function hideHeight(){
+    let heightDropdown = document.querySelector('.heightBannerButton');
+    heightDropdown.classList.remove('heightGrow');
+    let heightOptionsDropdown = document.querySelector('.heightButtonContainer');
+    heightOptionsDropdown.classList.remove('heightShow')
 }  
 
 const listenoutsideSizeChange = (e) => {
@@ -175,8 +184,29 @@ const listenoutsideSizeChange = (e) => {
       hideSize();
     }
   }
-  
   document.addEventListener('click', listenoutsideSizeChange, false);
+
+  const listenoutsideHeightChange = (e) => {
+
+    let containsActiveClass = false;
+    let reviewNode = e.target;
+    
+    while (reviewNode.nodeName !== 'BODY') {
+    
+      if (reviewNode.classList.contains('heightBannerButton') || reviewNode.classList.contains('heightButtonContainer')) {
+        containsActiveClass = true;
+        break;
+      }
+      
+      reviewNode = reviewNode.parentNode;
+    }
+    
+    if (containsActiveClass === false) {
+      hideHeight();
+    }
+  }
+  
+  document.addEventListener('click', listenoutsideHeightChange, false);
 
   const listenoutsideChange = (e) => {
 
@@ -207,6 +237,12 @@ function toggle(){
     let dropdownListButton = document.querySelector('.dropdownListButtonContainer');
     dropdownListButton.classList.toggle('show2');
   }
+function heightButtonToggle(){
+    let heightDropdown = document.querySelector('.heightBannerButton');
+    heightDropdown.classList.toggle('heightGrow');
+    let heightOptionsDropdown = document.querySelector('.heightButtonContainer');
+    heightOptionsDropdown.classList.toggle('heightShow')
+}
 
 function change(buttonId) {
     if(buttonId == "Kilometers"){
@@ -220,7 +256,7 @@ function change(buttonId) {
     let dropdownListSize = document.querySelector('.dropdownList');
     dropdownListSize.classList.toggle('show');
     let dropdownListSizeButtons = document.querySelector('.dropdownListButtonContainer');
-    dropdownListSizeButtons.classList.toggle('showButtons');
+    dropdownListSizeButtons.classList.toggle('show2');
     
     switch(buttonId){
         case("Miles"):
@@ -314,6 +350,53 @@ function changeSize(buttonId) {
             function Updatebytes() {
                 document.getElementById("SizeTB").innerHTML = (SizeTB*1000000000000);
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(Updatebytes, 333.33);
+            break;
+        default:
+            /*document.getElementById("drowdownList").style.transform = "translate(-110px, 100px)";*/
+            break;
+        }
+
+}
+
+function changeHeight(buttonId) {
+    document.getElementById('heightBannerButton').textContent = buttonId;
+    let heightDropdown = document.querySelector('.heightBannerButton');
+    heightDropdown.classList.toggle('heightGrow');
+    let heightOptionsDropdown = document.querySelector('.heightButtonContainer');
+    heightOptionsDropdown.classList.toggle('heightShow')
+
+    switch(buttonId){
+        case("Centimeters"):
+            function UpdateHCentimeters() {
+                document.getElementById("HeightStack").innerHTML = (HeightFt*30.48);
+            } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHCentimeters, 333.33);
+            document.getElementById("heightBannerButton").style["font-size"] = "1.6em";
+                break;
+        case("Millimeters"):
+            function UpdateHMillimeters() {
+                document.getElementById("HeightStack").innerHTML = (HeightFt*304.8);
+            } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHMillimeters, 333.33);
+            document.getElementById("heightBannerButton").style["font-size"] = "1.7em";
+            break;
+        case("Inches"):
+            function UpdateHInches() {
+                document.getElementById("HeightStack").innerHTML = (HeightFt*12);
+            } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHInches, 333.33);
+            break;
+        case("Feet"):
+            function UpdateHFeet() {
+                document.getElementById("HeightStack").innerHTML = (HeightFt);
+            } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHFeet, 333.33);
+            break;
+        case("Meters"):
+            function UpdateHMeters() {
+                document.getElementById("HeightStack").innerHTML = (HeightFt/3.281).toFixed(5);
+            } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHMeters, 333.33);
+            break;
+        case("Yards"):
+            function UpdateHYards() {
+                document.getElementById("HeightStack").innerHTML = (HeightFt/3).toFixed(5);
+            } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHYards, 333.33);
             break;
         default:
             /*document.getElementById("drowdownList").style.transform = "translate(-110px, 100px)";*/

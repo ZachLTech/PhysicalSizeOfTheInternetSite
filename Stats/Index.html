@@ -82,8 +82,17 @@
                 <div class="heightCard">
                     <div class="heightBox">
                         <div class="heightBanner">Height</div>
+                        <div class="heightButtonContainer">
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" style="font-size: 0.7em;" value="Centimeters">Centimeters</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" style="font-size: 0.8em;" value="Millimeters">Millimeters</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" value="Inches">Inches</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" value="Feet">Feet</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" value="Meters">Meters</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" value="Yards">Yards</button>
+                        </div>
+                        <button onclick="heightButtonToggle()" class="heightBannerButton" id="heightBannerButton">Inches</div>
                         <div class="distanceTextCenter">
-                            <div id="HeightStack" class="distanceText"></div>
+                            <div id="HeightStack" class="heightText"></div>
                         </div>
                     </div>
                 </div>

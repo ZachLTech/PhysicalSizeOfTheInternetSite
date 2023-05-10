@@ -116,7 +116,7 @@ body{
     margin-left: 85%;
     width: 75;
     height: 75;
-    background-color: rgba(143, 8, 8, 0.603);
+    background: radial-gradient(rgba(143, 8, 8, 0.603) 1%, rgba(0,0,0,1) 130%);
     border: rgb(75, 12, 12) solid 5px;
     border-top: transparent;
     border-bottom-left-radius: 15px;
@@ -128,14 +128,13 @@ body{
     background-color: rgba(143, 8, 8, 0.726); 
 }
 .dropdown-listSizeButtonContainer{
-    margin-left: 75%;
-    top: -1005;
+    z-index: -50;
+    margin-left: 83%;
     position:absolute;
-    z-index: 2;
-    width: 300px;
-    height: 150px;
+    width: 75;
+    height: 75;
     overflow-y: auto;
-    transition: 0.3s ease-in-out;
+    transition: 0.15s ease-in-out;
     display: none;
     overflow: hidden;
     padding: 0.5vw;
@@ -146,9 +145,13 @@ body{
     opacity: 0;
 }
 .showSizeButtons{
+    z-index: 50;
+    margin-left: 75%;
+    width: 300px;
+    height: 150px;
     opacity: 1;
-    transition: 0.238s;
-    transform: translate(0px,1000px);
+    transition: 0.3s;
+    transform: translate(0px,000px);
 }
 .showSize{
     color: transparent;
@@ -167,7 +170,7 @@ body{
     border-style: solid;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.1s;
+    transition: 0.3s;
 }
 .sizeChangeOptionButton:hover{
     background-color: #0b1238;
@@ -190,6 +193,13 @@ body{
     color: whitesmoke;
     font-family: 'Rubik', sans-serif;
     font-size: 7em;
+}
+.heightText{
+    position: absolute;
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 7em;
+    transform: translate(0px,115px);
 }
 .distanceTextCenter{
     position: absolute;
@@ -231,7 +241,7 @@ body{
     width: 300px;
     height: 140px;
     border:rgb(99, 9, 9) solid 5px;
-    background-color: rgb(143, 8, 8);
+    background: radial-gradient(rgb(143, 8, 8), rgba(0,0,0,1) 120%);
     border-radius: 15px;
     transition: 0.3s;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.096), 2px 10px rgba(0, 0, 0, 0.096);
@@ -240,18 +250,18 @@ body{
     background-color: rgb(116, 8, 8); 
 }
 .show{
+    height: 160px;
+    width: 320px;
     color: transparent;
     z-index: 0;
 }
-.show2{
-    z-index: 30;
-}
+
 .dropdownListButtonContainer{
     transform: translate(335px, 5px);
     position:absolute;
     z-index: 12;
-    width: 290px;
-    height: 130px;
+    width: 280px;
+    height: 120px;
     overflow-y: auto;
     transition: 0.3s ease-in-out;
     display: none;
@@ -261,7 +271,8 @@ body{
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
-    opacity: 1;
+    opacity: 0;
+    transition: 0.2s;
 }
 .changeChangeOptionButton{
     width: calc(33.33% - 10px);
@@ -275,10 +286,18 @@ body{
     transition: 0.1s;
     font-size: 1em;
     font-weight: 550;
+    z-index: -50;
 }
 .changeChangeOptionButton:hover{
     background-color: #0b1238;
-    transition: 0.3s;
+    transition: 0s;
+}
+.show2{
+    width: 290px;
+    height: 130px;
+    z-index: 30;
+    transition: 0.5s;
+    opacity: 1;
 }
 .distanceNumbersFlexContainer{
     display: flex;
@@ -372,6 +391,7 @@ body{
     box-shadow: 10px 10px rgba(0, 0, 0, 0.096), 5px 10px rgba(0, 0, 0, 0.096);
 }
 .heightCard{
+    overflow: hidden;
     display: flex;
     width: 732.5px;
     height: 520px;
@@ -380,16 +400,89 @@ body{
     align-items: center;
 }
 .heightBox{
+    overflow: hidden;
     height: 450px;
     width: 650px;
     background: radial-gradient(var(--distanceCardBackgrounds) 50%, rgba(0, 0, 0, 0.377) 99.9%);
     border-radius: 40px;
 }
-.heightBanner{
+.heightBannerButton{
+    overflow: hidden;
+    position: absolute;
     font-size: 2.8em;
     color: white;
     font-family: 'Rubik', sans-serif;
-    margin-left: 65%;
+    margin-left: 4.5%;
+    width: 165px;
+    height: 84px;
+    background: radial-gradient(rgba(143, 8, 8, 0.603) 1%, rgba(0,0,0,1) 130%);
+    border: rgb(75, 12, 12) solid 5px;
+    border-top: transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 0.3s;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heightBannerButton:hover{
+    background: radial-gradient(rgba(143, 8, 8, 0.836) 1%, rgba(0,0,0,1) 130%);
+    transition: 0.3s;
+}
+
+.heightButtonContainer{
+    overflow: hidden;
+    position: absolute;
+    z-index: -5;
+    width: 170px;
+    height: 90px;
+    overflow-y: auto;
+    transition: 0.15s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 1;
+    transform: translate(44px, -14px);
+}
+.heightChangeOptionButton{
+    overflow:inherit;
+    font-weight: 600;
+    width: calc(33.33% - 20px);
+    height: calc(50% - 30px);
+    margin: 5px;
+    padding: 5px;
+    background-color: #080c22;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.heightGrow{
+    height: 150px;
+    width: 300px;
+    transform: translate(-30px, 0px);
+    color: transparent;
+}
+.heightShow{
+    width: 300px;
+    height: 150px;
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 20;
+    transform: translate(25px, 0px);
+}
+.heightBanner{
+    position: absolute;
+    font-size: 2.7em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 28.8%;
     width: 150;
     height: 75;
     background: radial-gradient(rgb(255, 233, 32) 1%, rgba(0,0,0,1) 150%);
