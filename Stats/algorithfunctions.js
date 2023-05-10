@@ -306,11 +306,12 @@ function toggleStoragePer(){
 
 function slideAllRight(){
     let background = document.querySelector('.sectionBackground1');
-    let tiles = document.querySelector('flexVerticalDistanceContaier');
-    let money = document.querySelector('sectionBackground2');
+    let money = document.querySelector('.sectionBackground2');
+    let button = document.querySelector('.slideScreen');
     background.classList.toggle('moveRight');
-    tiles.classList.toggle('moveRight');
-    money.classList.toggle('moveRight');
+    money.classList.toggle('moveRightUp');
+    button.classList.toggle('showSlideButton');
+
 }
 
 function change(buttonId) {
