@@ -149,9 +149,14 @@ function hideSize(){
     let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
     dropdownListSizeButtons.classList.remove('showSizeButtons');
 }  
+function hide(){
+    let dropdownListSize = document.querySelector('.dropdownList');
+    dropdownListSize.classList.remove('show');
+    let dropdownListSizeButtons = document.querySelector('.dropdownListButtonContainer');
+    dropdownListSizeButtons.classList.remove('showButtons');
+}  
 
-
-const myFunction = (e) => {
+const listenoutsideSizeChange = (e) => {
 
     let containsActiveClass = false;
     let reviewNode = e.target;
@@ -171,16 +176,36 @@ const myFunction = (e) => {
     }
   }
   
-  document.addEventListener('click', myFunction, false);
+  document.addEventListener('click', listenoutsideSizeChange, false);
 
+  const listenoutsideChange = (e) => {
 
+    let containsActiveClass = false;
+    let reviewNode = e.target;
+    
+    while (reviewNode.nodeName !== 'BODY') {
+    
+      if (reviewNode.classList.contains('dropdownList') || reviewNode.classList.contains('dropdownListButtonContainer')) {
+        containsActiveClass = true;
+        break;
+      }
+      
+      reviewNode = reviewNode.parentNode;
+    }
+    
+    if (containsActiveClass === false) {
+      hide();
+    }
+  }
+  
+  document.addEventListener('click', listenoutsideChange, false);
 
 
 function toggle(){
     let dropdownList = document.querySelector('.dropdownList');
     dropdownList.classList.toggle('show');
-    let dropdownListButtons = document.querySelector('.dropdownListButtonContainer')
-    dropdownListButtons.classList.toggle('showButtons')
+    let dropdownListButton = document.querySelector('.dropdownListButtonContainer');
+    dropdownListButton.classList.toggle('show2');
   }
 
 function change(buttonId) {
@@ -196,123 +221,60 @@ function change(buttonId) {
     dropdownListSize.classList.toggle('show');
     let dropdownListSizeButtons = document.querySelector('.dropdownListButtonContainer');
     dropdownListSizeButtons.classList.toggle('showButtons');
-    /*
+    
     switch(buttonId){
-        case("HHD Distance Unit: Miles"):
+        case("Miles"):
             function UpdateMiles() {
                 document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (WidthMi.toFixed(5));
                 document.getElementById("LengthMiles").innerHTML = (LengthMi.toFixed(5));
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateMiles, 333.33);
-            document.querySelector(".WidthTEXT").textContent = "Width Miles";
-            document.querySelector(".LengthTEXT").textContent = "Length Miles";
-            document.getElementById("PriceHHDs").innerHTML = (((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
-            document.getElementById("PriceHHDs").innerHTML = (((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
-            document.querySelector(".WidthTEXT").style.color = "#3D5287";
-            document.querySelector(".LengthTEXT").style.color = "#3D5287";
-            document.querySelector(".WidthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".LengthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".WidthTEXT").style['font-weight'] = "545";
-            document.querySelector(".LengthTEXT").style['font-weight'] = "545";
-            document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
-            document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
             break;
-        case("HHD Distance Unit: Feet"):
+        case("Feet"):
             function UpdateSquareFt() {
                 document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*5280).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*5280).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateSquareFt, 333.33);
-            document.querySelector(".WidthTEXT").textContent = "Width Feet";
-            document.querySelector(".LengthTEXT").textContent = "Length Feet";    
-            document.querySelector(".WidthTEXT").style.color = "#3D5287";
-            document.querySelector(".LengthTEXT").style.color = "#3D5287";
-            document.querySelector(".WidthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".LengthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".WidthTEXT").style['font-weight'] = "545";
-            document.querySelector(".LengthTEXT").style['font-weight'] = "545";
-            document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
-            document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
             break;
-        case("HHD Distance Unit: Inches"):
+        case("Inches"):
             function UpdateInches() {
                 document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*63360).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*63360).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateInches, 333.33);
-            document.querySelector(".WidthTEXT").textContent = "Width Inches";
-            document.querySelector(".LengthTEXT").textContent = "Length Inches";    
-            document.querySelector(".WidthTEXT").style.color = "#3D5287";
-            document.querySelector(".LengthTEXT").style.color = "#3D5287";
-            document.querySelector(".WidthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".LengthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".WidthTEXT").style['font-weight'] = "545";
-            document.querySelector(".LengthTEXT").style['font-weight'] = "545";
-            document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
-            document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
             break;
-        case("HHD Distance Unit: Kilometers"):
+        case("Kilometers"):
             function UpdateKilometers() {
                 document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = ((WidthMi*1.60934).toFixed(5));
                 document.getElementById("LengthMiles").innerHTML = ((LengthMi*1.60934).toFixed(5));
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateKilometers, 333.33);
-            document.querySelector(".WidthTEXT").textContent = "Width Kilometers";
-            document.querySelector(".LengthTEXT").textContent = "Length Kilometers";    
-            document.querySelector(".WidthTEXT").style.color = "#3D5287";
-            document.querySelector(".LengthTEXT").style.color = "#3D5287";
-            document.querySelector(".WidthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".LengthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".WidthTEXT").style['font-weight'] = "545";
-            document.querySelector(".LengthTEXT").style['font-weight'] = "545";
-            document.querySelector(".WidthTEXT").style.fontFamily = "Arial";
-            document.querySelector(".LengthTEXT").style.fontFamily = "Arial";
             break;
-        case("HHD Distance Unit: Meters"):
+        case("Meters"):
             function UpdateMeters() {
                 document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*1609).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*1609).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateMeters, 333.33);
-            document.querySelector(".WidthTEXT").textContent = "Width Meters";
-            document.querySelector(".LengthTEXT").textContent = "Length Meters";
-            document.querySelector(".WidthTEXT").style.color = "#3D5287";
-            document.querySelector(".LengthTEXT").style.color = "#3D5287";
-            document.querySelector(".WidthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".LengthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".WidthTEXT").style['font-weight'] = "545";
-            document.querySelector(".LengthTEXT").style['font-weight'] = "545";
-            (document.querySelector(".WidthTEXT")).style.fontFamily = "Arial";
-            (document.querySelector(".LengthTEXT")).style.fontFamily = "Arial";
             break;
-        case("HHD Distance Unit: Yards"):
+        case("Yards"):
             function UpdateYards() {
                 document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*1760).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*1760).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateYards, 333.33);
-            document.querySelector(".WidthTEXT").textContent = "Width Yards";
-            document.querySelector(".LengthTEXT").textContent = "Length Yards";    
-            document.querySelector(".WidthTEXT").style.color = "#3D5287";
-            document.querySelector(".LengthTEXT").style.color = "#3D5287";
-            document.querySelector(".WidthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".LengthTEXT").style['font-size'] = "1.65vw";
-            document.querySelector(".WidthTEXT").style['font-weight'] = "545";
-            document.querySelector(".LengthTEXT").style['font-weight'] = "545";
-            (document.querySelector(".WidthTEXT")).style.fontFamily = "Arial";
-            (document.querySelector(".LengthTEXT")).style.fontFamily = "Arial";
             break;
         default:
-            document.getElementById("drowdownList").style.transform = "translate(-110px, 100px)";
             break;
         }
-*/
+
 }
 
 function changeSize(buttonId) {
