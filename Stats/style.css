@@ -180,6 +180,19 @@ body{
 
 /* Section 1: Distance, Height, Layer/Individual HHD Capacity Adjustments */
 
+
+.slideScreen{
+    transform: translate(-820px,430px);
+    height: 55px;
+    width: 55px;
+    background-image: url(../assets/left_arrow.png);
+    background-color: transparent;
+    border: none;
+}
+.moveRight{
+    transition: 1.5s ease-in-out;
+    transform: translate(3000px,0px);
+}
 .sectionBackground1 {
     height: 2200px;
     width: 100%;
@@ -233,7 +246,7 @@ body{
     font-size: 7em;
 }
 .dropdownList{
-    transform: translate(30px, 0px);
+    transform: translate(30px, 5px);
     z-index: 20;
     color: whitesmoke;
     font-family: 'Rubik', sans-serif;
@@ -247,7 +260,7 @@ body{
     box-shadow: 10px 10px rgba(0, 0, 0, 0.096), 2px 10px rgba(0, 0, 0, 0.096);
 }
 .dropdownList:hover{
-    background-color: rgb(116, 8, 8); 
+    background: radial-gradient(rgb(119, 6, 6), rgba(0,0,0,1) 120%);
 }
 .show{
     height: 160px;
@@ -255,9 +268,26 @@ body{
     color: transparent;
     z-index: 0;
 }
+.Kilometers{
+    position: absolute;
+    transform: translate(345px, 45px);
+    z-index: -20;
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.5em;
+    width: 300px;
+    height: 140px;
+    transition: 0.15s;
+    opacity: 0;
+    pointer-events: none;
+}
+.showKilometers{
+    opacity: 1;
+    z-index: 20;
+}
 
 .dropdownListButtonContainer{
-    transform: translate(335px, 5px);
+    transform: translate(335px, 10px);
     position:absolute;
     z-index: 12;
     width: 280px;
@@ -492,6 +522,199 @@ body{
     border-bottom-right-radius: 15px;
     transition: 0.3s;
     z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adjustmentsBanner{
+    position: absolute;
+    font-size: 2.5em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 32.98%;
+    margin-top: 8.6%;
+    width: 260px;
+    height: 75px;
+    background: radial-gradient(rgba(69, 255, 32, 0.616) 1%, rgba(0,0,0,1) 150%);
+    border: rgb(84, 207, 80) solid 5px;
+    border-bottom: transparent;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 0.3s;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+.adjustmentsBannerMid{
+    margin-top: 12.5%;
+}
+.adjustmentsBannerEnd{
+    margin-top: 17%;
+}
+
+
+.flexAdjustmentsContainer{
+    width: 571px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.stackedFlexContainer{
+    margin-top: 20px;
+    margin-left: 35px;
+    height: 160px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: #080c22 5px solid;
+    border-radius: 10px;
+    background: radial-gradient(rgba(59, 59, 59, 0.568) 1%, rgb(0, 0, 0) 80%);
+}
+.stackedLabel{
+    margin-left: 10%;
+    font-size: 3.5em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+.stackedInput{
+    font-size: 3em;
+    color: whitesmoke;
+    height: 75px;
+    width: 120px;
+    border-radius: 10px;
+    border: 4px solid rgb(85, 141, 85);
+    background: radial-gradient(rgba(59, 59, 59, 0.493) 20%, rgba(0, 0, 0, 0.459) 140%);
+    transition: 0.5s;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transform: translate(-90px, 0px);
+}
+.stackedInput:hover{
+    background: radial-gradient(rgba(59, 59, 59, 0.493) 20%, rgba(0, 0, 0, 0.884) 140%);
+}
+.storageFlexContainer{
+    border: #080c22 5px solid;
+    border-radius: 10px;
+    background: radial-gradient(rgba(59, 59, 59, 0.568) 1%, rgb(0, 0, 0) 80%);
+    transform: translate(20px,15px);
+    margin-left: 15px;
+    margin-top: -1.5%;
+    height: 160px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.storageLabel{
+    font-size: 2.7em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 10px;
+}
+.storageButton{
+    overflow: hidden;
+    position: absolute;
+    font-size: 2.3em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 70.3%;
+    width: 127px;
+    height: 84px;
+    background: radial-gradient(rgb(61, 100, 61) 1%, rgba(0,0,0,1) 130%);
+    border: rgb(85, 141, 85) solid 4px;
+    border-radius: 10px;
+    transition: 0.3s;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.storageButton:hover{
+    background: radial-gradient(rgb(47, 77, 47) 1%, rgba(0,0,0,1) 130%);
+    transition: 0.3s;
+}
+.storageButtonsContainer{
+    overflow: hidden;
+    position: absolute;
+    z-index: -10;
+    width: 170px;
+    height: 75px;
+    overflow-y: auto;
+    transition: 0.15s ease-in-out;
+    display: none;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 0;
+    transform: translate(327px, 7px);
+}
+.storageButtonsButtons{
+    overflow: hidden;
+    font-weight: 600;
+    height: calc(33.33% - 20px);
+    width: calc(50% - 15px);
+    margin: 5px;
+    padding: 5px;
+    background-color: #080c22;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.showSizePerContainer{
+    width: 180px;
+    height: 215px;
+    transform: translate(-30px, 0px);
+    color: transparent;
+    background: radial-gradient(rgb(47, 77, 47) 1%, rgba(0,0,0,1) 110%);
+}
+.showSizePerButtons{
+    opacity: 1;
+    z-index: 30;
+    height: 200px;
+    transition: 0.3s;
+}
+
+.helpContainer{
+    height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.helpButton{
+    color: whitesmoke;
+    background: radial-gradient(rgba(59, 59, 59, 0.568) 10%, rgba(0, 0, 0, 0.74));
+    font-size: 2em;
+    font-family: 'Rubik', sans-serif;
+    width: 100px;
+    height: 75px;
+    border-radius: 15px;
+    border: 4px solid black;
+    transform: translate(31.5px, 0px);
+    transition: 0.3s;
+}
+.helpButton:hover{
+    background: radial-gradient(rgba(59, 59, 59, 0.568) 10%, rgb(0, 0, 0));
+    transition: 0.3s;
+}
+
+/* Section 2 */
+.sectionBackground2{
+    position: absolute;
+    left: -3000px;
+    height: 2200px;
+    width: 100%;
+    background: radial-gradient(var(--backgroundFirst) 50%, rgba(0,0,0,1) 170%); 
     display: flex;
     justify-content: center;
     align-items: center;

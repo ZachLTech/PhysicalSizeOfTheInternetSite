@@ -2,6 +2,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="algorithfunctions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <header>
@@ -40,12 +41,13 @@
 
 
     <section class="sectionBackground1">
+        <button class="slideScreen" onclick="slideAllRight()"></button>
         <div class="flexVerticalDistanceContainer">
             <div class="distanceTitleFlexContainer">
                 <h1 class="distanceTitle">Distance in: </h1>
 
                 <button class="dropdownList" id="dropdownList" onclick="toggle()">Miles</button>
-                
+                <div class="Kilometers">Kilometers</div>
                 <div class="dropdownListButtonContainer">
                     <button onclick="change(this.value)" class="changeChangeOptionButton" value="Miles">Miles</button>
                     <button onclick="change(this.value)" class="changeChangeOptionButton" value="Feet">Feet</button>
@@ -76,9 +78,34 @@
             <div class="AdjustmentsContainer">
                 <div class="adjustmentsCard">
                     <div class="adjustmentsBox">
+                        <button class="adjustmentsBanner" onclick="MoveMeEasterEgg()">Adjustments</button>
                         
+                        
+                        <div class="flexAdjustmentsContainer">
+                            <div class="stackedFlexContainer">
+                                <div class="stackedLabel">HHD's Stacked: </div>
+                                <input class="stackedInput" onchange="updateVariable()" placeholder="1" type="number" id="inputNumber" min="1" max="3,614.457831325302" value="1"></input>
+                            </div>
+                            <div class="storageFlexContainer">
+                                <div class="storageLabel">Storage Per HHD: </div>
+                                <button class="storageButton" id="storagePerButton" onclick="toggleStoragePer()">30TB</button>
+                                <div class="storageButtonsContainer">
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="30TB">30TB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="10TB">10TB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="1TB">1TB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="500GB">500GB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="240GB">240GB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="64GB">64GB</button>
+                                </div>
+                            </div>
+                            <div class="helpContainer">
+                                <button class="helpButton">Help</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                
                 <div class="heightCard">
                     <div class="heightBox">
                         <div class="heightBanner">Height</div>
@@ -99,7 +126,9 @@
             </div>
         </div>
     </section>
+    <section class="sectionBackground2">
 
+    </section>
 
 </body>
 

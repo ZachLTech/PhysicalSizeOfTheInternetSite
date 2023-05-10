@@ -165,8 +165,33 @@ function hideHeight(){
     let heightDropdown = document.querySelector('.heightBannerButton');
     heightDropdown.classList.remove('heightGrow');
     let heightOptionsDropdown = document.querySelector('.heightButtonContainer');
-    heightOptionsDropdown.classList.remove('heightShow')
+    heightOptionsDropdown.classList.remove('heightShow');
 }  
+function hideStorage(){
+    let sizePerDropdown = document.querySelector('.storageButton');
+    sizePerDropdown.classList.remove('showSizePerContainer');
+    let sizePerOptionsDropdown = document.querySelector('.storageButtonsContainer');
+    sizePerOptionsDropdown.classList.remove('showSizePerButtons');
+} 
+let pos = 0;
+function MoveMeEasterEgg(){
+    let moveBanner = document.querySelector('.adjustmentsBanner');
+    switch(pos){
+        case(0):
+            moveBanner.classList.toggle('adjustmentsBannerMid');
+            pos = 1;
+            break;
+        case(1):
+            moveBanner.classList.remove('adjustmentsBannerMid');
+            moveBanner.classList.toggle('adjustmentsBannerEnd');
+            pos = 2;
+            break;
+        case(2):
+            moveBanner.classList.remove('adjustmentsBannerEnd');
+            pos = 0;
+            break;
+    }
+}
 
 const listenoutsideSizeChange = (e) => {
 
@@ -213,6 +238,7 @@ const listenoutsideSizeChange = (e) => {
 
   const listenoutsideChange = (e) => {
 
+
     let containsActiveClass = false;
     let reviewNode = e.target;
     
@@ -233,8 +259,33 @@ const listenoutsideSizeChange = (e) => {
   
   document.addEventListener('click', listenoutsideChange, false);
 
+  const listenoutsideAdjust = (e) => {
+
+    let containsActiveClass = false;
+    let reviewNode = e.target;
+    
+    while (reviewNode.nodeName !== 'BODY') {
+    
+      if (reviewNode.classList.contains('storageButton') || reviewNode.classList.contains('storageButtonsContainer')) {
+        containsActiveClass = true;
+        break;
+      }
+      
+      reviewNode = reviewNode.parentNode;
+    }
+    
+    if (containsActiveClass === false) {
+      hideStorage();
+    }
+  }
+  
+  document.addEventListener('click', listenoutsideAdjust, false);
+
 
 function toggle(){
+    document.querySelector(".dropdownList").style.transition = "0.3s";
+    let dropdownListSizeButtonsKM = document.querySelector('.Kilometers');
+    dropdownListSizeButtonsKM.classList.remove('showKilometers');
     let dropdownList = document.querySelector('.dropdownList');
     dropdownList.classList.toggle('show');
     let dropdownListButton = document.querySelector('.dropdownListButtonContainer');
@@ -244,67 +295,84 @@ function heightButtonToggle(){
     let heightDropdown = document.querySelector('.heightBannerButton');
     heightDropdown.classList.toggle('heightGrow');
     let heightOptionsDropdown = document.querySelector('.heightButtonContainer');
-    heightOptionsDropdown.classList.toggle('heightShow')
+    heightOptionsDropdown.classList.toggle('heightShow');
+}
+function toggleStoragePer(){
+    let sizePerDropdown = document.querySelector('.storageButton');
+    sizePerDropdown.classList.toggle('showSizePerContainer');
+    let sizePerOptionsDropdown = document.querySelector('.storageButtonsContainer');
+    sizePerOptionsDropdown.classList.toggle('showSizePerButtons');
+}
+
+function slideAllRight(){
+    let background = document.querySelector('.sectionBackground1');
+    let tiles = document.querySelector('flexVerticalDistanceContaier');
+    let money = document.querySelector('sectionBackground2');
+    background.classList.toggle('moveRight');
+    tiles.classList.toggle('moveRight');
+    money.classList.toggle('moveRight');
 }
 
 function change(buttonId) {
-    if(buttonId == "Kilometers"){
-        document.querySelector(".dropdownList").style["font-size"] = "3.5em";
-        document.querySelector(".dropdownList").style.transition = "0s";
-    }
-    else{
-        document.querySelector(".dropdownList").style["font-size"] = "5.5em";
-    }
-    document.getElementById('dropdownList').textContent = buttonId;
     let dropdownListSize = document.querySelector('.dropdownList');
     dropdownListSize.classList.toggle('show');
     let dropdownListSizeButtons = document.querySelector('.dropdownListButtonContainer');
     dropdownListSizeButtons.classList.toggle('show2');
-    
+    /**/ 
     switch(buttonId){
         case("Miles"):
+        document.getElementById('dropdownList').textContent = buttonId;
+            
+            
             function UpdateMiles() {
-                document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (WidthMi.toFixed(5));
                 document.getElementById("LengthMiles").innerHTML = (LengthMi.toFixed(5));
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateMiles, 333.33);
             break;
         case("Feet"):
+        document.getElementById('dropdownList').textContent = buttonId;
+            
+            
             function UpdateSquareFt() {
-                document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*5280).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*5280).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateSquareFt, 333.33);
             break;
         case("Inches"):
+        document.getElementById('dropdownList').textContent = buttonId;
+            
+            
             function UpdateInches() {
-                document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*63360).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*63360).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateInches, 333.33);
             break;
         case("Kilometers"):
+            document.getElementById('dropdownList').textContent = " ";
+            let dropdownListSizeButtonsKM = document.querySelector('.Kilometers');
+            dropdownListSizeButtonsKM.classList.toggle('showKilometers');
             function UpdateKilometers() {
-                document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = ((WidthMi*1.60934).toFixed(5));
                 document.getElementById("LengthMiles").innerHTML = ((LengthMi*1.60934).toFixed(5));
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateKilometers, 333.33);
             break;
         case("Meters"):
+        document.getElementById('dropdownList').textContent = buttonId;
             function UpdateMeters() {
-                document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*1609).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*1609).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateMeters, 333.33);
             break;
         case("Yards"):
+        document.getElementById('dropdownList').textContent = buttonId;
+            
+            
             function UpdateYards() {
-                document.getElementById("HeightStack").innerHTML = HeightFt;
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*1760).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*1760).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
@@ -361,6 +429,39 @@ function changeSize(buttonId) {
 
 }
 
+function changeStoragePer(buttonId) {
+    document.getElementById('storagePerButton').textContent = buttonId;
+    let sizePerDropdown = document.querySelector('.storageButton');
+    sizePerDropdown.classList.toggle('showSizePerContainer');
+    let sizePerOptionsDropdown = document.querySelector('.storageButtonsContainer');
+    sizePerOptionsDropdown.classList.toggle('showSizePerButtons')
+
+    switch(buttonId){
+        case("30TB"):
+            HHDSizeEach = 30.72;
+            break;
+        case("10TB"):
+            HHDSizeEach = 10;
+            break;
+        case("1TB"):
+            HHDSizeEach = 1;
+            break;
+        case("500GB"):
+            HHDSizeEach = 0.5;
+            break;
+        case("240GB"):
+            HHDSizeEach = 0.24;
+            break;
+        case("64GB"):
+            HHDSizeEach = 0.064;
+            break;
+        default:
+            /*document.getElementById("drowdownList").style.transform = "translate(-110px, 100px)";*/
+            break;
+        }
+
+}
+
 function changeHeight(buttonId) {
     document.getElementById('heightBannerButton').textContent = buttonId;
     let heightDropdown = document.querySelector('.heightBannerButton');
@@ -371,24 +472,24 @@ function changeHeight(buttonId) {
     switch(buttonId){
         case("Centimeters"):
             function UpdateHCentimeters() {
-                document.getElementById("HeightStack").innerHTML = (HeightFt*30.48);
+                document.getElementById("HeightStack").innerHTML = (HeightFt*30.48).toFixed(5);
             } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHCentimeters, 333.33);
             document.getElementById("heightBannerButton").style["font-size"] = "1.6em";
                 break;
         case("Millimeters"):
             function UpdateHMillimeters() {
-                document.getElementById("HeightStack").innerHTML = (HeightFt*304.8);
+                document.getElementById("HeightStack").innerHTML = (HeightFt*304.8).toFixed(5);
             } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHMillimeters, 333.33);
             document.getElementById("heightBannerButton").style["font-size"] = "1.7em";
             break;
         case("Inches"):
             function UpdateHInches() {
-                document.getElementById("HeightStack").innerHTML = (HeightFt*12);
+                document.getElementById("HeightStack").innerHTML = (HeightFt*12).toFixed(5);
             } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHInches, 333.33);
             break;
         case("Feet"):
             function UpdateHFeet() {
-                document.getElementById("HeightStack").innerHTML = (HeightFt);
+                document.getElementById("HeightStack").innerHTML = (HeightFt).toFixed(5);
             } clearInterval(DocHeightInterval); DocHeightInterval = setInterval(UpdateHFeet, 333.33);
             break;
         case("Meters"):
