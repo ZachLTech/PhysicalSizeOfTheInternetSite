@@ -8,6 +8,7 @@ body{
     --backgroundFirst: #0d1233;
     --distanceCardBackgrounds: #0b0e27;
     --adjustmentsCardBackground: #131949;
+    --backgroundSecond: rgb(184, 184, 44);
 }
 
 *{
@@ -182,25 +183,36 @@ body{
 
 
 .slideScreen{
-    transform: translate(-820px,430px);
-    height: 55px;
-    width: 55px;
+    transform: translate(-820px,130px);
+    height: 80px;
+    width: 80px;
     background-image: url(../assets/left_arrow.png);
+    background-size: 110px 110px;
     background-color: transparent;
     border: none;
+    background-position: center;
 }
-.moveRight{
-    transition: 1.5s ease-in-out;
-    transform: translate(3000px,0px);
+.slideScreen2{
+    transform: translate(820px,130px) rotate(180deg);
+    height: 80px;
+    width: 80px;
+    background-image: url(../assets/left_arrow.png);
+    background-size: 110px 110px;
+    background-color: transparent;
+    border: none;
+    background-position: center;
 }
+
 .sectionBackground1 {
-    height: 2200px;
+    height: 1800px;
+    transform: translate(0px,600px);
     width: 100%;
     background: radial-gradient(var(--backgroundFirst) 50%, rgba(0,0,0,1) 170%); 
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .distanceText{
     position: absolute;
     color: whitesmoke;
@@ -225,7 +237,6 @@ body{
 }
 .flexVerticalDistanceContainer{
     position: absolute;
-    margin-top: 600px;
     width: 1465px;
     height: 1300px;
     display: flex;
@@ -711,11 +722,20 @@ body{
 /* Section 2 */
 .sectionBackground2{
     position: absolute;
-    left: -3000px;
-    height: 2200px;
-    width: 100%;
-    background: radial-gradient(var(--backgroundFirst) 50%, rgba(0,0,0,1) 170%); 
+    height: 1800px;
+    width: 0%;
+    background: radial-gradient(var(--backgroundSecond) 1%, rgba(0,0,0,1) 120%); 
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translate(0px,-1200px);
+    z-index: -500;
+}
+.moveRight{
+    transition: 1.5s ease-in-out;
+    transform: translate(100%,600px);
+}
+.moveRightUp{
+    width: 100%;
+    transition: 1.45s ease-in-out;
 }
