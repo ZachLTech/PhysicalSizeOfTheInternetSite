@@ -304,15 +304,29 @@ function toggleStoragePer(){
     sizePerOptionsDropdown.classList.toggle('showSizePerButtons');
 }
 
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
 function slideAllRight(){
     let background = document.querySelector('.sectionBackground1');
     let money = document.querySelector('.sectionBackground2');
     let button = document.querySelector('.slideScreen');
+    let header = document.querySelector('.headerBackgroundContainer');
+    let priceback = document.querySelector('.priceInfoContainerUnder');
+    let price = document.querySelector('.priceInfoContainer');
+    header.classList.toggle('invis');
     background.classList.toggle('moveRight');
     money.classList.toggle('moveRightUp');
     button.classList.toggle('showSlideButton');
-
+    priceback.classList.toggle('moveRightBottm');
+    price.classList.toggle('moveRightBottm');
+    topFunction();
 }
+
+
+
 
 function change(buttonId) {
     let dropdownListSize = document.querySelector('.dropdownList');
@@ -509,3 +523,35 @@ function changeHeight(buttonId) {
         }
 
 }
+
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+      const largeText = document.getElementById("large-text");
+      const scrollPercentage = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+  
+      if (scrollPercentage > 1.7) {
+        largeText.classList.add("priceTextHide");
+      } else {
+        largeText.classList.remove("priceTextHide");
+      }
+    },
+    false
+  );
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const largeTextContainerPrice = document.getElementById("priceNumber");
+      const scrollPercentage = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+  
+      if (scrollPercentage > 1.7) {
+        largeTextContainerPrice.classList.add("priceNumberShow");
+      } else {
+        largeTextContainerPrice.classList.remove("priceNumberShow");
+      }
+    },
+    false
+  );

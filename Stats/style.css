@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 body{
     overflow-x: hidden;
+    zoom: 90%;
+    font-family: 'Blippo', fantasy;
 }
 
 :root{
     --backgroundFirst: #0d1233;
     --distanceCardBackgrounds: #0b0e27;
     --adjustmentsCardBackground: #131949;
-    --backgroundSecond: rgb(184, 184, 44);
+    --backgroundSecond: rgba(184, 184, 44, 0.596);
 }
 
 *{
@@ -192,15 +194,15 @@ body{
     border: none;
     background-position: center;
     transition: 1.7s;
-    z-index: 5;
+    z-index: 80;
     outline: none;
 }
 .showSlideButton{
-    transform: translate(-1045px,130px) rotate(180deg);
+    transform: translate(-1270px,130px) rotate(180deg);
 }
 
 .sectionBackground1 {
-    transition: 1.45s ease-in-out;
+    transition: 0.45s ease-in-out;
     height: 1800px;
     transform: translate(0px,600px);
     width: 100%;
@@ -719,21 +721,109 @@ body{
 /* Section 2 */
 .sectionBackground2{
     z-index: -1;
-    position: absolute;
-    height: 1800px;
+    position: fixed;
+    height: 1200px;
     width: 0%;
     background: radial-gradient(var(--backgroundSecond) 1%, rgba(0,0,0,1) 120%); 
-    display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(0px,-1200px);
-    transition: 1.5s ease-in-out;
+    transform: translate(0px,-1029px);
+    transition: 0.4s ease-in-out;
 }
 .moveRight{
-    transition: 1.5s ease-in-out;
+
     transform: translate(100%,600px);
 }
 .moveRightUp{
     width: 100%;
-    transition: 1.45s ease-in-out;
+
 }
+.invis{
+    transition: 0.4s;
+    opacity: 0;
+}
+
+
+
+.mountBg{
+    transform: translate(-400px,500px);
+    width: 1200;
+    height: 800;
+  }
+  .mountMg{
+    transform: translate(850px,-1500px) rotate(50deg);
+    width: 1200;
+    height: 800;
+  }
+  .cloud2{
+    transform: translate(500px, -300px);
+  }
+  .mountFg{
+    transform: translate(-450px,0px) rotate(-45deg);
+  }
+  .mountBgR{
+    transform: translate(1000px, 0px) rotate(55deg);
+  }
+  text{
+    width:100%;
+    height:100%;
+    background:#ddd;
+    font-family: 'Montserrat', sans-serif;
+    font-size:99px;
+    text-align:center;
+  }
+  .text1{
+    width:100%;
+    height:100%;
+    background:#ddd;
+    font-family: 'Montserrat', sans-serif;
+    font-size:99px;
+    text-align:center;
+    transition: 0.3s;
+  }
+  .priceInfoContainerUnder{
+    position: absolute;
+    width: 100%;
+    height: 1500px;
+    background-color: white;
+    transform: translate(-3000px,400px);
+  }
+
+  .priceInfoContainer{
+    position: absolute;
+    width: 100%;
+    height: 1500px;
+    background: linear-gradient( rgb(255, 255, 255) 0.01%, var(--backgroundSecond) 70%);
+    transform: translate(-3000px,400px);
+    display: flex;
+    flex-direction: column;
+
+  }
+  .priceNumber{
+    margin-left: 26%;
+    transition: 1s;
+    opacity: 0;
+    position: absolute;
+    width: 1000;
+    height: 300;
+    background-color: rgb(255, 166, 0);
+    z-index: 2;
+    border: transparent solid 0px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
+    transform: translate(0px,800px);
+  }
+  .priceTextHide{
+    opacity: 0;
+  }
+
+  .priceNumberShow{
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+
+
+  .moveRightBottm{
+    transform: translate(0px,400px);
+  }

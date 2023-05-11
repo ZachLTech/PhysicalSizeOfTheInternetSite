@@ -1,9 +1,16 @@
+
+
+<html id="html">
+
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="algorithfunctions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script>viewport.setAttribute('content', 'width=device-width, initial-scale=0.67, user-scalable=0');</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 </head>
+
 
 <header>
     <button class="menubutton" onclick="location.href = '../Menu/Menu.html';">
@@ -11,7 +18,7 @@
     </button>
 </header>
 
-<body>
+<body id="body">
     <header class="headerBackgroundContainer">
         <article class="headerBackground"></article>
         <div class="storageSystemTypeBox">
@@ -126,12 +133,61 @@
             </div>
         </div>
     </section>
-    <section class="sectionBackground2">
+    <section>
+        <section class="sectionBackground2" style="zoom: 175%">
+            <div class="introPlacement">
+                <div class="scrollDist"></div>
+                    <div class="main" id="moneymoneymoney">
+                        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="m">
+                                <g class="cloud1">
+                                    <rect fill="#fff" width="100%" height="801" y="799" />
+                                    <image xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1200" height="800"/>
+                                </g>
+                            </mask>
+                        
+                            <image class="sky" xlink:href="https://assets.codepen.io/721952/sky.jpg"  width="1200" height="590" />
+                            <image class="mountBg" href="../assets/money/money5.png" width="1200" height="800"/>    
+                            <image class="mountBgR" href="../assets/money/money2.png" width="1200" height="800"/> 
+                            <image class="mountMg" href="../assets/money/money4.png" width="1200" height="800"/> 
+                            <image class="cloud2" href="../assets/money/money3.png" width="1200" height="800"/>    
+                            <image class="mountFg" href="../assets/money/money1.png" width="1200" height="800"/>
+                            <image class="cloud1" href="" width="1200" height="800"/>
+                            <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
+                            <text style="transform: translate(-260px, 0px);" fill="#fff" x="300" y="200">BUT AT WHAT</text><text style="transform: translate(510px, 0px);" fill="#F70000" x="300" y="200">COST</text><text style="transform: translate(800px, 0px);" fill="#fff" x="300" y="200">?</text>
+                            <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
+                            <g mask="url(#m)">
+                                <rect fill="#fff" width="100%" height="100%" />      
+                                <text class="text1" id="large-text" style="transform: translate(-285px, 0px);" x="300" y="200" fill="#162a43">14 TRILLION DOLLARS</text>
+                            </g>
+                            <rect id="arrowBtn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
+                        </svg>
+                    </div>
+                    <!-- partial -->
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
+                    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+                    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+                    <script src='https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js'></script><script  src="./script.js"></script>     
+                </div>
+            </div>
 
+            
+            
+        </section>
+        <section id="height">
+        <div class="priceInfoContainerUnder">
+        
+        </div>
+        <div class="priceInfoContainer"> 
+            <div class="priceNumber" id="priceNumber">
+
+            </div>
+        </div>
+        </section>
     </section>
-
 </body>
 
 <footer>
 
 </footer>
+</html>
