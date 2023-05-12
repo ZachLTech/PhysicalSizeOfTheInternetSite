@@ -198,7 +198,8 @@ body{
     outline: none;
 }
 .showSlideButton{
-    transform: translate(-1270px,130px) rotate(180deg);
+    transform: translate(-1100px,1600px) rotate(180deg);
+    opacity: 1;
 }
 
 .sectionBackground1 {
@@ -781,12 +782,23 @@ body{
     text-align:center;
     transition: 0.3s;
   }
+  .text1mid{
+    width:100%;
+    height:100%;
+    background:#ddd;
+    font-family: 'Montserrat', sans-serif;
+    font-size:30px;
+    text-align:center;
+    transition: 0.3s;
+  }
+  
   .priceInfoContainerUnder{
     position: absolute;
     width: 100%;
     height: 1500px;
     background-color: white;
     transform: translate(-3000px,400px);
+    z-index: -6;
   }
 
   .priceInfoContainer{
@@ -797,7 +809,7 @@ body{
     transform: translate(-3000px,400px);
     display: flex;
     flex-direction: column;
-
+    z-index: -1;
   }
   .priceNumber{
     margin-left: 26%;
@@ -806,24 +818,160 @@ body{
     position: absolute;
     width: 1000;
     height: 300;
-    background-color: rgb(255, 166, 0);
+    background-color: rgb(255, 217, 0);
     z-index: 2;
     border: transparent solid 0px;
     border-radius: 20px;
-    overflow: hidden;
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
     transform: translate(0px,800px);
   }
   .priceTextHide{
     opacity: 0;
   }
-
   .priceNumberShow{
     opacity: 1;
     transform: translate(0px,0px);
   }
-
-
   .moveRightBottm{
     transform: translate(0px,400px);
+  }
+  .priceNumberText{
+    transition: 0.2s;
+    color: white;
+    font-size: 85px;
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 85px;
+    margin-top: 95px;
+  }
+  .toBeExact{
+    color: rgb(247 205 78);
+    font-size: 30px;
+    transform: translate(530px, 281px) rotate(90deg);
+  }
+  .ifStoredIn{
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    transform: translate(557px, -20px);
+  }
+  .HHDsText{
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    transform: translate(744px, -49px);
+  }
+  .insertTBorGB{
+    z-index: 5;
+    position: absolute;
+    transition: 0.3s;
+    width: 65px;
+    height: 30px;
+    background-color: #f5b849;
+    border-color: darkorange;
+    color: white;
+    border-radius: 3px;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+    transform: translate(673px, -50px);
+  }
+  .insertTBorGBHide{
+    opacity: 0;
+    z-index: -1;
+  }
+  .storedInButtonContainer{
+    opacity: 0;
+    transition: 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    width: 65px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f5b849;
+    border-color: #1a1105;
+    border: solid 1px darkorange;
+    border-radius: 3px;
+    transform: translate(672px, -79px);
+    z-index: -1;
+  }
+  .storedInButtonContainerShow{
+    height: 170px;
+    opacity: 1;
+    z-index: 5;
+  }
+  .storedInChangeOptionButton{
+    background: radial-gradient(orange 50%, black 190%);
+    border: solid 1px #d37605;
+    width: 55px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border-radius: 2px;
+    overflow-y: hidden;
+  }
+
+  .leftBoxCurrencyAdjust{
+    transition: 0.8s ease-in-out;
+    width: 650px;
+    height: 280px;
+    background: linear-gradient( var(--backgroundSecond) 5%, rgb(239 239 239) 70%);
+    margin-left: 180px;
+    margin-top: 550px;
+    border-radius: 0px;
+    box-shadow: inset 0 -1.5em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
+    opacity: 0;
+    transform: translate(-1000px, 0px);
+  }
+  .leftBoxCurrencyAdjustShow{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  .moneyGifCurrencyAdjust{
+    transition: 0.8s ease-in-out;
+    background-size: 622px, 350px;
+    width: 270px;
+    height: 350px;
+    background-image: url(https://i.gifer.com/SeIE.gif);
+    border-radius: 5px;
+    box-shadow: inset 0 -1.5em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.822);
+    transform: translate(1000px, 1000px);
+    opacity: 0;
+}
+  .moneyGifCurrencyAdjustShow{
+    opacity: 1;
+    transform: translate(-55px, -130px);
+  }
+
+
+  .rightBoxNavButtons{
+    transition: 0.8s ease-in-out;
+    width: 650px;
+    height: 280px;
+    background: linear-gradient( var(--backgroundSecond) 5%, rgb(239 239 239) 70%);
+    margin-left: 1255px;
+    margin-top: 50px;
+    border-radius: 0px;
+    box-shadow: inset 0 -1.5em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
+    opacity: 0;
+    transform: translate(1000px, 0px);
+  }
+  .rightBoxNavButtonsShow{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  .GifNavButtons{
+    transition: 0.8s ease-in-out;
+    background-size: 622px, 350px;
+    background-position: -95px;
+    width: 270px;
+    height: 350px;
+    background-image: url(https://scitechdaily.com/images/Hard-Drive-Data-Storage.gif);
+    border-radius: 5px;
+    box-shadow: inset 0 -1.5em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.822);
+    transform: translate(-700px, 1000px);
+    opacity: 0;
+  }
+  .GifNavButtonsShow{
+    opacity: 1;
+    transform: translate(435px, -130px);
   }

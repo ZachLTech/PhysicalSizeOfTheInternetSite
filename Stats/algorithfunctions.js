@@ -91,10 +91,6 @@ let HHDSizeEach = 30.72;
 let WidthMi = 0;
 let LengthMi = 0;
 /* Math Functions */
-function HeightAndPrice(){
-    HeightFt = stackHeight*(0.0332);
-    priceUSD = HHDsNeeded*4000; 
-} let HeightAndPriceinterval = setInterval(HeightAndPrice, 333.33);
 function Width() {
     HHDsNeeded = SizeTB/HHDSizeEach;
     HHDsNeeded1b4 = ((SizeTB-14)/HHDSizeEach);
@@ -103,7 +99,7 @@ function Width() {
     WidthInches = WidthHHDS*2.8;
     WidthMiles = WidthInches*1.57828e-5;
     WidthMi = ((WidthMiles*(1/stackHeight))-((WidthMiles*(1/stackHeight))*(1/(stackHeight+1))));
-} let Widthinterval = setInterval(Width, 333.33)
+} let Widthinterval = setInterval(Width, 333.33);
 function Length() {
     HHDsNeeded = SizeTB/HHDSizeEach;
     HHDsNeeded1b4 = (SizeTB-14)/HHDSizeEach;
@@ -113,6 +109,29 @@ function Length() {
     LengthMiles = LengthInches*1.57828e-5;
     LengthMi = ((LengthMiles*(1/stackHeight))-((LengthMiles*(1/stackHeight))*(1/(stackHeight+1))));
 } let Lengthinterval = setInterval(Length, 333.33)
+function HeightAndPrice(){
+    HeightFt = stackHeight*(0.0332);
+    switch(HHDSizeEach){
+        case(30.72):
+            priceUSD = HHDsNeeded*2960.31;
+            break;
+        case(15.4):
+            priceUSD = HHDsNeeded*1192;
+            break;
+        case(1):
+            priceUSD = HHDsNeeded*40;
+            break;
+        case(0.5):
+            priceUSD = HHDsNeeded*18;
+            break;
+        case(0.24):
+            priceUSD = HHDsNeeded*16;
+            break;
+        case(0.064):
+            priceUSD = HHDsNeeded*14;
+            break;
+    }
+} let HeightAndPriceinterval = setInterval(HeightAndPrice, 333.33);
 /* Intervals */
 function UpdateTB() {
     document.getElementById("SizeTB").innerHTML = (SizeTB.toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -122,10 +141,13 @@ function UpdateHeight(){
     document.getElementById("HeightStack").innerHTML = HeightFt;
 } let DocHeightInterval = setInterval(UpdateHeight, 333.33);
 
+function UpdatePrice(){
+    document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+} let DocPriceInterval = setInterval(UpdatePrice, 333.33);
+
 function Update() {
     document.getElementById("WidthMiles").innerHTML = WidthMi.toFixed(5);
     document.getElementById("LengthMiles").innerHTML = LengthMi.toFixed(5);
-    document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
 } let DocMilesInterval = setInterval(Update, 333.33); 
 /*******************************************************************************************************
  *                                  ~HANDLES THE UNIT DROPDOWN MENU~                                   *
@@ -297,6 +319,12 @@ function heightButtonToggle(){
     let heightOptionsDropdown = document.querySelector('.heightButtonContainer');
     heightOptionsDropdown.classList.toggle('heightShow');
 }
+function storedInToggle(){
+    let storedInDropdown = document.querySelector('.insertTBorGB');
+    storedInDropdown.classList.toggle('insertTBorGBHide');
+    let storedInOptionsDropdown = document.querySelector('.storedInButtonContainer');
+    storedInOptionsDropdown.classList.toggle('storedInButtonContainerShow');
+}
 function toggleStoragePer(){
     let sizePerDropdown = document.querySelector('.storageButton');
     sizePerDropdown.classList.toggle('showSizePerContainer');
@@ -342,7 +370,6 @@ function change(buttonId) {
             function UpdateMiles() {
                 document.getElementById("WidthMiles").innerHTML = (WidthMi.toFixed(5));
                 document.getElementById("LengthMiles").innerHTML = (LengthMi.toFixed(5));
-                document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateMiles, 333.33);
             break;
         case("Feet"):
@@ -352,7 +379,6 @@ function change(buttonId) {
             function UpdateSquareFt() {
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*5280).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*5280).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateSquareFt, 333.33);
             break;
         case("Inches"):
@@ -362,7 +388,6 @@ function change(buttonId) {
             function UpdateInches() {
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*63360).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*63360).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateInches, 333.33);
             break;
         case("Kilometers"):
@@ -372,7 +397,6 @@ function change(buttonId) {
             function UpdateKilometers() {
                 document.getElementById("WidthMiles").innerHTML = ((WidthMi*1.60934).toFixed(5));
                 document.getElementById("LengthMiles").innerHTML = ((LengthMi*1.60934).toFixed(5));
-                document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateKilometers, 333.33);
             break;
         case("Meters"):
@@ -380,7 +404,6 @@ function change(buttonId) {
             function UpdateMeters() {
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*1609).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*1609).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateMeters, 333.33);
             break;
         case("Yards"):
@@ -390,7 +413,6 @@ function change(buttonId) {
             function UpdateYards() {
                 document.getElementById("WidthMiles").innerHTML = (((WidthMi*1760).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 document.getElementById("LengthMiles").innerHTML = (((LengthMi*1760).toFixed(2)).toString()).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
             } clearInterval(DocMilesInterval); DocMilesInterval = setInterval(UpdateYards, 333.33);
             break;
         default:
@@ -446,29 +468,46 @@ function changeSize(buttonId) {
 
 function changeStoragePer(buttonId) {
     document.getElementById('storagePerButton').textContent = buttonId;
+    document.getElementById('storedInButton').textContent = buttonId;
     let sizePerDropdown = document.querySelector('.storageButton');
     sizePerDropdown.classList.toggle('showSizePerContainer');
     let sizePerOptionsDropdown = document.querySelector('.storageButtonsContainer');
-    sizePerOptionsDropdown.classList.toggle('showSizePerButtons')
+    sizePerOptionsDropdown.classList.toggle('showSizePerButtons');
+    let storedInOptionsDropdown = document.querySelector('.storedInButtonContainer');
+    storedInOptionsDropdown.classList.remove('storedInButtonContainerShow');
+    let storedInOptionsButton = document.querySelector('.insertTBorGB');
+    storedInOptionsButton.classList.remove('insertTBorGBHide');
 
     switch(buttonId){
         case("30TB"):
             HHDSizeEach = 30.72;
+            storedInOptionsButton.style["font-size"] = "25px";
+            document.getElementById('PriceHHDs').style["margin-left"] = "85px";
             break;
-        case("10TB"):
-            HHDSizeEach = 10;
+        case("15TB"):
+            HHDSizeEach = 15.4;
+            storedInOptionsButton.style["font-size"] = "25px";
+            document.getElementById('PriceHHDs').style["margin-left"] = "110px";
             break;
         case("1TB"):
             HHDSizeEach = 1;
+            storedInOptionsButton.style["font-size"] = "25px";
+            document.getElementById('PriceHHDs').style["margin-left"] = "110px";
             break;
         case("500GB"):
             HHDSizeEach = 0.5;
+            storedInOptionsButton.style["font-size"] = "20px";
+            document.getElementById('PriceHHDs').style["margin-left"] = "110px";
             break;
         case("240GB"):
             HHDSizeEach = 0.24;
+            storedInOptionsButton.style["font-size"] = "20px";
+            document.getElementById('PriceHHDs').style["margin-left"] = "110px";
             break;
         case("64GB"):
             HHDSizeEach = 0.064;
+            storedInOptionsButton.style["font-size"] = "25px";
+            document.getElementById('PriceHHDs').style["margin-left"] = "85px";
             break;
         default:
             /*document.getElementById("drowdownList").style.transform = "translate(-110px, 100px)";*/
@@ -530,12 +569,15 @@ window.addEventListener(
     "scroll",
     () => {
       const largeText = document.getElementById("large-text");
+      const midText = document.getElementById("mid-text");
       const scrollPercentage = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
   
       if (scrollPercentage > 1.7) {
         largeText.classList.add("priceTextHide");
+        midText.classList.add("priceTextHide");
       } else {
         largeText.classList.remove("priceTextHide");
+        midText.classList.remove("priceTextHide");
       }
     },
     false
@@ -551,6 +593,42 @@ window.addEventListener(
         largeTextContainerPrice.classList.add("priceNumberShow");
       } else {
         largeTextContainerPrice.classList.remove("priceNumberShow");
+      }
+    },
+    false
+  );
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const smallLeftButtonContainerPrice = document.getElementById("leftBoxCurrencyAdjust");
+      const smallLeftGifContainerPrice = document.getElementById("moneyGifCurrencyAdjust");
+      const scrollPercentage = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+  
+      if (scrollPercentage > 1.9) {
+        smallLeftButtonContainerPrice.classList.add("leftBoxCurrencyAdjustShow");
+        smallLeftGifContainerPrice.classList.add("moneyGifCurrencyAdjustShow");
+      } else {
+        smallLeftButtonContainerPrice.classList.remove("leftBoxCurrencyAdjustShow");
+        smallLeftGifContainerPrice.classList.remove("moneyGifCurrencyAdjustShow");
+      }
+    },
+    false
+  );
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const smallRightButtonContainerPrice = document.getElementById("rightBoxNavButtons");
+      const smallRightGifContainerPrice = document.getElementById("GifNavButtons");
+      const scrollPercentage = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+  
+      if (scrollPercentage > 2.1) {
+        smallRightButtonContainerPrice.classList.add("rightBoxNavButtonsShow");
+        smallRightGifContainerPrice.classList.add("GifNavButtonsShow");
+      } else {
+        smallRightButtonContainerPrice.classList.remove("rightBoxNavButtonsShow");
+        smallRightGifContainerPrice.classList.remove("GifNavButtonsShow");
       }
     },
     false

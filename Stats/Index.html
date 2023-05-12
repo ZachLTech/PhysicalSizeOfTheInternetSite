@@ -3,6 +3,7 @@
 <html id="html">
 
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="algorithfunctions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -98,7 +99,7 @@
                                 <button class="storageButton" id="storagePerButton" onclick="toggleStoragePer()">30TB</button>
                                 <div class="storageButtonsContainer">
                                     <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="30TB">30TB</button>
-                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="10TB">10TB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="15TB">15TB</button>
                                     <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="1TB">1TB</button>
                                     <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="500GB">500GB</button>
                                     <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="240GB">240GB</button>
@@ -158,7 +159,8 @@
                             <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
                             <g mask="url(#m)">
                                 <rect fill="#fff" width="100%" height="100%" />      
-                                <text class="text1" id="large-text" style="transform: translate(-285px, 0px);" x="300" y="200" fill="#162a43">14 TRILLION DOLLARS</text>
+                                <text class="text1" id="large-text" style="transform: translate(-285px, 0px);" x="300" y="200" fill="#162a43">10 TRILLION DOLLARS</text>
+                                <text class="text1mid" id="mid-text" style="transform: translate(110px, 50px);" x="300" y="200" fill="#162a43">(if stored in 30TB HHDs)</text>
                             </g>
                             <rect id="arrowBtn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
                         </svg>
@@ -180,7 +182,25 @@
         </div>
         <div class="priceInfoContainer"> 
             <div class="priceNumber" id="priceNumber">
-
+                <h1 id="PriceHHDs" class="priceNumberText"></h1>
+                <p class="toBeExact">...to be exact &#128513;</p>
+                <p class="ifStoredIn">If stored in</p>
+                <button class="insertTBorGB" onclick="storedInToggle()" id="storedInButton">30TB</button>
+                <p class="HHDsText">HHDs</p>
+                <div class="storedInButtonContainer">
+                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="30TB">30TB</button>
+                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="15TB">15TB</button>
+                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="1TB">1TB</button>
+                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="500GB">500GB</button>
+                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="240GB">240GB</button>
+                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="64GB">64GB</button>
+                </div>
+            </div>
+            <div class="leftBoxCurrencyAdjust" id="leftBoxCurrencyAdjust">
+                <div class="moneyGifCurrencyAdjust" id="moneyGifCurrencyAdjust"></div>
+            </div>
+            <div class="rightBoxNavButtons" id="rightBoxNavButtons">
+                <div class="GifNavButtons" id="GifNavButtons"></div>
             </div>
         </div>
         </section>
