@@ -195,6 +195,19 @@ function hideStorage(){
     let sizePerOptionsDropdown = document.querySelector('.storageButtonsContainer');
     sizePerOptionsDropdown.classList.remove('showSizePerButtons');
 } 
+function hideStorageCurrency(){
+    let sizePerDropdown = document.querySelector('.insertTBorGB');
+    sizePerDropdown.classList.remove('insertTBorGBHide');
+    let sizePerOptionsDropdown = document.querySelector('.storedInButtonContainer');
+    sizePerOptionsDropdown.classList.remove('storedInButtonContainerShow');
+    document.getElementById("changeStoredInButton").disabled = true;
+    document.getElementById("changeStoredInButton2").disabled = true;
+    document.getElementById("changeStoredInButton3").disabled = true;
+    document.getElementById("changeStoredInButton4").disabled = true;
+    document.getElementById("changeStoredInButton5").disabled = true;
+    document.getElementById("changeStoredInButton6").disabled = true;
+}
+
 let pos = 0;
 function MoveMeEasterEgg(){
     let moveBanner = document.querySelector('.adjustmentsBanner');
@@ -303,6 +316,27 @@ const listenoutsideSizeChange = (e) => {
   
   document.addEventListener('click', listenoutsideAdjust, false);
 
+  const listenoutsideCurrencyAdjust = (e) => {
+
+    let containsActiveClass = false;
+    let reviewNode = e.target;
+    
+    while (reviewNode.nodeName !== 'BODY') {
+    
+      if (reviewNode.classList.contains('storedInButtonContainer') || reviewNode.classList.contains('insertTBorGB')) {
+        containsActiveClass = true;
+        break;
+      }
+      
+      reviewNode = reviewNode.parentNode;
+    }
+    
+    if (containsActiveClass === false) {
+      hideStorageCurrency();
+    }
+  }
+  
+  document.addEventListener('click', listenoutsideCurrencyAdjust, false);
 
 function toggle(){
     document.querySelector(".dropdownList").style.transition = "0.3s";
@@ -324,6 +358,12 @@ function storedInToggle(){
     storedInDropdown.classList.toggle('insertTBorGBHide');
     let storedInOptionsDropdown = document.querySelector('.storedInButtonContainer');
     storedInOptionsDropdown.classList.toggle('storedInButtonContainerShow');
+    document.getElementById("changeStoredInButton").disabled = false;
+    document.getElementById("changeStoredInButton2").disabled = false;
+    document.getElementById("changeStoredInButton3").disabled = false;
+    document.getElementById("changeStoredInButton4").disabled = false;
+    document.getElementById("changeStoredInButton5").disabled = false;
+    document.getElementById("changeStoredInButton6").disabled = false;
 }
 function toggleStoragePer(){
     let sizePerDropdown = document.querySelector('.storageButton');
@@ -477,37 +517,37 @@ function changeStoragePer(buttonId) {
     storedInOptionsDropdown.classList.remove('storedInButtonContainerShow');
     let storedInOptionsButton = document.querySelector('.insertTBorGB');
     storedInOptionsButton.classList.remove('insertTBorGBHide');
+    document.getElementById("changeStoredInButton").disabled = true;
+    document.getElementById("changeStoredInButton2").disabled = true;
+    document.getElementById("changeStoredInButton3").disabled = true;
+    document.getElementById("changeStoredInButton4").disabled = true;
+    document.getElementById("changeStoredInButton5").disabled = true;
+    document.getElementById("changeStoredInButton6").disabled = true;
 
     switch(buttonId){
         case("30TB"):
             HHDSizeEach = 30.72;
             storedInOptionsButton.style["font-size"] = "25px";
-            document.getElementById('PriceHHDs').style["margin-left"] = "85px";
             break;
         case("15TB"):
             HHDSizeEach = 15.4;
             storedInOptionsButton.style["font-size"] = "25px";
-            document.getElementById('PriceHHDs').style["margin-left"] = "110px";
             break;
         case("1TB"):
             HHDSizeEach = 1;
             storedInOptionsButton.style["font-size"] = "25px";
-            document.getElementById('PriceHHDs').style["margin-left"] = "110px";
             break;
         case("500GB"):
             HHDSizeEach = 0.5;
             storedInOptionsButton.style["font-size"] = "20px";
-            document.getElementById('PriceHHDs').style["margin-left"] = "110px";
             break;
         case("240GB"):
             HHDSizeEach = 0.24;
             storedInOptionsButton.style["font-size"] = "20px";
-            document.getElementById('PriceHHDs').style["margin-left"] = "110px";
             break;
         case("64GB"):
             HHDSizeEach = 0.064;
             storedInOptionsButton.style["font-size"] = "25px";
-            document.getElementById('PriceHHDs').style["margin-left"] = "85px";
             break;
         default:
             /*document.getElementById("drowdownList").style.transform = "translate(-110px, 100px)";*/
@@ -562,7 +602,75 @@ function changeHeight(buttonId) {
         }
 
 }
-
+function changeCurrency(buttonId){
+    priceHHD = document.getElementById("PriceHHDs");
+    highlight = document.getElementById("highlighterButtons");
+    switch(buttonId){
+        case("USD"):
+            function clickedUSD(){
+                document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedUSD, 333.33);
+            priceHHD.style["font-size"] = "85px";
+            highlight.style.transform = "translate(232px, 17px)"
+            break;
+        case("JPY"):
+            function clickedJPY(){
+                document.getElementById("PriceHHDs").innerHTML = ("¥"+(((priceUSD*134.66).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedJPY, 333.33);
+            priceHHD.style["font-size"] = "77px";
+            highlight.style.transform = "translate(372px, 17px)"
+            break;
+        case("GBP"):
+            function clickedGBP(){
+                document.getElementById("PriceHHDs").innerHTML = ("£"+(((priceUSD*0.8).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedGBP, 333.33);
+            priceHHD.style["font-size"] = "85px";
+            highlight.style.transform = "translate(512px, 17px)"
+            break;
+        case("AUD"):
+            function clickedAUD(){
+                document.getElementById("PriceHHDs").innerHTML = ("A$"+(((priceUSD*1.49).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedAUD, 333.33);
+            priceHHD.style["font-size"] = "85px";
+            highlight.style.transform = "translate(232px, 104px)"
+            break;
+        case("CAD"):
+            function clickedCAD(){
+                document.getElementById("PriceHHDs").innerHTML = ("$"+(((priceUSD*1.35).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedCAD, 333.33);
+            priceHHD.style["font-size"] = "85px";
+            highlight.style.transform = "translate(372px, 104px)"
+            break;
+        case("CNY"):
+            function clickedCNY(){
+                document.getElementById("PriceHHDs").innerHTML = ("CN¥"+(((priceUSD*6.95).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedCNY, 333.33);
+            priceHHD.style["font-size"] = "80px";
+            highlight.style.transform = "translate(512px, 104px)"
+            break;
+        case("MXN"):
+            function clickedMXN(){
+                document.getElementById("PriceHHDs").innerHTML = ("Mex$"+(((priceUSD*17.59).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedMXN, 333.33);
+            priceHHD.style["font-size"] = "76px";
+            highlight.style.transform = "translate(232px, 190px)"
+            break;
+        case("RUB"):
+            function clickedRUB(){
+                document.getElementById("PriceHHDs").innerHTML = ("₽"+(((priceUSD*76.56).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedRUB, 333.33);
+            priceHHD.style["font-size"] = "83px";
+            highlight.style.transform = "translate(372px, 190px)"
+            break;
+        case("COP"):
+            function clickedCOP(){
+                document.getElementById("PriceHHDs").innerHTML = ("Col$"+(((priceUSD*4596.25).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
+            } clearInterval(DocPriceInterval); DocPriceInterval = setInterval(clickedCOP, 333.33);
+            priceHHD.style["font-size"] = "70px";
+            highlight.style.transform = "translate(512px, 190px)"
+            break;
+    }
+}
 
 
 window.addEventListener(
@@ -604,13 +712,19 @@ window.addEventListener(
       const smallLeftButtonContainerPrice = document.getElementById("leftBoxCurrencyAdjust");
       const smallLeftGifContainerPrice = document.getElementById("moneyGifCurrencyAdjust");
       const scrollPercentage = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
-  
+      const smallLeftTitleContainerPrice = document.getElementById("currencyText");
+      
+      
       if (scrollPercentage > 1.9) {
         smallLeftButtonContainerPrice.classList.add("leftBoxCurrencyAdjustShow");
         smallLeftGifContainerPrice.classList.add("moneyGifCurrencyAdjustShow");
+        smallLeftTitleContainerPrice.classList.add("currencyTextShow");
+        document.querySelector(".currencyChangeContainer").style.opacity = 1;
       } else {
         smallLeftButtonContainerPrice.classList.remove("leftBoxCurrencyAdjustShow");
         smallLeftGifContainerPrice.classList.remove("moneyGifCurrencyAdjustShow");
+        smallLeftTitleContainerPrice.classList.remove("currencyTextShow");
+        document.querySelector(".currencyChangeContainer").style.opacity = 0;
       }
     },
     false
