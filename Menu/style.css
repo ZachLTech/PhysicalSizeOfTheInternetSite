@@ -93,7 +93,7 @@ div, svg {
 }
 .description25{
   width: 510px;
-  top: 350px;
+  top: 310px;
   left: 50px;
   position: absolute;
   color: white;
@@ -165,7 +165,7 @@ div, svg {
 }
 .description35{
   width: 510px;
-  top: 350px;
+  top: 310px;
   left: 50px;
   position: absolute;
   color: white;
@@ -238,6 +238,220 @@ div, svg {
 }
 .descriptionSSD{
   width: 510px;
+  top: 310px;
+  left: 50px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+
+
+
+
+.HHDCardFloppy{
+  position: relative;
+  float: left;
+  width: 590px;
+  height: 790px;
+  border-style: solid;
+  border-color: black;
+  overflow: hidden;
+  background-color: black;
+}
+.PicFloppy{
+  object-fit: cover;
+  position: absolute;
+  width: 590px;
+  height: 540px;
+  background: url(https://metro.co.uk/wp-content/uploads/2019/10/PRI_91813526.jpg?quality=90&strip=all);
+  background-position: right 280% bottom 70%;
+  background-attachment: fixed;
+  background-size: 800px;
+}
+.coverFloppy{
+  right: -170px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  top: 170px;
+  position: absolute;
+  width: 790px;
+  height: 690px;
+  background: radial-gradient(black 60%, #b34139 100%);
+  z-index: 15;
+  margin-top: 10%;
+  margin-right: 20%;
+  transform: rotate(20deg);
+}
+.titleFloppy{
+  width: 200px;
+  top: 175px;
+  left: 20px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+.lineFloppy{
+  left: 10px;
+  border-style: solid;
+  border-color: #b34139;
+  border-width: 1px;
+  position: absolute;
+  top: 50px;
+  width: 460px;
+  color: #3D5287;
+  z-index: 40;
+}
+.descriptionFloppy{
+  width: 520px;
+  top: 350px;
+  left: 50px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.16em;
+}
+
+
+
+
+.HHDCardM2{
+  position: relative;
+  float: left;
+  width: 590px;
+  height: 790px;
+  border-style: solid;
+  border-color: black;
+  overflow: hidden;
+  background-color: black;
+}
+.PicM2{
+  object-fit: cover;
+  position: absolute;
+  width: 590px;
+  height: 540px;
+  background: url(https://www.cgdirector.com/wp-content/uploads/media/2022/02/M.2-SSD.jpg);
+  background-position: right 280% bottom 70%;
+  background-attachment: fixed;
+  background-size: 800px;
+}
+.coverM2{
+  right: -170px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  top: 170px;
+  position: absolute;
+  width: 790px;
+  height: 690px;
+  background: radial-gradient(black 60%, #5d346e 100%);
+  z-index: 15;
+  margin-top: 10%;
+  margin-right: 20%;
+  transform: rotate(20deg);
+}
+.titleM2{
+  width: 200px;
+  top: 175px;
+  left: 20px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+.lineM2{
+  left: 10px;
+  border-style: solid;
+  border-color: #5d346e;
+  border-width: 1px;
+  position: absolute;
+  top: 50px;
+  width: 460px;
+  color: #3D5287;
+  z-index: 40;
+}
+.descriptionM2{
+  width: 510px;
+  top: 350px;
+  left: 50px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+
+
+
+
+
+
+.HHDCardMSD{
+  position: relative;
+  float: left;
+  width: 590px;
+  height: 790px;
+  border-style: solid;
+  border-color: black;
+  overflow: hidden;
+  background-color: black;
+}
+.PicMSD{
+  object-fit: cover;
+  position: absolute;
+  width: 590px;
+  height: 540px;
+  background: url(https://havecamerawilltravel.com/wp-content/uploads/2021/08/sd-memory-cards-05-800x533.jpg);
+  background-position: right 250% bottom 120%;
+  background-attachment: fixed;
+  background-size: 800px;
+}
+.coverMSD{
+  right: -170px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  top: 170px;
+  position: absolute;
+  width: 790px;
+  height: 690px;
+  background: radial-gradient(black 60%, #6e381e 100%);
+  z-index: 15;
+  margin-top: 10%;
+  margin-right: 20%;
+  transform: rotate(20deg);
+}
+.titleMSD{
+  width: 210px;
+  top: 175px;
+  left: 20px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+.lineMSD{
+  left: 10px;
+  border-style: solid;
+  border-color: #6e381e;
+  border-width: 1px;
+  position: absolute;
+  top: 50px;
+  width: 460px;
+  color: #3D5287;
+  z-index: 40;
+}
+.descriptionMSD{
+  width: 510px;
   top: 350px;
   left: 50px;
   position: absolute;
@@ -278,6 +492,22 @@ div, svg {
   left: -55px;
   height: 119%;
   width: 119%;
+  z-index: -100;
+}
+.vidspacePRICE{
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+.vidspaceHELP{
+  left: 0px;
+  object-fit: contain;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   z-index: -100;
 }
 
@@ -398,4 +628,28 @@ font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 5em;
   font-weight: bold;
+}
+
+
+
+
+.PriceCard{
+  position: relative;
+  float: left;
+  width: 590px;
+  height: 790px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.2);
+  border-width: 5px;
+  overflow: hidden;
+}
+
+.titlePrice{
+  top: 175px;
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5em;
+  font-weight: 550;
 }

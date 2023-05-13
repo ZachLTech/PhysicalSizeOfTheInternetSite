@@ -177,27 +177,25 @@
             
         </section>
         <section id="height">
-        <div class="priceInfoContainerUnder">
-        
-        </div>
-        <div class="priceInfoContainer"> 
-            <div class="priceNumber" id="priceNumber">
-                <div class="centerPrice">
-                <h1 id="PriceHHDs" class="priceNumberText"></h1>
+            <div class="priceInfoContainerUnder"></div>
+            <div class="priceInfoContainer"> 
+                <div class="priceNumber" id="priceNumber">
+                    <div class="centerPrice">
+                    <h1 id="PriceHHDs" class="priceNumberText"></h1>
+                    </div>
+                    <p class="toBeExact">...to be exact &#128513;</p>
+                    <p class="ifStoredIn">If stored in</p>
+                    <button class="insertTBorGB" onclick="storedInToggle()" id="storedInButton">30TB</button>
+                    <p class="HHDsText">HHDs</p>
+                    <div class="storedInButtonContainer" id="storedInButtonContainer">
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="30TB" id="changeStoredInButton">30TB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="15TB" id="changeStoredInButton2">15TB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="1TB" id="changeStoredInButton3">1TB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="500GB" id="changeStoredInButton4">500GB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="240GB" id="changeStoredInButton5">240GB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="64GB" id="changeStoredInButton6">64GB</button>
+                    </div>
                 </div>
-                <p class="toBeExact">...to be exact &#128513;</p>
-                <p class="ifStoredIn">If stored in</p>
-                <button class="insertTBorGB" onclick="storedInToggle()" id="storedInButton">30TB</button>
-                <p class="HHDsText">HHDs</p>
-                <div class="storedInButtonContainer" id="storedInButtonContainer">
-                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="30TB" id="changeStoredInButton">30TB</button>
-                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="15TB" id="changeStoredInButton2">15TB</button>
-                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="1TB" id="changeStoredInButton3">1TB</button>
-                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="500GB" id="changeStoredInButton4">500GB</button>
-                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="240GB" id="changeStoredInButton5">240GB</button>
-                    <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="64GB" id="changeStoredInButton6">64GB</button>
-                </div>
-            </div>
             <div class="leftBoxCurrencyAdjust" id="leftBoxCurrencyAdjust">
                 <div class="moneyGifCurrencyAdjust" id="moneyGifCurrencyAdjust"></div>
                 <p class="currencyText" id="currencyText">Currency</p>
@@ -220,10 +218,10 @@
                     <button class="currencyChangeButtonsRight1" onclick="slideAllRight()"><img src="../assets/back2.png" alt="Back" class="centerBackImg"></button>
                     <button class="currencyChangeButtonsRight2" onclick="window.location.href = '../Menu/Menu.html';">Menu</button>
                     <button class="currencyChangeButtonsRight3">The Math</button>
-                    <button class="currencyChangeButtonsRight4" onclick="window.location.href = src('zachl.tech');"><div style="z-index: 5;position: absolute;">My Portfolio</div><img src="../assets/city.jpg" class="cityBackground"></button>
+                    <button class="currencyChangeButtonsRight4" onclick="window.location.replace('http://zachl.tech');"><div style="z-index: 5;position: absolute;">My Portfolio</div><img src="../assets/city.jpg" class="cityBackground"></button>
                 </div>
             </div>
-        </div>
+            </div>
         </section>
     </section>
 </body>

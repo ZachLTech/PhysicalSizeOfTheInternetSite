@@ -4,9 +4,9 @@ let rotationSpeed = 0.5; // adjust this value to change the rotation speed
 gsap.timeline()
     .set('.ring', { rotationY:1, cursor:'grab' }) //set initial rotationY so the parallax jump happens off screen
     .set('.img',  { // apply transform rotations to each image
-      rotateY: (i)=> i*-36,
-      transformOrigin: '50% 50% 1000px',
-      z: -1000,
+      rotateY: (i)=> (i*-36)*0.83,
+      transformOrigin: '50% 50% 1200px',
+      z: -1200,
       backgroundImage:(i)=>'url(../assets/containerimg'+(i+32)+'.jpg)',
       backgroundPosition:(i)=>getBgPos(i),
       backfaceVisibility:'hidden'
@@ -117,6 +117,14 @@ document.querySelectorAll('.btn').forEach(function(btn) {
       case 'container10':
         // Code to be executed for container2
         alert('Container 10 clicked');
+        break;
+      case 'container11':
+        // Code to be executed for container1
+        alert('Container 11 clicked');
+        break;
+      case 'container12':
+        // Code to be executed for container2
+        alert('Container 12 clicked');
         break;
       // ... add more cases for other containers ...
       default:
