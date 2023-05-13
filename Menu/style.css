@@ -476,6 +476,17 @@ div, svg {
   width: 100%;
   z-index: -100;
 }
+
+.vidspaceHOME{
+  object-fit: cover;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 120%;
+  width: 100%;
+  z-index: -100;
+  transform: translate(0px, -35px);
+}
 .vidspaceMATH{
   object-fit: cover;
   position: absolute;
@@ -518,11 +529,9 @@ position: relative;
 float: left;
 width: 590px;
 height: 790px;
-
 border-style: solid;
 border-color: black;
 border-width: 5px;
-
 overflow: hidden;
 }
 

@@ -59,15 +59,6 @@ function getBgPos(i){ //returns the background-position string to create paralla
     return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.ring', 'rotationY')-180-i*36)/360*500 )+'px 0px';
 }
 
-function handleMouseWheel(e) {
-    // Normalize the wheel delta values across different browsers
-    const wheelDelta = e.originalEvent.wheelDelta / 120 || -e.originalEvent.deltaY / 3;
-    const rotationAmount = wheelDelta * rotationSpeed;
-    gsap.to('.ring', {
-        rotationY: '+=' + rotationAmount,
-        onUpdate:()=>{ gsap.set('.img', { backgroundPosition:(i)=>getBgPos(i) }) }
-    });
-}
 
 
 // Add a click event listener to all elements with class 'btn'
