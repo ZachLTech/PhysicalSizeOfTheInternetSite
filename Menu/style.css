@@ -309,7 +309,7 @@ div, svg {
 }
 .descriptionFloppy{
   width: 520px;
-  top: 350px;
+  top: 310px;
   left: 50px;
   position: absolute;
   color: white;
@@ -358,7 +358,7 @@ div, svg {
 }
 .titleM2{
   width: 200px;
-  top: 175px;
+  top: 200px;
   left: 20px;
   position: absolute;
   color: white;
@@ -379,7 +379,7 @@ div, svg {
 }
 .descriptionM2{
   width: 510px;
-  top: 350px;
+  top: 310px;
   left: 50px;
   position: absolute;
   color: white;
@@ -431,7 +431,7 @@ div, svg {
 }
 .titleMSD{
   width: 210px;
-  top: 175px;
+  top: 200px;
   left: 20px;
   position: absolute;
   color: white;
@@ -452,7 +452,7 @@ div, svg {
 }
 .descriptionMSD{
   width: 510px;
-  top: 350px;
+  top: 310px;
   left: 50px;
   position: absolute;
   color: white;
