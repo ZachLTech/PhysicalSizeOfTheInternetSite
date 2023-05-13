@@ -267,7 +267,7 @@ div, svg {
   width: 590px;
   height: 540px;
   background: url(https://metro.co.uk/wp-content/uploads/2019/10/PRI_91813526.jpg?quality=90&strip=all);
-  background-position: right 280% bottom 70%;
+  background-position: right 70% bottom 380%;
   background-attachment: fixed;
   background-size: 800px;
 }
@@ -337,9 +337,9 @@ div, svg {
   width: 590px;
   height: 540px;
   background: url(https://www.cgdirector.com/wp-content/uploads/media/2022/02/M.2-SSD.jpg);
-  background-position: right 280% bottom 70%;
+  background-position: right 50% bottom 400%;
   background-attachment: fixed;
-  background-size: 800px;
+  background-size: 900px;
 }
 .coverM2{
   right: -170px;
@@ -410,9 +410,9 @@ div, svg {
   width: 590px;
   height: 540px;
   background: url(https://havecamerawilltravel.com/wp-content/uploads/2021/08/sd-memory-cards-05-800x533.jpg);
-  background-position: right 250% bottom 120%;
+  background-position: right 90% bottom 40%;
   background-attachment: fixed;
-  background-size: 800px;
+  background-size: 900px;
 }
 .coverMSD{
   right: -170px;
