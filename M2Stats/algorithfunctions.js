@@ -96,7 +96,7 @@ function Width() {
     HHDsNeeded1b4 = ((SizeTB-14)/HHDSizeEach);
     growth = ((HHDsNeeded-HHDsNeeded1b4)/2);
     WidthHHDS = 65536+(growth*amountadded);
-    WidthInches = WidthHHDS*2.8;
+    WidthInches = WidthHHDS*0.866142;
     WidthMiles = WidthInches*1.57828e-5;
     WidthMi = ((WidthMiles*(1/stackHeight))-((WidthMiles*(1/stackHeight))*(1/(stackHeight+1))));
 } let Widthinterval = setInterval(Width, 333.33);
@@ -105,12 +105,12 @@ function Length() {
     HHDsNeeded1b4 = (SizeTB-14)/HHDSizeEach;
     growth = (HHDsNeeded-HHDsNeeded1b4)/2;
     LengthHHDS = 52650.76955159505+(growth*amountadded);
-    LengthInches = LengthHHDS*4.0;
+    LengthInches = LengthHHDS*3.14961;
     LengthMiles = LengthInches*1.57828e-5;
     LengthMi = ((LengthMiles*(1/stackHeight))-((LengthMiles*(1/stackHeight))*(1/(stackHeight+1))));
 } let Lengthinterval = setInterval(Length, 333.33)
 function HeightAndPrice(){
-    HeightFt = stackHeight*(0.0332);
+    HeightFt = stackHeight*(0.0114829);
     switch(HHDSizeEach){
         case(30.72):
             priceUSD = HHDsNeeded*2960.31;
