@@ -75,15 +75,15 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         break;
       case 'container2':
         // Code to be executed for container2
-        window.location.href = "../Stats/Index.html";
+        window.location.href = "../HHD25Stats/Index.html";
         break;
       case 'container3':
         // Code to be executed for container1
-        alert('Container 3 clicked');
+        window.location.href = "../SSDStats/Index.html";
         break;
       case 'container4':
         // Code to be executed for container2
-        alert('Container 4 clicked');
+        window.location.href = "../M2Stats/Index.html";
         break;
       case 'container5':
             // Code to be executed for container1
@@ -107,15 +107,15 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         break;
       case 'container10':
         // Code to be executed for container2
-        alert('Container 10 clicked');
+        window.location.href = "../FloppyStats/Index.html";
         break;
       case 'container11':
         // Code to be executed for container1
-        alert('Container 11 clicked');
+        window.location.href = "../MSDStats/Index.html";
         break;
       case 'container12':
         // Code to be executed for container2
-        alert('Container 12 clicked');
+        window.location.href = "../HHD35Stats/Index.html";
         break;
       // ... add more cases for other containers ...
       default:
