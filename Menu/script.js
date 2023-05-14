@@ -7,7 +7,7 @@ gsap.timeline()
       rotateY: (i)=> (i*-36)*0.83,
       transformOrigin: '50% 50% 1200px',
       z: -1200,
-      backgroundImage:(i)=>'url(../assets/containerimg'+(i+32)+'.jpg)',
+      backgroundImage:(i)=>'',
       backgroundPosition:(i)=>getBgPos(i),
       backfaceVisibility:'hidden'
     })  
@@ -30,7 +30,7 @@ gsap.timeline()
 
 $(window).on('mousedown touchstart', dragStart);
 $(window).on('mouseup touchend', dragEnd);
-$('.stage').on('wheel', handleMouseWheel); // update event listener to target .stage element
+
 
 function dragStart(e){ 
     if (e.touches) e.clientX = e.touches[0].clientX;

@@ -280,7 +280,7 @@ div, svg {
   position: absolute;
   width: 790px;
   height: 690px;
-  background: radial-gradient(black 60%, #b34139 100%);
+  background: radial-gradient(black 60%, #e0271a 100%);
   z-index: 15;
   margin-top: 10%;
   margin-right: 20%;
@@ -299,7 +299,7 @@ div, svg {
 .lineFloppy{
   left: 10px;
   border-style: solid;
-  border-color: #b34139;
+  border-color: #d63f34;
   border-width: 1px;
   position: absolute;
   top: 50px;

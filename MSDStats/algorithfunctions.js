@@ -380,14 +380,12 @@ function topFunction() {
 function slideAllRight(){
     let background = document.querySelector('.sectionBackground1');
     let money = document.querySelector('.sectionBackground2');
-    let button = document.querySelector('.slideScreen');
     let header = document.querySelector('.headerBackgroundContainer');
     let priceback = document.querySelector('.priceInfoContainerUnder');
     let price = document.querySelector('.priceInfoContainer');
     header.classList.toggle('invis');
     background.classList.toggle('moveRight');
     money.classList.toggle('moveRightUp');
-    button.classList.toggle('showSlideButton');
     priceback.classList.toggle('moveRightBottm');
     price.classList.toggle('moveRightBottm');
     topFunction();
