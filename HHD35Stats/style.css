@@ -1,0 +1,1115 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@font-face {
+    font-family: 'CedarvilleCursive-Regular';
+    font-style: normal;
+    font-weight: 10;
+    src: url(../assets/CedarvilleCursive-Regular.woff2) format('woff2');
+  }
+body{
+    overflow-x: hidden;
+    zoom: 90%;
+    font-family: 'Blippo', fantasy;
+}
+
+:root{
+    --backgroundFirst: #0d1233;
+    --distanceCardBackgrounds: #0b0e27;
+    --adjustmentsCardBackground: #131949;
+    --backgroundSecond: rgba(184, 184, 44, 0.596);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menubutton{
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    transition: 0.25s;
+    position: fixed;
+    left: 93.5%;
+    margin-top: 50px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+.menubutton:hover{
+    background-color: rgb(71, 92, 150);
+}
+.menubutton:active{
+    background-color: #3D5287;
+}
+
+.headerBackgroundContainer{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+
+.headerBackground{
+    position:absolute;
+    background: url(https://pbblogassets.s3.amazonaws.com/uploads/2020/06/30055409/shutterstock_10323187-1.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    height: 600px;
+    filter: brightness(75%);
+}
+
+.storageSystemTypeBox{
+    position: absolute;
+    background-color: rgb(247, 135, 43);
+    width: 120px;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform: rotate(90deg) translate(370px, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: rgb(192, 77, 23);
+    border-width: 5px;
+    z-index: 2;
+}
+.storageSystemType{
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18pt;
+    color: white;
+    filter: brightness(100%);
+}
+
+.spaceVid{
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spaceCard{
+    position: absolute;
+    width: 1500;
+    height: 500;
+    background-color: black;
+    z-index: 2;
+    border: transparent solid 0px;
+    border-radius: 75px;
+    overflow: hidden;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
+}
+.centerCard{
+    position: absolute;
+    width: 100%;
+    height: 949px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.SizeTB{
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 6em;
+}
+.dropdown-listSize{
+    font-size: 1.72em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 85%;
+    width: 75;
+    height: 75;
+    background: radial-gradient(rgba(143, 8, 8, 0.603) 1%, rgba(0,0,0,1) 130%);
+    border: rgb(75, 12, 12) solid 5px;
+    border-top: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+    z-index: 5;
+}
+.dropdown-listSize:hover{
+    background-color: rgba(143, 8, 8, 0.726); 
+}
+.dropdown-listSizeButtonContainer{
+    z-index: -50;
+    margin-left: 83%;
+    position:absolute;
+    width: 75;
+    height: 75;
+    overflow-y: auto;
+    transition: 0.15s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 0;
+}
+.showSizeButtons{
+    z-index: 50;
+    margin-left: 75%;
+    width: 300px;
+    height: 150px;
+    opacity: 1;
+    transition: 0.3s;
+    transform: translate(0px,000px);
+}
+.showSize{
+    color: transparent;
+    height: 150px;
+    width: 300px;
+    transform: translate(-140px, 0px);
+}
+.sizeChangeOptionButton{
+    font-weight: 600;
+    width: calc(33.33% - 20px);
+    height: calc(50% - 30px);
+    margin: 5px;
+    padding: 5px;
+    background-color: #080c22;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sizeChangeOptionButton:hover{
+    background-color: #0b1238;
+    transition: 0.3s;
+}
+
+
+/* Section 1: Distance, Height, Layer/Individual HHD Capacity Adjustments */
+
+
+.slideScreen{
+    transform: translate(-820px,130px);
+    height: 80px;
+    width: 80px;
+    background-image: url(../assets/left_arrow.png);
+    background-size: 110px 110px;
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    transition: 1.7s;
+    z-index: 80;
+    outline: none;
+}
+.showSlideButton{
+    transform: translate(-1100px,1600px) rotate(180deg);
+    opacity: 1;
+}
+
+.sectionBackground1 {
+    transition: 0.45s ease-in-out;
+    height: 1800px;
+    transform: translate(0px,600px);
+    width: 100%;
+    background: radial-gradient(var(--backgroundFirst) 50%, rgba(0,0,0,1) 170%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.distanceText{
+    position: absolute;
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 7em;
+}
+.heightText{
+    position: absolute;
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 7em;
+    transform: translate(0px,115px);
+}
+.distanceTextCenter{
+    position: absolute;
+    height: 450px;
+    width: 650px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.flexVerticalDistanceContainer{
+    position: absolute;
+    width: 1465px;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.distanceTitleFlexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 260px;
+    width: 1465px;
+}
+.distanceTitle{
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 7em;
+}
+.dropdownList{
+    transform: translate(30px, 5px);
+    z-index: 20;
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 5.5em;
+    width: 300px;
+    height: 140px;
+    border:rgb(99, 9, 9) solid 5px;
+    background: radial-gradient(rgb(143, 8, 8), rgba(0,0,0,1) 120%);
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.096), 2px 10px rgba(0, 0, 0, 0.096);
+}
+.dropdownList:hover{
+    background: radial-gradient(rgb(119, 6, 6), rgba(0,0,0,1) 120%);
+}
+.show{
+    height: 160px;
+    width: 320px;
+    color: transparent;
+    z-index: 0;
+}
+.Kilometers{
+    position: absolute;
+    transform: translate(345px, 45px);
+    z-index: -20;
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.5em;
+    width: 300px;
+    height: 140px;
+    transition: 0.15s;
+    opacity: 0;
+    pointer-events: none;
+}
+.showKilometers{
+    opacity: 1;
+    z-index: 20;
+}
+
+.dropdownListButtonContainer{
+    transform: translate(335px, 10px);
+    position:absolute;
+    z-index: 12;
+    width: 280px;
+    height: 120px;
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 0;
+    transition: 0.2s;
+}
+.changeChangeOptionButton{
+    width: calc(33.33% - 10px);
+    height: calc(50% - 20px);
+    margin: 5px;
+    background-color: #080c22;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+    font-size: 1em;
+    font-weight: 550;
+    z-index: -50;
+}
+.changeChangeOptionButton:hover{
+    background-color: #0b1238;
+    transition: 0s;
+}
+.show2{
+    width: 290px;
+    height: 130px;
+    z-index: 30;
+    transition: 0.5s;
+    opacity: 1;
+}
+.distanceNumbersFlexContainer{
+    display: flex;
+    justify-content: space-around;
+    height: 520px;
+    width: 1465px;
+}
+.widthCard{
+    display: flex;
+    width: 732.5px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.widthBox{
+    height: 450px;
+    width: 650px;
+    background: radial-gradient(var(--distanceCardBackgrounds) 50%, rgba(0, 0, 0, 0.377) 99.9%);
+    border-radius: 15px;
+}
+.widthBanner{
+    font-size: 3em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 65%;
+    width: 150;
+    height: 75;
+    background: radial-gradient(rgb(255, 233, 32) 1%, rgba(0,0,0,1) 150%);
+    border: rgb(207, 192, 80) solid 5px;
+    border-top: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lengthCard{
+    display: flex;
+    width: 732.5px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lengthBox{
+    height: 450px;
+    width: 650px;
+    background: radial-gradient(var(--distanceCardBackgrounds) 50%, rgba(0, 0, 0, 0.377) 99.9%);
+    border-radius: 15px;
+}
+.lengthBanner{
+    font-size: 2.7em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 65%;
+    width: 150;
+    height: 75;
+    background: radial-gradient(rgb(255, 233, 32) 1%, rgba(0,0,0,1) 150%);
+    border: rgb(207, 192, 80) solid 5px;
+    border-top: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AdjustmentsContainer{
+    display: flex;
+    justify-content: space-around;
+    height: 520px;
+    width: 1465px;
+}
+.adjustmentsCard{
+    display: flex;
+    width: 732.5px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adjustmentsBox{
+    height: 450px;
+    width: 650px;
+    background: radial-gradient(rgba(0, 0, 0, 0.377) 0.1%, var(--adjustmentsCardBackground) 100%);
+    border-radius: 15px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.096), 5px 10px rgba(0, 0, 0, 0.096);
+}
+.heightCard{
+    overflow: hidden;
+    display: flex;
+    width: 732.5px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heightBox{
+    overflow: hidden;
+    height: 450px;
+    width: 650px;
+    background: radial-gradient(var(--distanceCardBackgrounds) 50%, rgba(0, 0, 0, 0.377) 99.9%);
+    border-radius: 15px;
+}
+.heightBannerButton{
+    overflow: hidden;
+    position: absolute;
+    font-size: 2.8em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 4.5%;
+    width: 165px;
+    height: 84px;
+    background: radial-gradient(rgba(143, 8, 8, 0.603) 1%, rgba(0,0,0,1) 130%);
+    border: rgb(75, 12, 12) solid 5px;
+    border-top: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heightBannerButton:hover{
+    background: radial-gradient(rgba(143, 8, 8, 0.836) 1%, rgba(0,0,0,1) 130%);
+    transition: 0.3s;
+}
+
+.heightButtonContainer{
+    overflow: hidden;
+    position: absolute;
+    z-index: -5;
+    width: 170px;
+    height: 90px;
+    overflow-y: auto;
+    transition: 0.15s ease-in-out;
+    display: none;
+    overflow: hidden;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 0;
+    transform: translate(44px, -14px);
+}
+.heightChangeOptionButton{
+    overflow:inherit;
+    font-weight: 600;
+    width: calc(33.33% - 20px);
+    height: calc(50% - 30px);
+    margin: 5px;
+    padding: 5px;
+    background-color: #080c22;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.heightGrow{
+    height: 150px;
+    width: 300px;
+    transform: translate(-30px, 0px);
+    color: transparent;
+}
+.heightShow{
+    width: 300px;
+    height: 150px;
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 20;
+    transform: translate(25px, 0px);
+}
+.heightBanner{
+    position: absolute;
+    font-size: 2.7em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 28.8%;
+    width: 150;
+    height: 75;
+    background: radial-gradient(rgb(255, 233, 32) 1%, rgba(0,0,0,1) 150%);
+    border: rgb(207, 192, 80) solid 5px;
+    border-top: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adjustmentsBanner{
+    position: absolute;
+    font-size: 2.5em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 32.98%;
+    margin-top: 8.6%;
+    width: 260px;
+    height: 75px;
+    background: radial-gradient(rgba(69, 255, 32, 0.616) 1%, rgba(0,0,0,1) 150%);
+    border: rgb(84, 207, 80) solid 5px;
+    border-bottom: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: 0.3s;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+.adjustmentsBannerMid{
+    margin-top: 12.5%;
+}
+.adjustmentsBannerEnd{
+    margin-top: 17%;
+}
+
+
+.flexAdjustmentsContainer{
+    width: 571px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.stackedFlexContainer{
+    margin-top: 20px;
+    margin-left: 35px;
+    height: 160px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: #080c22 5px solid;
+    border-radius: 5px;
+    background: radial-gradient(rgba(59, 59, 59, 0.568) 1%, rgb(0, 0, 0) 80%);
+}
+.stackedLabel{
+    margin-left: 10%;
+    font-size: 3.5em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+.stackedInput{
+    font-size: 3em;
+    color: whitesmoke;
+    height: 75px;
+    width: 120px;
+    border-radius: 5px;
+    border: 4px solid rgb(85, 141, 85);
+    background: radial-gradient(rgba(59, 59, 59, 0.493) 20%, rgba(0, 0, 0, 0.459) 140%);
+    transition: 0.5s;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transform: translate(-90px, 0px);
+}
+.stackedInput:hover{
+    background: radial-gradient(rgba(59, 59, 59, 0.493) 20%, rgba(0, 0, 0, 0.884) 140%);
+}
+.storageFlexContainer{
+    border: #080c22 5px solid;
+    border-radius: 5px;
+    background: radial-gradient(rgba(59, 59, 59, 0.568) 1%, rgb(0, 0, 0) 80%);
+    transform: translate(20px,15px);
+    margin-left: 15px;
+    margin-top: -1.5%;
+    height: 160px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.storageLabel{
+    font-size: 2.7em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 10px;
+}
+.storageButton{
+    overflow: hidden;
+    position: absolute;
+    font-size: 2.3em;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 70.3%;
+    width: 127px;
+    height: 84px;
+    background: radial-gradient(rgb(61, 100, 61) 1%, rgba(0,0,0,1) 130%);
+    border: rgb(85, 141, 85) solid 4px;
+    border-radius: 5px;
+    transition: 0.3s;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.storageButton:hover{
+    background: radial-gradient(rgb(47, 77, 47) 1%, rgba(0,0,0,1) 130%);
+    transition: 0.3s;
+}
+.storageButtonsContainer{
+    overflow: hidden;
+    position: absolute;
+    z-index: -10;
+    width: 170px;
+    height: 75px;
+    overflow-y: auto;
+    transition: 0.15s ease-in-out;
+    display: none;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 0;
+    transform: translate(327px, 7px);
+}
+.storageButtonsButtons{
+    overflow: hidden;
+    font-weight: 600;
+    height: calc(33.33% - 20px);
+    width: calc(50% - 15px);
+    margin: 5px;
+    padding: 5px;
+    background-color: #080c22;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.showSizePerContainer{
+    width: 180px;
+    height: 215px;
+    transform: translate(-30px, 0px);
+    color: transparent;
+    background: radial-gradient(rgb(47, 77, 47) 1%, rgba(0,0,0,1) 110%);
+}
+.showSizePerButtons{
+    opacity: 1;
+    z-index: 30;
+    height: 200px;
+    transition: 0.3s;
+}
+
+.helpContainer{
+    height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.helpButton{
+    color: whitesmoke;
+    background: radial-gradient(rgba(59, 59, 59, 0.568) 10%, rgba(0, 0, 0, 0.74));
+    font-size: 2em;
+    font-family: 'Rubik', sans-serif;
+    width: 100px;
+    height: 75px;
+    border-radius: 10px;
+    border: 4px solid black;
+    transform: translate(31.5px, 0px);
+    transition: 0.3s;
+}
+.helpButton:hover{
+    background: radial-gradient(rgba(59, 59, 59, 0.568) 10%, rgb(0, 0, 0));
+    transition: 0.3s;
+}
+
+/* Section 2 */
+.sectionBackground2{
+    z-index: -1;
+    position: fixed;
+    height: 1200px;
+    width: 0%;
+    background: radial-gradient(var(--backgroundSecond) 1%, rgba(0,0,0,1) 120%); 
+    justify-content: center;
+    align-items: center;
+    transform: translate(0px,-1029px);
+    transition: 0.4s ease-in-out;
+}
+.moveRight{
+
+    transform: translate(100%,600px);
+}
+.moveRightUp{
+    width: 100%;
+
+}
+.invis{
+    transition: 0.4s;
+    opacity: 0;
+}
+
+
+
+.mountBg{
+    transform: translate(-400px,500px);
+    width: 1200;
+    height: 800;
+  }
+  .mountMg{
+    transform: translate(850px,-1500px) rotate(50deg);
+    width: 1200;
+    height: 800;
+  }
+  .cloud2{
+    transform: translate(500px, -300px);
+  }
+  .mountFg{
+    transform: translate(-450px,0px) rotate(-45deg);
+  }
+  .mountBgR{
+    transform: translate(1000px, 0px) rotate(55deg);
+  }
+  text{
+    width:100%;
+    height:100%;
+    background:#ddd;
+    font-family: 'Montserrat', sans-serif;
+    font-size:99px;
+    text-align:center;
+  }
+  .text1{
+    width:100%;
+    height:100%;
+    background:#ddd;
+    font-family: 'Montserrat', sans-serif;
+    font-size:99px;
+    text-align:center;
+    transition: 0.3s;
+  }
+  .text1mid{
+    width:100%;
+    height:100%;
+    background:#ddd;
+    font-family: 'Montserrat', sans-serif;
+    font-size:30px;
+    text-align:center;
+    transition: 0.3s;
+  }
+  
+  .priceInfoContainerUnder{
+    position: absolute;
+    width: 100%;
+    height: 1500px;
+    background-color: white;
+    transform: translate(-3000px,400px);
+    z-index: -6;
+  }
+
+  .priceInfoContainer{
+    position: absolute;
+    width: 100%;
+    height: 1500px;
+    background: linear-gradient( rgb(255, 255, 255) 0.01%, var(--backgroundSecond) 70%);
+    transform: translate(-3000px,400px);
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+  }
+  .priceNumber{
+    margin-left: 26%;
+    transition: 1s;
+    opacity: 0;
+    position: absolute;
+    width: 1000;
+    height: 300;
+    background-color: rgb(255, 217, 0);
+    z-index: 2;
+    border: transparent solid 0px;
+    border-radius: 20px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
+    transform: translate(0px,800px);
+  }
+  .priceTextHide{
+    opacity: 0;
+  }
+  .priceNumberShow{
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+  .moveRightBottm{
+    transform: translate(0px,400px);
+  }
+  .priceNumberText{
+    transition: 0.1s;
+    color: white;
+    font-size: 85px;
+    font-family:'Times New Roman', Times, serif;
+  }
+  .toBeExact{
+    color: rgb(247 205 78);
+    font-size: 30px;
+    transform: translate(530px, 241px) rotate(90deg);
+  }
+  .ifStoredIn{
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    transform: translate(557px, -70px);
+  }
+  .HHDsText{
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    transform: translate(744px, -99px);
+  }
+  .insertTBorGB{
+    z-index: 5;
+    position: absolute;
+    transition: 0.3s;
+    width: 65px;
+    height: 30px;
+    background-color: #f5b849;
+    border-color: darkorange;
+    color: white;
+    border-radius: 3px;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+    transform: translate(673px, -100px);
+  }
+  .insertTBorGBHide{
+    opacity: 0;
+    z-index: -1;
+  }
+  .storedInButtonContainer{
+    opacity: 0;
+    transition: 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    width: 65px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f5b849;
+    border-color: #1a1105;
+    border: solid 1px darkorange;
+    border-radius: 3px;
+    transform: translate(672px, -130px);
+    z-index: -1;
+  }
+  .storedInButtonContainerShow{
+    height: 170px;
+    opacity: 1;
+    z-index: 5;
+  }
+  .storedInChangeOptionButton{
+    background: radial-gradient(orange 50%, black 190%);
+    border: solid 1px #d37605;
+    width: 55px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border-radius: 2px;
+    overflow-y: hidden;
+  }
+  .currencyText{
+    transition: 1s;
+    position: absolute;
+    transform: translate(400px, 1067px);
+    color: white;
+    font-size: 60px;
+  }
+  .currencyChangeContainerRight{
+    transition: 1s;
+    height: 260px;
+    width: 359px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transform: translate(39px, -320px);
+  }
+  .currencyTextShow{
+    transform: translate(400px, -67px);
+  }
+  .leftBoxCurrencyAdjust{
+    transition: 0.8s ease-in-out;
+    width: 650px;
+    height: 280px;
+    background: linear-gradient( var(--backgroundSecond) 5%, rgb(239 239 239) 70%);
+    margin-left: 180px;
+    margin-top: 550px;
+    border-radius: 0px;
+    box-shadow: inset 0 -1.5em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
+    opacity: 0;
+    transform: translate(-1000px, 0px);
+  }
+  .leftBoxCurrencyAdjustShow{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  .moneyGifCurrencyAdjust{
+    position: absolute;
+    z-index: 5;
+    transition: 0.8s ease-in-out;
+    background-size: 622px, 350px;
+    width: 270px;
+    height: 350px;
+    background-image: url(https://i.gifer.com/SeIE.gif);
+    border-radius: 5px;
+    box-shadow: inset 0 -1.5em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.822);
+    transform: translate(1000px, 1000px);
+    opacity: 0;
+  }
+  .moneyGifCurrencyAdjustShow{
+    opacity: 1;
+    transform: translate(-55px, -130px);
+  }
+  .highlighterCurrencyButtons{
+    transition: 0.4s;
+    position: absolute;
+    width: 120px;
+    height: 70px;
+    background-color: rgba(253, 175, 85, 0.336);
+    z-index: 2;
+    border: solid orange 3px;
+    border-radius: 5px;
+    transform: translate(232px, 17px);
+  }
+
+  .rightBoxNavButtons{
+    transition: 0.8s ease-in-out;
+    width: 650px;
+    height: 280px;
+    background: linear-gradient( var(--backgroundSecond) 5%, rgb(239 239 239) 70%);
+    margin-left: 1255px;
+    margin-top: 50px;
+    border-radius: 0px;
+    box-shadow: inset 0 -1.5em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.61);
+    opacity: 0;
+    transform: translate(1000px, 0px);
+  }
+  .rightBoxNavButtonsShow{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  .GifNavButtons{
+    transition: 0.8s ease-in-out;
+    background-size: 622px, 350px;
+    background-position: -95px;
+    width: 270px;
+    height: 350px;
+    background-image: url(https://scitechdaily.com/images/Hard-Drive-Data-Storage.gif);
+    border-radius: 5px;
+    box-shadow: inset 0 -1.5em 3em rgba(0, 0, 0, 0.651), 0 0 0 2px rgba(0, 0, 0, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.822);
+    transform: translate(-700px, 1000px);
+    opacity: 0;
+  }
+  .GifNavButtonsShow{
+    opacity: 1;
+    transform: translate(435px, -130px);
+  }
+  .currencyChangeContainer{
+    transition: 1s;
+    height: 260px;
+    width: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transform: translate(224px, 19px);
+  }
+  .currencyChangeButtons{
+    opacity: 1;
+    width: 120px;
+    height: 70px;
+    background: linear-gradient(45deg, #e3e3e3, var(--backgroundSecond));
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: fangsong;
+    font-size: 48px;
+    box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), -0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
+    font-weight: 900;
+  }
+  .centerPrice{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  .currencyChangeButtonsRight1{
+    opacity: 1;
+    overflow: hidden;
+    width: 170px;
+    height: 100px;
+    background: url(../assets/back2.png);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: fangsong;
+    font-size: 48px;
+    box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), 0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
+    font-weight: 900;
+  }
+  .currencyChangeButtonsRight2{
+    opacity: 1;
+    overflow: hidden;
+    width: 170px;
+    height: 100px;
+    background-image: url(https://64.media.tumblr.com/84f4d0974acd36caab8ded54254f9f77/tumblr_pgxjysfCNT1txe8seo1_500.gif);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 48px;
+    box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), 0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
+    font-weight: 900;
+  }
+  .currencyChangeButtonsRight4{
+    overflow: hidden;
+    opacity: 1;
+    width: 170px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: cursive;
+    font-size: 38px;
+    box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), 0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
+    font-weight: 900;
+  }
+  .cityBackground{
+    height: 310%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200%;
+    transform: translate(-86px, -120px);
+  }
+  .currencyChangeButtonsRight3{
+    opacity: 1;
+    width: 170px;
+    text-align: initial;
+    height: 100px;
+    background-position: 20px;
+    background-image: url(https://static.scientificamerican.com/sciam/cache/file/A2409E33-B549-4771-B7C1999DD52F9727_source.gif?w=590&h=800&2A8A3E95-ABD7-4F5F-86B1DF1AB1FA078A);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'CedarvilleCursive-Regular';
+    font-size: 40px;
+    box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), 0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
+    font-weight: 900;
+  }
+  .centerBackImg{
+    height: 310%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200%;
+    transform: translate(-86px, -106px);
+  }
