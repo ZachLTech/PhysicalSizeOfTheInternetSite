@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@font-face {
+    font-family: 'CedarvilleCursive-Regular';
+    font-style: normal;
+    font-weight: 10;
+    src: url(../assets/CedarvilleCursive-Regular.woff2) format('woff2');
+  }
+
+/*
+font-family: 'Rubik', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'CedarvilleCursive-Regular';
+font-family: 'Blippo', fantasy;
+font-family: fangsong;
+font-family: cursive;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backgroundImg{
+    background-image: url(../assets/socials/wallpapernew.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blurBox{
+    background-color: rgba(0, 0, 0, 0.116);
+    backdrop-filter: blur(5px);
+    height: 95%;
+    width: 45%;
+    max-width: 95%;
+    position: absolute;
+    border-radius: 20px;
+}
+.centeredDivs{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.myLogo{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+.title{
+    height: 7.5%;
+    width: 95%;
+    border: solid 1px black;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.bio{
+    height: 17.5%;
+    width: 95%;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+}
+.bioText{
+    color: rgb(147, 173, 175);
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+    margin: auto;
+    width: 85%;
+}
+.socialCards{
+    height: 47.5%;
+    width: 95%;
+    border: solid 1px black;
+}
+.socialButtons{
+    height: 17.5%;
+    width: 95%;
+    border: solid 1px black;
+}
+
+
+@media screen and (max-width: 1000px){
+    body{
+        height: 160%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .bioText{
+        color: rgb(149, 151, 18);
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.5rem;
+        margin: auto;
+        width: 100%;
+    }
+    .backgroundImg{
+        background-image: url(../assets/socials/wallpapernew.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 160%;
+        width: 100%;
+        inset: 0;
+        margin: auto;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blurBox{
+        height: 140%;
+        width: 85%;
+    }
+}
