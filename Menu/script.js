@@ -95,7 +95,7 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         break;
       case 'container7':
         // Code to be executed for container1
-        alert('Container 7 clicked');
+        window.location.href = "../Socials/index.html";
         break;
       case 'container8':
         // Code to be executed for container2

@@ -1,134 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-@font-face {
-    font-family: 'CedarvilleCursive-Regular';
-    font-style: normal;
-    font-weight: 10;
-    src: url(../assets/CedarvilleCursive-Regular.woff2) format('woff2');
-  }
-
-/*
-font-family: 'Rubik', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'CedarvilleCursive-Regular';
-font-family: 'Blippo', fantasy;
-font-family: fangsong;
-font-family: cursive;
-*/
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
 }
-
+a{
+    text-decoration: none;
+}
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #000000;
+    font-family: 'Nunito', sans-serif;
 }
-
-.backgroundImg{
-    background-image: url(../assets/socials/wallpapernew.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
+.container{
+    width: 30em;
+}
+.head__section img{
+    display: block;
+    margin: 0 auto;
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.head__section p{
+    text-align: center;
+    color: #fff;
+}
+.social__links ul li{
     width: 100%;
-    position: fixed;
+    margin: 1.2rem 0;
+    padding: 0.4rem 0.8rem;
+    background: rgba( 255, 255, 255, 0.1 );
+    backdrop-filter: blur( 0px );
+    border-radius: 5px;
+    transition: background 0.25s;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 0 0.8rem  rgba(255, 255, 255, .12);
+}
+.js-tilt-glare{
+    border-radius: 5px;
+}
+.social__links ul li a{
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    color: #ffff;
+    font-size: 1rem;
 }
-
-.blurBox{
-    background-color: rgba(0, 0, 0, 0.116);
-    backdrop-filter: blur(5px);
-    height: 95%;
-    width: 45%;
-    max-width: 95%;
-    position: absolute;
-    border-radius: 20px;
+.social__links ul li a i{
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+    transform: scale(1.4) translateZ(50px);
+    transition: 0.25s;
 }
-.centeredDivs{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.social__links ul li a span{
+    line-height: 1.4rem;
 }
-.myLogo{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    align-self: center;
+.social__links ul .instagram:hover{
+    background: #FF0000;
 }
-
-.title{
-    height: 7.5%;
-    width: 95%;
-    border: solid 1px black;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
+.social__links ul .youtube:hover{
+    background: #007c06;
 }
-.bio{
-    height: 17.5%;
-    width: 95%;
-    border: solid 1px black;
-    display: flex;
-    justify-content: center;
+.social__links ul .telegram:hover{
+    background:#0088cc;
 }
-.bioText{
-    color: rgb(147, 173, 175);
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.2rem;
-    margin: auto;
-    width: 85%;
-}
-.socialCards{
-    height: 47.5%;
-    width: 95%;
-    border: solid 1px black;
-}
-.socialButtons{
-    height: 17.5%;
-    width: 95%;
-    border: solid 1px black;
-}
-
-
-@media screen and (max-width: 1000px){
-    body{
-        height: 160%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.social__links ul .github:hover{
+    background: #333;
+} 
+.social__links ul .menu:hover{
+    background: #181425;
+} 
+@media only screen and (max-width: 549px) {
+    .container{
+        width: 88vw;
     }
-    .bioText{
-        color: rgb(149, 151, 18);
-        font-family: 'Rubik', sans-serif;
-        font-size: 1.5rem;
-        margin: auto;
-        width: 100%;
-    }
-    .backgroundImg{
-        background-image: url(../assets/socials/wallpapernew.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 160%;
-        width: 100%;
-        inset: 0;
-        margin: auto;
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .blurBox{
-        height: 140%;
-        width: 85%;
-    }
-}
+  }
