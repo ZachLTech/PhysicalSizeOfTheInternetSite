@@ -16,7 +16,7 @@ body{
     --backgroundFirst: #1d0b0b;
     --distanceCardBackgrounds: #2c0909;
     --adjustmentsCardBackground: #7a1818;
-    --backgroundSecond: rgba(0, 60, 80, 0.596);
+    --backgroundSecond: rgba(80, 0, 20, 0.596);
     --sizeBannerBackground: rgba(143, 8, 8, 0.603);
     --sizeBannerBorder: rgb(99, 9, 9);
     --sizeBannerHover: rgba(119, 6, 6, 0.703);
@@ -34,13 +34,13 @@ body{
     --adjustmentsBannerBorder: rgb(30, 175, 49);
     --storagePerButtonHoverAndContainer: rgb(47, 77, 47);
     --toBeExactColor: rgb(78, 118, 247);
-    --priceNumberContainerBackground: rgb(0, 81, 255);
+    --priceNumberContainerBackground: rgb(255, 0, 98);
     --storedInButtonBackground: #229999;
     --storedInButtonBorder: rgb(0, 174, 255);
     --storedInOptionButtonBackground: rgb(0, 174, 255);
     --storedInOptionButtonBorder: #216d6d;
-    --currencyChangeHighlightBackground: rgba(85, 242, 253, 0.336);
-    --currencyChangeHighlightBorder: rgb(0, 225, 255);
+    --currencyChangeHighlightBackground: rgba(253, 85, 211, 0.336);
+    --currencyChangeHighlightBorder: rgb(255, 0, 119);
 }
 
 *{
