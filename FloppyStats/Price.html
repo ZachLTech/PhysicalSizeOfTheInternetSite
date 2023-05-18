@@ -1,0 +1,77 @@
+
+
+<html id="html" style="background: black;">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="Price.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script>viewport.setAttribute('content', 'width=device-width, initial-scale=0.67, user-scalable=0');</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+
+
+<header>
+    <button class="menubutton" onclick="location.href = '../Menu/Menu.html';">
+        <img class="menuico" src="../assets/menu.svg">
+    </button>
+</header>
+
+<body id="body">
+    
+        <section id="height">
+            <div class="priceInfoContainerUnder"></div>
+            <div class="priceInfoContainer" style="position: relative; z-index: 5;"> 
+                <div class="priceNumber priceNumberShow" id="priceNumber">
+                    <div class="centerPrice">
+                    <h1 id="PriceHHDs" class="priceNumberText"></h1>
+                    </div>
+                    <p class="toBeExact">...to be exact &#128513;</p>
+                    <p class="ifStoredIn">If stored in</p>
+                    <button class="insertTBorGB" style="font-size: 18px;" onclick="storedInToggle()" id="storedInButton" disabled>1.44MB</button>
+                    <p class="HHDsText">Disks</p>
+                    <div class="storedInButtonContainer" id="storedInButtonContainer">
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="30TB" id="changeStoredInButton" disabled>30TB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="15TB" id="changeStoredInButton2" disabled>15TB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="1TB" id="changeStoredInButton3" disabled>1TB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="500GB" id="changeStoredInButton4" disabled>500GB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="240GB" id="changeStoredInButton5" disabled>240GB</button>
+                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="64GB" id="changeStoredInButton6" disabled>64GB</button>
+                    </div>
+                </div>
+            <div class="leftBoxCurrencyAdjust leftBoxCurrencyAdjustShow" id="leftBoxCurrencyAdjust">
+                <div class="moneyGifCurrencyAdjust moneyGifCurrencyAdjustShow" id="moneyGifCurrencyAdjust"></div>
+                <p class="currencyText currencyTextShow" id="currencyText">Currency</p>
+                <div class="highlighterCurrencyButtons" id="highlighterButtons"></div>
+                <div class="currencyChangeContainer">
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="USD">USD</button>
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="JPY">JPY</button>
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="GBP">GBP</button>
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="AUD">AUD</button>
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="CAD">CAD</button>
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="CNY">CNY</button>
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="MXN">MXN</button>
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="RUB">RUB</button>
+                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="COP">COP</button>
+                </div>
+            </div>
+            <div class="rightBoxNavButtons rightBoxNavButtonsShow" id="rightBoxNavButtons">
+                <div class="GifNavButtons GifNavButtonsShow" id="GifNavButtons"></div>
+                <div class="currencyChangeContainerRight">
+                    <button class="currencyChangeButtonsRight1" onclick="window.location.href = '../Price/index.html';"><img src="../assets/back2.png" alt="Back" class="centerBackImg"></button>
+                    <button class="currencyChangeButtonsRight2" onclick="window.location.href = '../Menu/Menu.html';">Menu</button>
+                    <button class="currencyChangeButtonsRight3">The Math</button>
+                    <button class="currencyChangeButtonsRight4" onclick="window.location.replace('http://zachl.tech');"><div style="z-index: 5;position: absolute;">My Portfolio</div><img src="../assets/city.jpg" class="cityBackground"></button>
+                </div>
+            </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+<footer>
+
+</footer>
+</html>

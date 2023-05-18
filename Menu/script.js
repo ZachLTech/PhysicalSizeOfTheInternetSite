@@ -87,7 +87,7 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         break;
       case 'container5':
             // Code to be executed for container1
-        alert('Container 5 clicked');
+            window.location.href = "../Price/Index.html";
         break;
       case 'container6':
             // Code to be executed for container2

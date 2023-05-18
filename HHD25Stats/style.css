@@ -31,7 +31,7 @@ body{
     transition: 0.25s;
     position: fixed;
     left: 93.5%;
-    margin-top: 50px;
+    margin-top: calc(-10% + 50px);
     z-index: 1000;
     border-radius: 5px;
 }
@@ -811,8 +811,8 @@ body{
     position: absolute;
     width: 100%;
     height: 1500px;
-    background: linear-gradient( rgb(255, 255, 255) 0.01%, var(--backgroundSecond) 70%);
-    transform: translate(-3000px,400px);
+    background: linear-gradient( rgb(0, 0, 0) 0.01%, var(--backgroundSecond) 70%);
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     z-index: -1;
@@ -936,7 +936,7 @@ body{
     transition: 0.8s ease-in-out;
     width: 650px;
     height: 280px;
-    background: linear-gradient( var(--backgroundSecond) 5%, rgb(239 239 239) 70%);
+    background: linear-gradient( var(--backgroundSecond) 5%, rgb(0, 0, 0) 70%);
     margin-left: 180px;
     margin-top: 550px;
     border-radius: 0px;
@@ -981,7 +981,7 @@ body{
     transition: 0.8s ease-in-out;
     width: 650px;
     height: 280px;
-    background: linear-gradient( var(--backgroundSecond) 5%, rgb(239 239 239) 70%);
+    background: linear-gradient( var(--backgroundSecond) 5%, rgb(0, 0, 0) 70%);
     margin-left: 1255px;
     margin-top: 50px;
     border-radius: 0px;
@@ -1022,7 +1022,7 @@ body{
     opacity: 1;
     width: 120px;
     height: 70px;
-    background: linear-gradient(45deg, #e3e3e3, var(--backgroundSecond));
+    background: linear-gradient(45deg, #383838, var(--backgroundSecond));
     border: none;
     border-radius: 5px;
     color: white;
@@ -1043,6 +1043,7 @@ body{
   
   
   .currencyChangeButtonsRight1{
+    transition: 0.3s;
     opacity: 1;
     overflow: hidden;
     width: 170px;
@@ -1056,7 +1057,11 @@ body{
     box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), 0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
     font-weight: 900;
   }
+  .currencyChangeButtonsRight1:hover{
+    border: var(--backgroundSecond) 5px solid;
+  }
   .currencyChangeButtonsRight2{
+    transition: 0.3s;
     opacity: 1;
     overflow: hidden;
     width: 170px;
@@ -1069,7 +1074,11 @@ body{
     box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), 0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
     font-weight: 900;
   }
+  .currencyChangeButtonsRight2:hover{
+    color: var(--backgroundSecond);
+  }
   .currencyChangeButtonsRight4{
+    transition: 0.3s;
     overflow: hidden;
     opacity: 1;
     width: 170px;
@@ -1082,6 +1091,9 @@ body{
     box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), 0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
     font-weight: 900;
   }
+  .currencyChangeButtonsRight4:hover{
+    color: var(--backgroundSecond);
+  }
   .cityBackground{
     height: 310%;
     display: block;
@@ -1091,6 +1103,7 @@ body{
     transform: translate(-86px, -120px);
   }
   .currencyChangeButtonsRight3{
+    transition: 0.3s;
     opacity: 1;
     width: 170px;
     text-align: initial;
@@ -1104,6 +1117,9 @@ body{
     font-size: 40px;
     box-shadow: 0 0.5em 20em rgba(0, 0, 0, 0.051), 0 0 0 1px rgba(0, 0, 0, 0), 0.1em -0.1em 0.4em rgba(0, 0, 0, 0.61);
     font-weight: 900;
+  }
+  .currencyChangeButtonsRight3:hover{
+    color: var(--backgroundSecond);
   }
   .centerBackImg{
     height: 310%;

@@ -49,7 +49,7 @@
 
 
     <section class="sectionBackground1">
-        <button class="slideScreen" onclick="slideAllRight()"></button>
+        
         <div class="flexVerticalDistanceContainer">
             <div class="distanceTitleFlexContainer">
                 <h1 class="distanceTitle">Distance in: </h1>
@@ -134,96 +134,7 @@
             </div>
         </div>
     </section>
-    <section>
-        <section class="sectionBackground2" style="zoom: 175%">
-            <div class="introPlacement">
-                <div class="scrollDist"></div>
-                    <div class="main" id="moneymoneymoney">
-                        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-                            <mask id="m">
-                                <g class="cloud1">
-                                    <rect fill="#fff" width="100%" height="801" y="799" />
-                                    <image xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1200" height="800"/>
-                                </g>
-                            </mask>
-                        
-                            <image class="sky" xlink:href="https://assets.codepen.io/721952/sky.jpg"  width="1200" height="590" />
-                            <image class="mountBg" href="../assets/money/money5.png" width="1200" height="800"/>    
-                            <image class="mountBgR" href="../assets/money/money2.png" width="1200" height="800"/> 
-                            <image class="mountMg" href="../assets/money/money4.png" width="1200" height="800"/> 
-                            <image class="cloud2" href="../assets/money/money3.png" width="1200" height="800"/>    
-                            <image class="mountFg" href="../assets/money/money1.png" width="1200" height="800"/>
-                            <image class="cloud1" href="" width="1200" height="800"/>
-                            <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
-                            <text style="transform: translate(-260px, 0px);" fill="#fff" x="300" y="200">BUT AT WHAT</text><text style="transform: translate(510px, 0px);" fill="#F70000" x="300" y="200">COST</text><text style="transform: translate(800px, 0px);" fill="#fff" x="300" y="200">?</text>
-                            <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
-                            <g mask="url(#m)">
-                                <rect fill="#fff" width="100%" height="100%" />      
-                                <text class="text1" id="large-text" style="transform: translate(-285px, 0px);" x="300" y="200" fill="#162a43">10 TRILLION DOLLARS</text>
-                                <text class="text1mid" id="mid-text" style="transform: translate(65px, 50px);" x="300" y="200" fill="#162a43">(USD if stored in 30TB SSDs)</text>
-                            </g>
-                            <rect id="arrowBtn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
-                        </svg>
-                    </div>
-                    <!-- partial -->
-                    <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
-                    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
-                    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
-                    <script src='https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js'></script><script  src="./script.js"></script>     
-                </div>
-            </div>
-
-            
-            
-        </section>
-        <section id="height">
-            <div class="priceInfoContainerUnder"></div>
-            <div class="priceInfoContainer"> 
-                <div class="priceNumber" id="priceNumber">
-                    <div class="centerPrice">
-                    <h1 id="PriceHHDs" class="priceNumberText"></h1>
-                    </div>
-                    <p class="toBeExact">...to be exact &#128513;</p>
-                    <p class="ifStoredIn">If stored in</p>
-                    <button class="insertTBorGB" onclick="storedInToggle()" id="storedInButton">30TB</button>
-                    <p class="HHDsText">SSDs</p>
-                    <div class="storedInButtonContainer" id="storedInButtonContainer">
-                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="30TB" id="changeStoredInButton">30TB</button>
-                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="15TB" id="changeStoredInButton2">15TB</button>
-                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="1TB" id="changeStoredInButton3">1TB</button>
-                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="500GB" id="changeStoredInButton4">500GB</button>
-                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="240GB" id="changeStoredInButton5">240GB</button>
-                        <button onclick="changeStoragePer(this.value)" class="storedInChangeOptionButton" value="64GB" id="changeStoredInButton6">64GB</button>
-                    </div>
-                </div>
-            <div class="leftBoxCurrencyAdjust" id="leftBoxCurrencyAdjust">
-                <div class="moneyGifCurrencyAdjust" id="moneyGifCurrencyAdjust"></div>
-                <p class="currencyText" id="currencyText">Currency</p>
-                <div class="highlighterCurrencyButtons" id="highlighterButtons"></div>
-                <div class="currencyChangeContainer">
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="USD">USD</button>
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="JPY">JPY</button>
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="GBP">GBP</button>
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="AUD">AUD</button>
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="CAD">CAD</button>
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="CNY">CNY</button>
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="MXN">MXN</button>
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="RUB">RUB</button>
-                    <button onclick="changeCurrency(this.value)" class="currencyChangeButtons" value="COP">COP</button>
-                </div>
-            </div>
-            <div class="rightBoxNavButtons" id="rightBoxNavButtons">
-                <div class="GifNavButtons" id="GifNavButtons"></div>
-                <div class="currencyChangeContainerRight">
-                    <button class="currencyChangeButtonsRight1" onclick="slideAllRight()"><img src="../assets/back2.png" alt="Back" class="centerBackImg"></button>
-                    <button class="currencyChangeButtonsRight2" onclick="window.location.href = '../Menu/Menu.html';">Menu</button>
-                    <button class="currencyChangeButtonsRight3">The Math</button>
-                    <button class="currencyChangeButtonsRight4" onclick="window.location.replace('http://zachl.tech');"><div style="z-index: 5;position: absolute;">My Portfolio</div><img src="../assets/city.jpg" class="cityBackground"></button>
-                </div>
-            </div>
-            </div>
-        </section>
-    </section>
+    
 </body>
 
 <footer>

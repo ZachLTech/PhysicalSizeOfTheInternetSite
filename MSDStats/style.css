@@ -55,7 +55,7 @@ body{
     transition: 0.25s;
     position: fixed;
     left: 93.5%;
-    margin-top: 50px;
+    margin-top: calc(-10% + 50px);
     z-index: 1000;
     border-radius: 5px;
 }
@@ -836,8 +836,8 @@ body{
     position: absolute;
     width: 100%;
     height: 1500px;
-    background: linear-gradient( rgb(255, 255, 255) 0.01%, var(--backgroundSecond) 70%);
-    transform: translate(-3000px,400px);
+    background: linear-gradient( rgb(0, 0, 0) 0.01%, var(--backgroundSecond) 70%);
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     z-index: -1;
@@ -961,7 +961,7 @@ body{
     transition: 0.8s ease-in-out;
     width: 650px;
     height: 280px;
-    background: linear-gradient( var(--backgroundSecond) 5%, rgb(239 239 239) 70%);
+    background: linear-gradient( var(--backgroundSecond) 5%, rgb(0, 0, 0) 70%);
     margin-left: 180px;
     margin-top: 550px;
     border-radius: 0px;
@@ -1006,7 +1006,7 @@ body{
     transition: 0.8s ease-in-out;
     width: 650px;
     height: 280px;
-    background: linear-gradient( var(--backgroundSecond) 5%, rgb(239 239 239) 70%);
+    background: linear-gradient( var(--backgroundSecond) 5%, rgb(0, 0, 0) 70%);
     margin-left: 1255px;
     margin-top: 50px;
     border-radius: 0px;
@@ -1048,7 +1048,7 @@ body{
     opacity: 1;
     width: 120px;
     height: 70px;
-    background: linear-gradient(45deg, #e3e3e3, var(--backgroundSecond));
+    background: linear-gradient(45deg, #424242, var(--backgroundSecond));
     border: none;
     border-radius: 5px;
     color: white;

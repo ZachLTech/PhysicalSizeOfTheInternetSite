@@ -95,8 +95,8 @@ function Width() {
     HHDsNeeded = SizeTB/HHDSizeEach;
     HHDsNeeded1b4 = ((SizeTB-14)/HHDSizeEach);
     growth = ((HHDsNeeded-HHDsNeeded1b4)/2);
-    WidthHHDS = 65536+(growth*amountadded);
-    WidthInches = WidthHHDS*4;
+    WidthHHDS = 59093.38477579753+(growth*amountadded);
+    WidthInches = WidthHHDS*3.54331;
     WidthMiles = WidthInches*1.57828e-5;
     WidthMi = ((WidthMiles*(1/stackHeight))-((WidthMiles*(1/stackHeight))*(1/(stackHeight+1))));
 } let Widthinterval = setInterval(Width, 333.33);
@@ -104,25 +104,25 @@ function Length() {
     HHDsNeeded = SizeTB/HHDSizeEach;
     HHDsNeeded1b4 = (SizeTB-14)/HHDSizeEach;
     growth = (HHDsNeeded-HHDsNeeded1b4)/2;
-    LengthHHDS = 52650.76955159505+(growth*amountadded);
-    LengthInches = LengthHHDS*5.8;
+    LengthHHDS = 59093.38477579753+(growth*amountadded);
+    LengthInches = LengthHHDS*3.54331;
     LengthMiles = LengthInches*1.57828e-5;
     LengthMi = ((LengthMiles*(1/stackHeight))-((LengthMiles*(1/stackHeight))*(1/(stackHeight+1))));
 } let Lengthinterval = setInterval(Length, 333.33)
 function HeightAndPrice(){
-    HeightFt = stackHeight*(0.066666667);
+    HeightFt = stackHeight*(0.0328084);
     switch(HHDSizeEach){
         case(30.72):
-            priceUSD = HHDsNeeded*2960.31;
+            priceUSD = HHDsNeeded*3640;
             break;
         case(15.4):
-            priceUSD = HHDsNeeded*1192;
+            priceUSD = HHDsNeeded*1745;
             break;
         case(1):
-            priceUSD = HHDsNeeded*40;
+            priceUSD = HHDsNeeded*50;
             break;
         case(0.5):
-            priceUSD = HHDsNeeded*18;
+            priceUSD = HHDsNeeded*40;
             break;
         case(0.24):
             priceUSD = HHDsNeeded*16;
@@ -133,22 +133,12 @@ function HeightAndPrice(){
     }
 } let HeightAndPriceinterval = setInterval(HeightAndPrice, 333.33);
 /* Intervals */
-function UpdateTB() {
-    document.getElementById("SizeTB").innerHTML = (SizeTB.toFixed(0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-} let DocTeBInterval = setInterval(UpdateTB, 333.33);
-
-function UpdateHeight(){
-    document.getElementById("HeightStack").innerHTML = HeightFt;
-} let DocHeightInterval = setInterval(UpdateHeight, 333.33);
 
 function UpdatePrice(){
     document.getElementById("PriceHHDs").innerHTML = ("$"+((priceUSD.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')));
 } let DocPriceInterval = setInterval(UpdatePrice, 333.33);
 
-function Update() {
-    document.getElementById("WidthMiles").innerHTML = WidthMi.toFixed(5);
-    document.getElementById("LengthMiles").innerHTML = LengthMi.toFixed(5);
-} let DocMilesInterval = setInterval(Update, 333.33); 
+
 /*******************************************************************************************************
  *                                  ~HANDLES THE UNIT DROPDOWN MENU~                                   *
  *                                  - TOGGLE SHOWS AND HIDES DROPDOWN                                  *
@@ -172,26 +162,22 @@ function toggleSize(){
     toggledAmount += 1;
 }
 function hideSize(){
-    let dropdownListSize = document.querySelector('.dropdown-listSize');
-    dropdownListSize.classList.remove('showSize');
+
     let dropdownListSizeButtons = document.querySelector('.dropdown-listSizeButtonContainer');
     dropdownListSizeButtons.classList.remove('showSizeButtons');
 }  
 function hide(){
-    let dropdownListSize = document.querySelector('.dropdownList');
-    dropdownListSize.classList.remove('show');
+
     let dropdownListSizeButtons = document.querySelector('.dropdownListButtonContainer');
     dropdownListSizeButtons.classList.remove('show2');
 }  
 function hideHeight(){
-    let heightDropdown = document.querySelector('.heightBannerButton');
-    heightDropdown.classList.remove('heightGrow');
+
     let heightOptionsDropdown = document.querySelector('.heightButtonContainer');
     heightOptionsDropdown.classList.remove('heightShow');
 }  
 function hideStorage(){
-    let sizePerDropdown = document.querySelector('.storageButton');
-    sizePerDropdown.classList.remove('showSizePerContainer');
+
     let sizePerOptionsDropdown = document.querySelector('.storageButtonsContainer');
     sizePerOptionsDropdown.classList.remove('showSizePerButtons');
 } 
@@ -228,95 +214,8 @@ function MoveMeEasterEgg(){
     }
 }
 
-const listenoutsideSizeChange = (e) => {
 
-    let containsActiveClass = false;
-    let reviewNode = e.target;
-    
-    while (reviewNode.nodeName !== 'BODY') {
-    
-      if (reviewNode.classList.contains('dropdown-listSize') || reviewNode.classList.contains('dropdown-listSizeButtonContainer')) {
-        containsActiveClass = true;
-        break;
-      }
-      
-      reviewNode = reviewNode.parentNode;
-    }
-    
-    if (containsActiveClass === false) {
-      hideSize();
-    }
-  }
-  document.addEventListener('click', listenoutsideSizeChange, false);
-
-  const listenoutsideHeightChange = (e) => {
-
-    let containsActiveClass = false;
-    let reviewNode = e.target;
-    
-    while (reviewNode.nodeName !== 'BODY') {
-    
-      if (reviewNode.classList.contains('heightBannerButton') || reviewNode.classList.contains('heightButtonContainer')) {
-        containsActiveClass = true;
-        break;
-      }
-      
-      reviewNode = reviewNode.parentNode;
-    }
-    
-    if (containsActiveClass === false) {
-      hideHeight();
-    }
-  }
-  
-  document.addEventListener('click', listenoutsideHeightChange, false);
-
-  const listenoutsideChange = (e) => {
-
-
-    let containsActiveClass = false;
-    let reviewNode = e.target;
-    
-    while (reviewNode.nodeName !== 'BODY') {
-    
-      if (reviewNode.classList.contains('dropdownList') || reviewNode.classList.contains('dropdownListButtonContainer')) {
-        containsActiveClass = true;
-        break;
-      }
-      
-      reviewNode = reviewNode.parentNode;
-    }
-    
-    if (containsActiveClass === false) {
-      hide();
-    }
-  }
-  
-  document.addEventListener('click', listenoutsideChange, false);
-
-  const listenoutsideAdjust = (e) => {
-
-    let containsActiveClass = false;
-    let reviewNode = e.target;
-    
-    while (reviewNode.nodeName !== 'BODY') {
-    
-      if (reviewNode.classList.contains('storageButton') || reviewNode.classList.contains('storageButtonsContainer')) {
-        containsActiveClass = true;
-        break;
-      }
-      
-      reviewNode = reviewNode.parentNode;
-    }
-    
-    if (containsActiveClass === false) {
-      hideStorage();
-    }
-  }
-  
-  document.addEventListener('click', listenoutsideAdjust, false);
-
-  const listenoutsideCurrencyAdjust = (e) => {
+const listenoutsideCurrencyAdjust = (e) => {
 
     let containsActiveClass = false;
     let reviewNode = e.target;
@@ -505,12 +404,10 @@ function changeSize(buttonId) {
 }
 
 function changeStoragePer(buttonId) {
-    document.getElementById('storagePerButton').textContent = buttonId;
     document.getElementById('storedInButton').textContent = buttonId;
-    let sizePerDropdown = document.querySelector('.storageButton');
-    sizePerDropdown.classList.toggle('showSizePerContainer');
+
     let sizePerOptionsDropdown = document.querySelector('.storageButtonsContainer');
-    sizePerOptionsDropdown.classList.toggle('showSizePerButtons');
+
     let storedInOptionsDropdown = document.querySelector('.storedInButtonContainer');
     storedInOptionsDropdown.classList.remove('storedInButtonContainerShow');
     let storedInOptionsButton = document.querySelector('.insertTBorGB');
@@ -669,23 +566,3 @@ function changeCurrency(buttonId){
             break;
     }
 }
-
-
-window.addEventListener(
-    "scroll",
-    () => {
-      const largeText = document.getElementById("large-text");
-      const midText = document.getElementById("mid-text");
-      const scrollPercentage = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
-  
-      if (scrollPercentage > 1.7) {
-        largeText.classList.add("priceTextHide");
-        midText.classList.add("priceTextHide");
-      } else {
-        largeText.classList.remove("priceTextHide");
-        midText.classList.remove("priceTextHide");
-      }
-    },
-    false
-  );
-
