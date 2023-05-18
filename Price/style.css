@@ -21,6 +21,26 @@ body{
     background: #000000;
     font-family: 'Nunito', sans-serif;
 }
+
+.menubutton{
+    height: 55px;
+    width: 55px;
+    background-color: black;
+    transition: 0.25s;
+    position: fixed;
+    left: 93.5%;
+    margin-top: calc(-10% + 50px);
+    z-index: 1000;
+    border-radius: 5px;
+}
+.menubutton:hover{
+    background-color: rgb(71, 92, 150);
+}
+.menubutton:active{
+    background-color: #3D5287;
+}
+
+
 .container{
     width: 30em;
 }

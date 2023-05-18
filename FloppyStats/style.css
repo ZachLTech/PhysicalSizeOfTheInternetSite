@@ -10,6 +10,7 @@ body{
     overflow-x: hidden;
     zoom: 90%;
     font-family: 'Blippo', fantasy;
+    background: radial-gradient(var(--backgroundFirst) 50%, rgba(0,0,0,1) 170%); 
 }
 
 :root{

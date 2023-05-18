@@ -138,7 +138,7 @@ function UpdateTB() {
 } let DocTeBInterval = setInterval(UpdateTB, 333.33);
 
 function UpdateHeight(){
-    document.getElementById("HeightStack").innerHTML = HeightFt;
+    document.getElementById("HeightStack").innerHTML = HeightFt.toFixed(5);;
 } let DocHeightInterval = setInterval(UpdateHeight, 333.33);
 
 function UpdatePrice(){
