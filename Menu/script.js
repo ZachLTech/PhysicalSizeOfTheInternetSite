@@ -86,12 +86,12 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         window.location.href = "../M2Stats/Index.html";
         break;
       case 'container5':
-            // Code to be executed for container1
-            window.location.href = "../Price/Index.html";
+          // Code to be executed for container1
+          window.location.href = "../Price/Index.html";
         break;
       case 'container6':
             // Code to be executed for container2
-        alert('Container 6 clicked');
+            window.location.href = "../Why/Index.html";
         break;
       case 'container7':
         // Code to be executed for container1

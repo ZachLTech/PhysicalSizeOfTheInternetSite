@@ -8,12 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<script>
+    function disclaimerShow(){
+        document.querySelector(".disclaimerTitle").classList.remove("hide");
+        document.querySelector(".disclaimerDescription").classList.remove("hide");
+        document.querySelector(".whyTitle").classList.add("hide");
+        document.querySelector(".whyDescription").classList.add("hide");
+    }
+    function whyShow(){
+        document.querySelector(".disclaimerTitle").classList.add("hide");
+        document.querySelector(".disclaimerDescription").classList.add("hide");
+        document.querySelector(".whyTitle").classList.remove("hide");
+        document.querySelector(".whyDescription").classList.remove("hide");
+    }
+    setTimeout( function() { whyShow(); }, 2000);
+</script>
+
 <header>
     <button class="menubutton" onclick="location.href = '../Menu/Menu.html';" style="margin-top: 50px;">
         <img class="menuico" src="../assets/menu.svg">
     </button>
+
+    <button class="disclaimer" onclick="disclaimerShow()" style="margin-top: 50px;">
+        <h3 style="font-size: 20px; width: 120px; color: white;">Disclaimer</h3>
+    </button>
+    <button class="why" onclick="whyShow()" style="margin-top: 50px;">
+        <h3 style="width: 120px; color: white; font-size: 25px">Why</h3>
+    </button>
 </header>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
     * {
         margin: 0;
         padding: 0;
@@ -42,7 +68,45 @@
     .menubutton:active {
         background-color: #3D5287;
     }
-
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    .why {
+        height: 60px;
+        width: 120px;
+        background: radial-gradient(#002d6b 1%, rgba(0, 0, 0, 0.342) 150%);
+        transition: 0.25s;
+        position: fixed;
+        margin-top: calc(-10% + 50px);
+        z-index: 1000;
+        border-radius: 5px;
+        transform: translatex(-60%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .why:hover{
+        background: radial-gradient(#003fb8 1%, rgba(0, 0, 0, 0.342) 150%);
+    }
+    .disclaimer {
+        transition: 0.3s;
+        height: 60px;
+        width: 120px;
+        background: radial-gradient(#002d6b 1%, rgba(0, 0, 0, 0.342) 150%);
+        transition: 0.25s;
+        position: fixed;
+        margin-top: calc(-10% + 50px);
+        z-index: 1000;
+        border-radius: 5px;
+        transform: translatex(60%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .disclaimer:hover{
+        background: radial-gradient(#003fb8 1%, rgba(0, 0, 0, 0.342) 150%);
+    }
     .waves {
         width: 100%;
         height: 100%;
@@ -55,9 +119,62 @@
         align-items: center;
         width: 100%;
     }
+    .textContainer{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        font-family: 'Rubik', sans-serif;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+    }
+    .disclaimerTitle{
+        position: absolute;
+        color: rgb(105, 14, 14);
+        font-family: 'Montserrat', sans-serif;
+        transform: translateY(-50%);
+        transition: 0.5s;
+    }
+    .disclaimerDescription{
+        position: absolute;
+        color: white;
+        width: 30%;
+        font-size: 25px;
+        transform: translateY(50%);
+        transition: 0.5s;
+    }
+    .whyTitle{
+        position: absolute;
+        color: rgb(105, 14, 14);
+        font-family: 'Montserrat', sans-serif;
+        transform: translateY(-240%);
+        transition: 0.5s;
+    }
+    .whyDescription{
+        position: absolute;
+        color: white;
+        width: 50%;
+        font-size: 20px;
+        transform: translateY(20%);
+        text-align: center;
+        line-height: 30px;
+        transition: 0.5s;
+    }
+    .hide{
+        opacity: 0;
+    }
 </style>
 
 <body>
+    <div class="textContainer">
+        <h1 class="disclaimerTitle">Disclaimer</h1>
+        <h3 class="disclaimerDescription">All the data and information used on this site may not be completely accurate (although I did try to make the stats as accurate as possible).</h3>
+        <h1 class="whyTitle hide">Why make this?</h1>
+        <h3 class="whyDescription hide">Well, the somewhat basic thought came into my mind one day while bored and thinking outloud with a few friends: what would it be like if someone were able to download the entire internet on only local drives? Then I wondered things such as: how much physical space would it take? and how much it would cost? So I did a few google searches and couldn't find anything that estimated this and decided to calculate it myself. After some basic data hunting and math, I was able to calculate a (somewhat inaccurate and estimated) size of the internet. Then, it hit me- What if I automated this task and turned it into a website for other curious people that, for some crazy unknown reason, might think to themselves... "I wonder how big the internet really is (physically)". Thats when I went on my way to code my heart out in this site. I decided to make it do more than just tell the physical size of the internet; It's also interactive, with the ability to change the units of measure and amount of storage mediums stacked in the stats pages (which unsurprisingly involved a lot of math). This started as a project involving me wanting to create a website with some interesting information, but quickly turned into a journey full of learning as I experimented with many ways to write and implement HTML, CSS, and Javascript building my skills by playing around with different styles, designs, animations, and interactivity in each page.</h3>
+    </div>
     <div class="blobs">
         <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -195,7 +312,7 @@
         </g>
     </svg>
     
-    <div class="textContainer"></div>
+    
     </section>
 </body>
 
