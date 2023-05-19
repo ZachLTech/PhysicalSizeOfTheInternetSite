@@ -99,7 +99,7 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         break;
       case 'container8':
         // Code to be executed for container2
-        alert('Container 8 clicked');
+        window.location.href = "../Help/Index.html";
         break;
       case 'container9':
         // Code to be executed for container1

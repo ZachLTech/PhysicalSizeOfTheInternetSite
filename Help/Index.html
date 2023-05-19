@@ -1,0 +1,183 @@
+
+
+<html id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="algorithfunctions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script>viewport.setAttribute('content', 'width=device-width, initial-scale=0.67, user-scalable=0');</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+
+
+<header>
+    <button class="menubutton" onclick="location.href = '../Menu/Menu.html';" style="margin-top: 50px;">
+        <img class="menuico" src="../assets/menu.svg">
+    </button>
+    <button class="pricebutton" onclick="location.href = 'Price.html';" style="margin-top: 50px;">
+        Price Help
+    </button>
+    <div class="box arrow-top-middle" style="position: fixed; left: 88.4%; top: 100px;">
+        Simple button that sticks to your screen which brings you back to the menu
+    </div>
+</header>
+
+<body id="body">
+    <header class="headerBackgroundContainer">
+        <article class="headerBackground"></article>
+        <div class="storageSystemTypeBox">
+            <p class="storageSystemType" style="text-align: center;">Storage Medium</p>
+        </div>
+        <div class="centerCard">
+            <div class="spaceCard">
+                <div class="dropdown-listSizeButtonContainer">
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="PB">Petabytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="TB">Terabytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="GB">Gigabytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="MB">Megabytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="KB">Kilobytes</button>
+                    <button onclick="changeSize(this.value)" class="sizeChangeOptionButton" value="B">Bytes</button>
+                </div>
+                <button class="dropdown-listSize" id="dropdown-listSize" onclick="toggleSize()">TB</button>
+                <div class="spaceVid">
+                    <video playsinline autoplay muted loop poster="https://cdn.wallpapersafari.com/1/97/co341S.jpg" class="spaceVid">
+                        <source src="../assets/spacebackground.mp4" type="video/webm">
+                            Your browser does not support the video tag.
+                    </video>
+                    <h1 class="SizeTB" id="SizeTB"></h1>
+                </div>
+            </div>
+            <div class="box arrow-top" style="border: solid 2px white; transform: translate(-200px, 140px);" id="boxArrowRightsizeTB">
+                Above is the Internets storage size in your selected unit
+            </div>
+            
+        </div>
+        <div class="box arrow-bottom-left" style="transform: translate(-50px, 160px)">
+            This tag simply indicates which storage medium page you're in
+        </div>
+        <div class="box arrow-bottom" style="transform: translate(1145px, 40px)">
+            This banner is a button that allows you to change the internets storage size on click
+        </div>
+    </header>
+
+
+    <section class="sectionBackground1">
+        
+        <div class="flexVerticalDistanceContainer">
+            <div class="distanceTitleFlexContainer">
+                <h1 class="distanceTitle">Distance in: </h1>
+
+                <button class="dropdownList" id="dropdownList" onclick="toggle()">Miles</button>
+                <div class="Kilometers">Kilometers</div>
+                <div class="dropdownListButtonContainer">
+                    <button onclick="change(this.value)" class="changeChangeOptionButton" value="Miles">Miles</button>
+                    <button onclick="change(this.value)" class="changeChangeOptionButton" value="Feet">Feet</button>
+                    <button onclick="change(this.value)" class="changeChangeOptionButton" value="Inches">Inches</button>
+                    <button onclick="change(this.value)" class="changeChangeOptionButton" value="Kilometers">Kilometers</button>
+                    <button onclick="change(this.value)" class="changeChangeOptionButton" value="Meters">Meters</button>
+                    <button onclick="change(this.value)" class="changeChangeOptionButton" value="Yards">Yards</button>
+                </div>
+            </div>
+            <div class="distanceNumbersFlexContainer">
+                <div class="widthCard">
+                    <div class="widthBox">
+                        <div class="widthBanner">Width</div>
+                        <div class="distanceTextCenter">
+                            <div id="WidthMiles" class="distanceText"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lengthCard">
+                    <div class="lengthBox">
+                        <div class="lengthBanner">Length</div>
+                        <div class="distanceTextCenter">
+                            <div id="LengthMiles" class="distanceText"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="AdjustmentsContainer">
+                <div class="adjustmentsCard">
+                    <div class="adjustmentsBox">
+                        <button class="adjustmentsBanner" onclick="MoveMeEasterEgg()">Adjustments</button>
+                        
+                        
+                        <div class="flexAdjustmentsContainer">
+                            <div class="stackedFlexContainer">
+                                <div class="stackedLabel">SSD's Stacked: </div>
+                                <input class="stackedInput" onchange="updateVariable()" placeholder="2" type="number" id="inputNumber" min="1" max="3,614.457831325302" value="2"></input>
+                            </div>
+                            <div class="storageFlexContainer">
+                                <div class="storageLabel">Storage Per SSD: </div>
+                                <button class="storageButton" id="storagePerButton" onclick="toggleStoragePer()">30TB</button>
+                                <div class="storageButtonsContainer">
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="30TB">30TB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="15TB">15TB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="1TB">1TB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="500GB">500GB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="240GB">240GB</button>
+                                    <button onclick="changeStoragePer(this.value)" class="storageButtonsButtons" value="64GB">64GB</button>
+                                </div>
+                            </div>
+                            <div class="helpContainer">
+                                <button class="helpButton">Help</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="heightCard">
+                    <div class="heightBox">
+                        <div class="heightBanner">Height</div>
+                        <div class="heightButtonContainer">
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" style="font-size: 0.7em;" value="Centimeters">Centimeters</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" style="font-size: 0.8em;" value="Millimeters">Millimeters</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" value="Inches">Inches</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" value="Feet">Feet</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" value="Meters">Meters</button>
+                            <button onclick="changeHeight(this.value)" class="heightChangeOptionButton" value="Yards">Yards</button>
+                        </div>
+                        <button onclick="heightButtonToggle()" class="heightBannerButton" id="heightBannerButton">Inches</div>
+                        <div class="distanceTextCenter">
+                            <div id="HeightStack" class="heightText"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box arrow-right" style="transform: translate(500px, -287px);">
+            simply indicates whether this number is referring to length, width, or height
+        </div>
+        <div class="box arrow-right" style="transform: translate(-160px, -100px); font-size: 15px">
+            the number in this box and the one to its right are the values corresponding with its banner
+        </div>
+        <div class="box arrow-left" style="transform: translate(360px, 456px); z-index: 100;">
+            This button allows you to change the amount of storage each device can hold
+        </div>
+        <div class="box arrow-bottom-middle" style="transform: translate(-150px, 140px); font-size: 15px">
+            This input element allows you to change the amount of layers the devices are stacked in
+        </div>
+        <div class="box arrow-top-middle" style="transform: translate(-497px, 670px);">
+            This is the help button that will bring you to this page when clicked ツ
+        </div>
+        <div class="box arrow-left" style="transform: translate(230px, -484px);">
+            This button allows you to change the width and length distance units 
+        </div>
+        <div class="box arrow-bottom" style="transform: translate(-500px, 84px);">
+            This button allows you to change the height units
+        </div>
+        <div class="box arrow-left" style="transform: translate(-100px, 415px);">
+            the number in this box is the height value
+        </div>
+    </section>
+    
+</body>
+
+<footer>
+
+</footer>
+</html>
