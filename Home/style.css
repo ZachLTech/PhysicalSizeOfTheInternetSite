@@ -1,0 +1,27 @@
+.stickyHeader{
+  position: fixed;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: slideDown 0.35s ease-out;
+}
+
+.w-\[calc\(100\%\-2rem\)\] {
+    width: calc(100% - 4rem);
+  }
+
+.h-\[calc\(100\%\+20rem\)\] {
+    height: calc(100% + 20vh);
+}
+
+.h-gradientBoxes{
+  height: 85rem;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
