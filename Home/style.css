@@ -24,3 +24,46 @@
     transform: translateY(0);
   }
 }
+
+.grayish{
+  background: #111111;
+}
+
+.bg-first{
+  background: linear-gradient(rgba(255, 255, 255, 0.034), black 70%);
+}
+
+.bg-header{
+  background: linear-gradient(black, rgba(255, 255, 255, 0.034));
+}
+
+.bg-no{
+  background: transparent;
+}
+
+.glowh2{
+  font-family:fangsong;
+  position:relative;
+  font-size:6rem;
+  letter-spacing:15px;
+  color:white;
+  text-transform:uppercase;
+  width:100%;
+  text-align:center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,white);
+    line-height:.7em;
+  outline:none;
+  animation : glow 4s linear infinite alternate-reverse;
+}
+@keyframes glow {
+  0%{
+    color:white;
+    text-shadow:none;
+  }
+  100%{
+    text-shadow: 0 0 5px white,
+      0 0 20px white,
+      0 0 40px white,
+      0 0 80px white
+  }
+}

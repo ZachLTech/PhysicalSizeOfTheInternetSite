@@ -71,7 +71,7 @@ document.querySelectorAll('.btn').forEach(function(btn) {
     switch (containerId) {
       case 'container1':
         // Code to be executed for container1
-        alert('Container 1 clicked');
+        window.location.href = "../index.html";
         break;
       case 'container2':
         // Code to be executed for container2
