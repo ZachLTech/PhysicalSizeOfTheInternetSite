@@ -41,11 +41,23 @@
   background: transparent;
 }
 
+.w-half{
+  width: 50%;
+}
+
+.h-half{
+  height: 50%;
+}
+
+.gridwrap{
+  grid-template-columns: minmax(1fr,2fr) minmax(1fr,2fr) minmax(1fr,2fr) minmax(1fr,2fr);
+}
+
 .glowh2{
   font-family:fangsong;
   position:relative;
-  font-size:6rem;
-  letter-spacing:15px;
+  font-size:6.5vw;
+  letter-spacing:10px;
   color:white;
   text-transform:uppercase;
   width:100%;
