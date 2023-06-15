@@ -1159,3 +1159,9 @@ body{
     width: 200%;
     transform: translate(-86px, -106px);
   }
+
+  @media (max-width: 1400px) {
+    body{
+      overflow-x: scroll;
+    }
+  }

@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+.font-title{
+  font-family: 'Londrina Shadow', cursive;
+}
+.font-nunito{
+  font-family: 'Nunito', sans-serif;
+}
+.font-prism{
+  font-family: 'Tilt Prism', cursive;
+}
+
 .stickyHeader{
   position: fixed;
   backdrop-filter: blur(10px);
@@ -14,6 +28,28 @@
 
 .h-gradientBoxes{
   height: 85rem;
+}
+
+.text-4vw{
+  font-size: minmax(100px, 1.5vw);
+}
+
+.text-2vw{
+  font-size: max(8vw);
+}
+
+.text-sizevw{
+  font-size: max(2vw);
+}
+
+.sizeBvw{
+  font-size: max(6.5vw);
+}
+
+.github{
+  background: url('/assets/socials/github.svg');
+  width: 10%;
+  height: 10%;
 }
 
 @keyframes slideDown {
@@ -37,6 +73,13 @@
   background: linear-gradient(black, rgba(255, 255, 255, 0.034));
 }
 
+.bg-space{
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
 .bg-no{
   background: transparent;
 }
@@ -45,18 +88,40 @@
   width: 50%;
 }
 
+.w-findout{
+  width: min(16rem);
+}
+
+.h-findout{
+  height: min(12rem);
+}
+
 .h-half{
   height: 50%;
 }
 
 .gridwrap{
-  grid-template-columns: minmax(1fr,2fr) minmax(1fr,2fr) minmax(1fr,2fr) minmax(1fr,2fr);
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+.size-butWhatAbout{
+  font-family:fangsong;
+  position:relative;
+  letter-spacing:10px;
+  font-size: max(6.5vw);
+  text-align:center;
+}
+
+.p-second{
+  padding: 13rem;
 }
 
 .glowh2{
   font-family:fangsong;
   position:relative;
-  font-size:6.5vw;
+  font-size: max(6.5vw);
   letter-spacing:10px;
   color:white;
   text-transform:uppercase;
@@ -77,5 +142,23 @@
       0 0 20px white,
       0 0 40px white,
       0 0 80px white
+  }
+}
+
+@media (max-width: 1000px) {
+  .p-second{
+    padding: 8rem;
+  }
+  .gridwrap{
+    grid-template-columns: 1fr;
+  }
+  .text-2vw{
+    font-size: min(15vw);
+  }
+  .w-findout{
+    width: min(40%);
+  }
+  .h-findout{
+    height: min(40%);
   }
 }

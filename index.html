@@ -13,7 +13,7 @@
 </head>
 
 <body class=" bg-black">
-    <header id="headerSlideIn" class=" h-20 w-full bg-header flex justify-between duration-75 gap-2 p-2.5">
+    <header id="headerSlideIn" class=" h-20 w-full bg-header flex justify-between duration-75 gap-2 p-2.5 z-10">
         <button onclick="window.location.href = 'https://zachl.space'"
             class=" w-20 h-full text-white font-bold text-xl font-sans shadow-2xl flex justify-center items-center"><img
                 width="80%" height="80%" src="/assets/socials/myLogo.png"></button>
@@ -25,25 +25,54 @@
     <main class=" h-max w-full flex flex-wrap">
 
         <div class=" w-full bg-first grid gap-4 p-3 gridwrap">
-            <div class=" border-2 border-slate-50 border-solid flex items-center justify-center " style="width:minmax(100%, 700px);"><img class=" rounded-xl" src="https://images.idgesg.net/images/article/2018/10/spinning-globe_smart-city_iot_skyscrapers_city-scape_internet_digital-transformation-100777501-large.jpg"></div>
-            <div class=" border-2 border-slate-50 border-solid"></div>
-            <div class=" border-2 border-slate-50 border-solid"></div>
-            <div class=" border-2 border-slate-50 border-solid"></div>
+            <div class=" flex items-center justify-center "><img width="80%"
+                    height="80%" class=" rounded-xl" src="/assets/internetbg.png"></div>
+            <div class=" flex items-center justify-center">
+                <h1 class=" antialiased text-2vw text-white text-center font-title">How Big is the Internet?</h1>
+            </div>
+            <div class=" flex justify-center items-center gap-5"><button onclick="window.location.href = 'https://github.com/ZachLTech/PhysicalSizeOfTheInternetSite'" style="width: 4vw; height: 4vw;"><img
+                        width="100%" height="100%" src="/assets/socials/github.svg"></button>
+                        <button onclick="window.location.href = 'https://codepen.io/zachltech'" style="width: 4vw; height: 4vw;"><img
+                            width="100%" height="100%" src="/assets/socials/codepen.svg"></button></div>
+            <div class=" px-12">
+                <p class=" font-nunito text-4vw text-center text-white">Immerse yourself in a captivating exploration of
+                    the size of the internet. Discover mind-boggling statistics that will leave you astounded. From the
+                    mind-numbing number of storage devices needed to hold the ever-growing volume of data that traverses the
+                    virtual pathways, prepare to have your perspective on the digital universe forever transformed.
+                    Unearth the astonishing breadth and depth of the internet, and gain a newfound appreciation for the
+                    vastness of human knowledge and creativity it encompasses.</p>
+            </div>
         </div>
 
 
-        <div class=" w-full h-full bg-black"><img src="/assets/lowpolybackground.svg">
-
+        <div class=" w-full h-full bg-black flex flex-col justify-center items-center"><img src="/assets/lowpolybackground.svg">
+            <div class=" absolute p-second">
+                <h1 class=" text-white text-sizevw font-nunito inline">
+                The internet is an expansive and ever-growing network that has revolutionized the way we
+                communicate, access information, and conduct various activities. Its size is immense,
+                spanning across the globe and connecting billions of devices. Each passing second, the
+                internet continues to expand at an astonishing rate of around <a class=" font-bold text-blue-800 hover:text-blue-600" href="https://www.teradata.com/Glossary/What-is-a-Terabyte#:~:text=A%20relatively%20large%20unit%20of,copies%20of%20the%20Encyclopedia%20Brittanica." target="_blank">40 Terabytes</a> <b>per second</b>
+                totaling, in size at the beginning of 2023, to be around an estimated
+                </h1>
+                <h1 class=" text-white text sizeBvw font-prism text-center">
+                    100 Billion Terabytes
+                </h1>
+            </div>
         </div>
 
 
-        <div class=" w-full h-screen bg-black flex items-center">
-            <h2 class="glowh2">But What About Physically?</h2>
+        <div class=" w-full h-screen bg-black flex justify-center flex-col gap-5">
+            <h2 class=" text-white size-butWhatAbout">But What About</h2><h2 class="glowh2">Physically?</h2>
         </div>
 
 
-        <div class=" w-full h-gradientBoxes grayish"><img src="/assets/endwaves.svg">
-
+        <div class=" w-full h-full grayish flex justify-center items-center"><img src="/assets/endwaves.svg">
+            <div class=" w-findout h-findout rounded-md flex absolute justify-center items-center overflow-hidden" >
+                <button onclick="window.location.href = 'Menu/Menu.html'" class=" w-findout h-findout p-5 overflow-hidden flex justify-center items-center">
+                    <video class="absolute rounded-md" autoplay muted loop src="/assets/spacebackground.mp4"></video>
+                    <p class=" text-white font-prism absolute text-4xl">Find Out</p>
+                </button>
+            </div>
         </div>
 
     </main>
