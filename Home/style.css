@@ -147,7 +147,7 @@
 
 @media (max-width: 1000px) {
   .p-second{
-    padding: 8rem;
+    padding: 1em;
   }
   .gridwrap{
     grid-template-columns: 1fr;
