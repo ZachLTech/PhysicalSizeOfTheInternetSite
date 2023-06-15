@@ -146,6 +146,18 @@
 }
 
 @media (max-width: 1000px) {
+  .stickyHeader{
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  .text-mobile{
+    font-size: medium;
+  }
+  .mobileHidden{
+    visibility: hidden;
+  }
   .p-second{
     padding: 1em;
   }

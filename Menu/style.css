@@ -693,18 +693,22 @@ font-weight: bold;
 }
 .apologyTitle{
   color: white;
-  font-size: xx-large;
+  font-size: 10rem;
 }
 .apologyText{
   color: white;
-  font-size: medium;
+  font-size: 3rem;
 }
 .apologyButton{
   border: #dfdfdf solid 1px;
   border-radius: 3px;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 1000px) {
+  .stage{
+    visibility: hidden;
+  }
   .mobileBlock{
     z-index: 1000;
     visibility: visible;
