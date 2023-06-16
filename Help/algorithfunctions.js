@@ -467,27 +467,27 @@ function changeSize(buttonId) {
     switch(buttonId){
         case("PB"):
             function UpdatePetabytes() {
-                document.getElementById("SizeTB").innerHTML = (SizeTB/1000);
+                document.getElementById("SizeTB").innerHTML = (SizeTB/1000).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdatePetabytes, 333.33);
                 break;
         case("TB"):
             function UpdateTerabytes() {
-                document.getElementById("SizeTB").innerHTML = (SizeTB);
+                document.getElementById("SizeTB").innerHTML = (SizeTB).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdateTerabytes, 333.33);
             break;
         case("GB"):
             function UpdateGigabytes() {
-                document.getElementById("SizeTB").innerHTML = (SizeTB*1000);
+                document.getElementById("SizeTB").innerHTML = (SizeTB*1000).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdateGigabytes, 333.33);
             break;
         case("MB"):
             function UpdateMegabytes() {
-                document.getElementById("SizeTB").innerHTML = (SizeTB*1000000);
+                document.getElementById("SizeTB").innerHTML = (SizeTB*1000000).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdateMegabytes, 333.33);
             break;
         case("KB"):
             function UpdateKilobytes() {
-                document.getElementById("SizeTB").innerHTML = (SizeTB*1000000000);
+                document.getElementById("SizeTB").innerHTML = (SizeTB*1000000000).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
             } clearInterval(DocTeBInterval); DocTeBInterval = setInterval(UpdateKilobytes, 333.33);
             break;
         case("B"):

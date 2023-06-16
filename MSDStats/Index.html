@@ -3,6 +3,7 @@
 <html id="html">
 
 <head>
+    <title>Micro SD Card Stats</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="algorithfunctions.js"></script>
@@ -20,6 +21,17 @@
 </header>
 
 <body id="body">
+    <div class="hidden">
+        <div id="storedInButton" class="hidden"></div>
+        <div class="storedInButtonContainer hidden"></div>
+        <div class="insertTBorGB hidden"></div>
+        <button id="changeStoredInButton" class="hidden"></button>
+        <button id="changeStoredInButton2" class="hidden"></button>
+        <button id="changeStoredInButton3" class="hidden"></button>
+        <button id="changeStoredInButton4" class="hidden"></button>
+        <button id="changeStoredInButton5" class="hidden"></button>
+        <button id="changeStoredInButton6" class="hidden"></button>
+    </div>
     <header class="headerBackgroundContainer">
         <article class="headerBackground"></article>
         <div class="storageSystemTypeBox">
@@ -107,7 +119,7 @@
                                 </div>
                             </div>
                             <div class="helpContainer">
-                                <button class="helpButton">Help</button>
+                                <button onclick="window.location.href = '../Help/Index.html'" class="helpButton">Help</button>
                             </div>
                         </div>
                     </div>

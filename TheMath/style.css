@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+
+
+.bg-wood{
+    background-image: url('../assets/woodbg1.jpg');
+}
+.bg-accent-green{
+    background: #22271d;
+}
+
+
+.font-title{
+    font-family: 'Londrina Shadow', cursive;
+}
+
+.text-title{
+    font-size: 6vw;
+}
+
+.text-math{
+    font-size: 1vw;
+}
+
+.text-math-title{
+    font-size: 2vw;
+}
+
+.text-algorithm-title{
+    font-size: 4vw;
+}
+
+.w-text{
+    width: 35vw;
+}
+
+.w-gif{
+    width: 30vw;
+}
+
+.h-gif{
+    height: 13vw;
+}

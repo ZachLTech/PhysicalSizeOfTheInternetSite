@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Internet Size Math</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://kit.fontawesome.com/070428bd88.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/0daa30b3d0.js" crossorigin="anonymous"></script>
+    </head>
+
+    <header class=" fixed h-20 w-full bg-header flex justify-end duration-75 gap-2 p-2.5 z-10">
+        <button onclick="window.location.href = '../Menu/Menu.html'" class=" bg-transparent w-16 h-full text-white font-bold text-xl font-sans shadow-2xl flex justify-center items-center rounded-full duration-150 hover:bg-zinc-900">
+            <img width="55%" height="55%" src="../assets/menuhome.svg">
+        </button>
+    </header>
+
+    <body class=" bg-accent-green">
+        <header class=" bg-wood w-full h-fit flex justify-around flex-col pt-16 items-center">
+            <div><img class=" rounded-lg border-4 border-black w-gif h-gif" src="https://media.tenor.com/MFE6UiMEpRoAAAAC/math-zack-galifianakis.gif"></div>
+            <div><h1 class=" text-center text-white font-title text-title">The Math That Calculates Digital Internet Size to a Physical Datacenter Size</h1></div>
+            <img src="../assets/mathHeaderWave.svg">
+        </header>
+        <main class=" flex w-full h-fit justify-around flex-col mb-16">
+
+            <div id="first" class=" flex w-100 h-fit items-center mb-5 flex-col gap-5"> <!-- I know nobody may find this message. But if you do find this and happen to be a web developer, I just want to point out that at the time of making this last bit of code for this project, I know this would be a lot easier with a frontend framework and having all of this boilerplate copy pasting as components instead but, when I started this project, I didn't know any of this and didn't learn anything about any frontend frameworks up until towards the end after I have already created most everything. Because of this all of my work up until now on this site is completely incompatible with mobile devices but at this point I'm just finishing this project off with this last math portion and leaving this as a soon to be fossil only adding a message for mobile users that it's incompatible. Although, there is a sliver of chance that maybe one day I will come back and properly recreate this project with proper tools and not involving a duplicated 700 lines of messy, primital javascript (This was my first time using javascript btw lol)-->
+                <p class=" text-white text-algorithm-title">Algorithm Components</p>
+                <div style="width: 35vw; height: 0.2vw; background-color: rgb(59, 59, 59);"></div>
+            </div>
+
+            <div class=" flex w-100 h-fit flex-wrap justify-around gap-5 items-center">
+                <div>
+                    <text class=" flex flex-col gap-4">
+                        <h1 class=" text-white text-math-title">
+                            Digital Size Calculation
+                        </h1>
+                        <p class=" text-white text-math h-fit w-text">
+                            First things first is getting an up to date digital size of the internet (i.e. in terms of TB or GB for example). The first steps to doing this just involve a few google searches to find some sort of reference point as to how large the internet is or was at a certain point in time and also find out how fast it grows. I found that at the beginning of 2023, as far as we know, the internet was around 106 trillion terabytes large and now grows at a pace of around 45 terabytes per second. With this information, I simply get the date and time whenever my stat pages are open and multiply the amount of seconds it has been since the beginning of 2023 by 45 and add that amount to 106 trillion (the internet size at the beginning of 2023) in order to get a real time internet size.
+                        </p>
+                    </text>
+                </div>
+                <div class="flex justify-center items-center w-gif h-gif">
+                    <img class=" rounded-md" src="../assets/Equation1Fixed.png">
+                </div>
+            </div>
+
+            <div class=" flex justify-center m-5">
+                <div style="width: 35vw; height: 0.2vw; background-color: rgb(59, 59, 59);"></div>
+            </div>
+            
+            <div class=" flex w-100 h-fit flex-wrap justify-around gap-5 items-center">
+                <div class="flex justify-center items-center w-gif h-gif">
+                    <img class=" rounded-md" src="../assets/Equation2.png">
+                </div>
+                <div>
+                    <text class=" flex flex-col gap-4">
+                        <h1 class=" text-white text-math-title text-right">
+                            Calculating the # of Drives Needed 
+                        </h1>
+                        <p class=" text-white text-math h-fit w-text text-right">
+                            Knowing the internet size is around 106 Trillion terabytes, to find the amount of storage devices needed I just divide this 106 trillion by the amount of terabytes stored in each storage device. Since this system is just simple division run by my coded program, I was able to make the amount of terabytes stored in each storage device a mutable variable (meaning it can be changed at any time). Having this as a mutable variable is how I was able to make the site allow the user to change the amount of storage that each device can hold which affects the amount of storage devices needed. This causes a domino effect resulting in the length, width, and price statistics to change which I thought would be an interesting feature.
+                        </p>
+                    </text>
+                </div>
+            </div>
+
+            <div class=" flex justify-center m-5">
+                <div style="width: 35vw; height: 0.2vw; background-color: rgb(59, 59, 59);"></div>
+            </div>
+            
+            <div class=" flex w-100 h-fit flex-wrap justify-around gap-5 items-center">
+                <div>
+                    <text class=" flex flex-col gap-4">
+                        <h1 class=" text-white text-math-title">
+                            Finding the Total Width 
+                        </h1>
+                        <p class=" text-white text-math h-fit w-text">
+                            Knowing the internet size is around 106 Trillion terabytes, to find the amount of storage devices needed I just divide this 106 trillion by the amount of terabytes stored in each storage device. Since this system is just simple division run by my coded program, I was able to make the amount of terabytes stored in each storage device a mutable variable (meaning it can be changed at any time). Having this as a mutable variable is how I was able to make the site allow the user to change the amount of storage that each device can hold which affects the amount of storage devices needed. This causes a domino effect resulting in the length, width, and price statistics to change which I thought would be an interesting feature.
+                        </p>
+                    </text>
+                </div>
+                <div class="flex justify-center items-center w-gif h-gif">
+                    <img class=" rounded-md" src="../assets/Equation2.png">
+                </div>
+            </div>
+
+            <div class=" flex justify-center m-5">
+                <div style="width: 35vw; height: 0.2vw; background-color: rgb(59, 59, 59);"></div>
+            </div>
+            
+            <div class=" flex w-100 h-fit flex-wrap justify-around gap-5 items-center">
+                <div class="flex justify-center items-center w-gif h-gif">
+                    <img class=" rounded-md" src="../assets/Equation2.png">
+                </div>
+                <div>
+                    <text class=" flex flex-col gap-4">
+                        <h1 class=" text-white text-math-title text-right">
+                            Finding the Total Width 
+                        </h1>
+                        <p class=" text-white text-math h-fit w-text text-right">
+                            Knowing the internet size is around 106 Trillion terabytes, to find the amount of storage devices needed I just divide this 106 trillion by the amount of terabytes stored in each storage device. Since this system is just simple division run by my coded program, I was able to make the amount of terabytes stored in each storage device a mutable variable (meaning it can be changed at any time). Having this as a mutable variable is how I was able to make the site allow the user to change the amount of storage that each device can hold which affects the amount of storage devices needed. This causes a domino effect resulting in the length, width, and price statistics to change which I thought would be an interesting feature.
+                        </p>
+                    </text>
+                </div>
+            </div>
+
+            <div class=" flex justify-center m-5">
+                <div style="width: 35vw; height: 0.2vw; background-color: rgb(59, 59, 59);"></div>
+            </div>
+            
+            <div class=" flex w-100 h-fit flex-wrap justify-around gap-5 items-center">
+                <div>
+                    <text class=" flex flex-col gap-4">
+                        <h1 class=" text-white text-math-title">
+                            Finding the Total Length 
+                        </h1>
+                        <p class=" text-white text-math h-fit w-text">
+                            Knowing the internet size is around 106 Trillion terabytes, to find the amount of storage devices needed I just divide this 106 trillion by the amount of terabytes stored in each storage device. Since this system is just simple division run by my coded program, I was able to make the amount of terabytes stored in each storage device a mutable variable (meaning it can be changed at any time). Having this as a mutable variable is how I was able to make the site allow the user to change the amount of storage that each device can hold which affects the amount of storage devices needed. This causes a domino effect resulting in the length, width, and price statistics to change which I thought would be an interesting feature.
+                        </p>
+                    </text>
+                </div>
+                <div class="flex justify-center items-center w-gif h-gif">
+                    <img class=" rounded-md" src="../assets/Equation2.png">
+                </div>
+            </div>
+
+            <div class=" flex justify-center m-5">
+                <div style="width: 35vw; height: 0.2vw; background-color: rgb(59, 59, 59);"></div>
+            </div>
+            
+            <div class=" flex w-100 h-fit flex-wrap justify-around gap-5 items-center">
+                <div class="flex justify-center items-center w-gif h-gif">
+                    <img class=" rounded-md" src="../assets/Equation2.png">
+                </div>
+                <div>
+                    <text class=" flex flex-col gap-4">
+                        <h1 class=" text-white text-math-title text-right">
+                            Incorperating the Golden Ratio 
+                        </h1>
+                        <p class=" text-white text-math h-fit w-text text-right">
+                            Knowing the internet size is around 106 Trillion terabytes, to find the amount of storage devices needed I just divide this 106 trillion by the amount of terabytes stored in each storage device. Since this system is just simple division run by my coded program, I was able to make the amount of terabytes stored in each storage device a mutable variable (meaning it can be changed at any time). Having this as a mutable variable is how I was able to make the site allow the user to change the amount of storage that each device can hold which affects the amount of storage devices needed. This causes a domino effect resulting in the length, width, and price statistics to change which I thought would be an interesting feature.
+                        </p>
+                    </text>
+                </div>
+            </div>
+
+            <div class=" flex justify-center m-5">
+                <div style="width: 35vw; height: 0.2vw; background-color: rgb(59, 59, 59);"></div>
+            </div>
+            
+            <div class=" flex w-100 h-fit flex-wrap justify-around gap-5 items-center">
+                <div>
+                    <text class=" flex flex-col gap-4">
+                        <h1 class=" text-white text-math-title">
+                            Calculating the Internet Price 
+                        </h1>
+                        <p class=" text-white text-math h-fit w-text">
+                            Knowing the internet size is around 106 Trillion terabytes, to find the amount of storage devices needed I just divide this 106 trillion by the amount of terabytes stored in each storage device. Since this system is just simple division run by my coded program, I was able to make the amount of terabytes stored in each storage device a mutable variable (meaning it can be changed at any time). Having this as a mutable variable is how I was able to make the site allow the user to change the amount of storage that each device can hold which affects the amount of storage devices needed. This causes a domino effect resulting in the length, width, and price statistics to change which I thought would be an interesting feature.
+                        </p>
+                    </text>
+                </div>
+                <div class="flex justify-center items-center w-gif h-gif">
+                    <img class=" rounded-md" src="../assets/Equation2.png">
+                </div>
+            </div>
+
+            <div class=" flex justify-center m-5">
+                <div style="width: 35vw; height: 0.2vw; background-color: rgb(59, 59, 59);"></div>
+            </div>
+            
+            <div class=" flex w-100 h-fit flex-wrap justify-around gap-5 items-center">
+                <div>
+                    <text class=" flex flex-col gap-4">
+                        <h1 class=" text-white text-math-title text-center">
+                            The Most Important Formula
+                        </h1>
+                        <p class=" text-white text-math h-fit w-text text-center">
+                            Knowing the internet size is around 106 Trillion terabytes, to find the amount of storage devices needed I just divide this 106 trillion by the amount of terabytes stored in each storage device. Since this system is just simple division run by my coded program, I was able to make the amount of terabytes stored in each storage device a mutable variable (meaning it can be changed at any time). Having this as a mutable variable is how I was able to make the site allow the user to change the amount of storage that each device can hold which affects the amount of storage devices needed. This causes a domino effect resulting in the length, width, and price statistics to change which I thought would be an interesting feature.
+                        </p>
+                    </text>
+                </div>
+            </div>
+        </main>
+
+    </body>
+</html>

@@ -103,7 +103,7 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         break;
       case 'container9':
         // Code to be executed for container1
-        alert('Container 9 clicked');
+        window.location.href = "../TheMath/Index.html";
         break;
       case 'container10':
         // Code to be executed for container2
