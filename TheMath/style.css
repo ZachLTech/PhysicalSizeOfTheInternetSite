@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 
+
+.font-nunito{
+    font-family: 'Nunito', sans-serif;
+}
 
 .bg-wood{
     background-image: url('../assets/woodbg1.jpg');
 }
+
 .bg-accent-green{
     background: #22271d;
 }

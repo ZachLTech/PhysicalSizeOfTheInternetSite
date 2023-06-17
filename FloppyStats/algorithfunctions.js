@@ -87,7 +87,7 @@ let WidthInches =0;
 let WidthMiles =0;
 let priceUSD = 0;
 let HeightFt = 0;
-let HHDSizeEach = 30.72;
+let HHDSizeEach = 1.44;
 let WidthMi = 0;
 let LengthMi = 0;
 /* Math Functions */
@@ -95,7 +95,7 @@ function Width() {
     HHDsNeeded = SizeTB/HHDSizeEach;
     HHDsNeeded1b4 = ((SizeTB-14)/HHDSizeEach);
     growth = ((HHDsNeeded-HHDsNeeded1b4)/2);
-    WidthHHDS = 59093.38477579753+(growth*amountadded);
+    WidthHHDS = 271313676.6016618+(growth*amountadded);
     WidthInches = WidthHHDS*3.54331;
     WidthMiles = WidthInches*1.57828e-5;
     WidthMi = ((WidthMiles*(1/stackHeight))-((WidthMiles*(1/stackHeight))*(1/(stackHeight+1))));
@@ -104,7 +104,7 @@ function Length() {
     HHDsNeeded = SizeTB/HHDSizeEach;
     HHDsNeeded1b4 = (SizeTB-14)/HHDSizeEach;
     growth = (HHDsNeeded-HHDsNeeded1b4)/2;
-    LengthHHDS = 59093.38477579753+(growth*amountadded);
+    LengthHHDS = 271313676.6016618+(growth*amountadded);
     LengthInches = LengthHHDS*3.54331;
     LengthMiles = LengthInches*1.57828e-5;
     LengthMi = ((LengthMiles*(1/stackHeight))-((LengthMiles*(1/stackHeight))*(1/(stackHeight+1))));
@@ -112,23 +112,23 @@ function Length() {
 function HeightAndPrice(){
     HeightFt = stackHeight*(0.0328084);
     switch(HHDSizeEach){
-        case(30.72):
-            priceUSD = HHDsNeeded*2960.31;
+        case(1.44):
+            priceUSD = HHDsNeeded*1.535;
             break;
-        case(15.4):
-            priceUSD = HHDsNeeded*1192;
+        case(1.44):
+            priceUSD = HHDsNeeded*1.535;
             break;
-        case(1):
-            priceUSD = HHDsNeeded*40;
+        case(1.44):
+            priceUSD = HHDsNeeded*1.535;
             break;
-        case(0.5):
-            priceUSD = HHDsNeeded*18;
+        case(1.44):
+            priceUSD = HHDsNeeded*1.535;
             break;
-        case(0.24):
-            priceUSD = HHDsNeeded*16;
+        case(1.44):
+            priceUSD = HHDsNeeded*1.535;
             break;
-        case(0.064):
-            priceUSD = HHDsNeeded*14;
+        case(1.44):
+            priceUSD = HHDsNeeded*1.535;
             break;
     }
 } let HeightAndPriceinterval = setInterval(HeightAndPrice, 333.33);
@@ -524,27 +524,27 @@ function changeStoragePer(buttonId) {
 
     switch(buttonId){
         case("30TB"):
-            HHDSizeEach = 30.72;
+            HHDSizeEach = 1.44;
             storedInOptionsButton.style["font-size"] = "25px";
             break;
         case("15TB"):
-            HHDSizeEach = 15.4;
+            HHDSizeEach = 1.44;
             storedInOptionsButton.style["font-size"] = "25px";
             break;
         case("1TB"):
-            HHDSizeEach = 1;
+            HHDSizeEach = 1.44;
             storedInOptionsButton.style["font-size"] = "25px";
             break;
         case("500GB"):
-            HHDSizeEach = 0.5;
+            HHDSizeEach = 1.44;
             storedInOptionsButton.style["font-size"] = "20px";
             break;
         case("240GB"):
-            HHDSizeEach = 0.24;
+            HHDSizeEach = 1.44;
             storedInOptionsButton.style["font-size"] = "20px";
             break;
         case("64GB"):
-            HHDSizeEach = 0.064;
+            HHDSizeEach = 1.44;
             storedInOptionsButton.style["font-size"] = "25px";
             break;
         default:

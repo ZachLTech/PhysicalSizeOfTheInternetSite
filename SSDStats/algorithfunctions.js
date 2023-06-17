@@ -95,7 +95,7 @@ function Width() {
     HHDsNeeded = SizeTB/HHDSizeEach;
     HHDsNeeded1b4 = ((SizeTB-14)/HHDSizeEach);
     growth = ((HHDsNeeded-HHDsNeeded1b4)/2);
-    WidthHHDS = 65536+(growth*amountadded);
+    WidthHHDS = 74720+(growth*amountadded);
     WidthInches = WidthHHDS*2.6;
     WidthMiles = WidthInches*1.57828e-5;
     WidthMi = ((WidthMiles*(1/stackHeight))-((WidthMiles*(1/stackHeight))*(1/(stackHeight+1))));
@@ -104,7 +104,7 @@ function Length() {
     HHDsNeeded = SizeTB/HHDSizeEach;
     HHDsNeeded1b4 = (SizeTB-14)/HHDSizeEach;
     growth = (HHDsNeeded-HHDsNeeded1b4)/2;
-    LengthHHDS = 52650.76955159505+(growth*amountadded);
+    LengthHHDS = 46179.34734118487+(growth*amountadded);
     LengthInches = LengthHHDS*3.9;
     LengthMiles = LengthInches*1.57828e-5;
     LengthMi = ((LengthMiles*(1/stackHeight))-((LengthMiles*(1/stackHeight))*(1/(stackHeight+1))));
