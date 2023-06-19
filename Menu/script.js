@@ -87,7 +87,7 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         break;
       case 'container5':
           // Code to be executed for container1
-          window.location.href = "../Price/Index.html";
+          window.location.href = "../Price/index.html";
         break;
       case 'container6':
             // Code to be executed for container2
@@ -103,7 +103,7 @@ document.querySelectorAll('.btn').forEach(function(btn) {
         break;
       case 'container9':
         // Code to be executed for container1
-        window.location.href = "../TheMath/Index.html";
+        window.location.href = "../TheMath/index.html";
         break;
       case 'container10':
         // Code to be executed for container2
