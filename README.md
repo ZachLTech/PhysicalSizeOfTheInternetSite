@@ -30,13 +30,20 @@ So aside from learning HTML, CSS, and Javascript, I was mainly stumped for a whi
 
 Here are some snapshots of the PhysicalSizeOfTheInternetSite:
 
-![Screenshot 1](/screenshots/screenshot1.png)
-*Caption for Screenshot 1*
+![Navigation 1](/assets/github/images/navigation1.png)
+*Main Navigation Page - Landing*
 
-![Screenshot 2](/screenshots/screenshot2.png)
-*Caption for Screenshot 2*
+![Navigation 2](/assets/github/images/navigation2.png)
+*Main Navigation Page - Shifted Right*
 
-...
+![Price Landing](/assets/github/images/butatwhatcost.png)
+*Price Landing Preview - Internet Price*
+
+![Stats Page Preview](/assets/github/images/statspagepreview.png)
+*Stats Page Preview - Landing for M.2 SSD Stats*
+
+![Price Page Preview](/assets/github/images/pricepagepreview.png)
+*Price Page Preview - Currency Adjustment*
 
 ## Important Note ⚠️
 
