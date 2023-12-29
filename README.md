@@ -22,7 +22,7 @@ So aside from learning HTML, CSS, and Javascript, I was mainly stumped for a whi
 - 🔄 **Unique navigation:** Utilize a fancy drag-to-move parallax carousel menu to navigate through pages.
 - 🎨 **Homemade Vanilla JS Animations:** Enjoy animations and moving parts made purely with vanilla JavaScript and CSS, excluding the main navigation page which utilizes [gsap](https://gsap.com/).
 - 🌈 **Visually enjoyable pages:** Each page is packed with either fancy and unique navigation or colors specific to that page.
-- 👨‍💻 **Self-taught journey:** This project serves as a testament to the developer's journey into web development. Crafted with vanilla HTML, CSS, and JavaScript as a beginner with limited skills.
+- 👨‍💻 **Self-taught journey:** This project serves as a testament to the my journey into web development and javascript. Crafted with vanilla HTML, CSS, and JavaScript as a beginner with limited skills.
 - 🎨 **Learning from the best:** Drawing inspiration from CodePen, the design elements reflect the learning process, showcasing creative implementations discovered while exploring CSS.
 - 🐣 **Easter eggs:** Discover hidden features! Hint: >! You may find a button that runs away as you click it...
 
@@ -54,13 +54,13 @@ So aside from learning HTML, CSS, and Javascript, I was mainly stumped for a whi
 
 ## Future Changes and Possibilities 🤔
 
-Given the developer's passion for this project, future improvements are on the horizon. Here's a glimpse of what's to come:
+Given my passion for this project, future improvements are possible in the future. First of all I would eventually love to rewrite this entire website using a proper js framework and maybe with a backend and more features. But to be specific on what's lacking, here's a glimpse of what's to come:
 
 - **Mobile Support**: A recreation using a proper JavaScript framework is in consideration to provide enhanced mobile responsiveness.
 - **Bug Fixes and Glitch Solutions**: Expect a smoother experience with fewer bugs and glitches for a seamless exploration of internet size.
-- **Code Refinement**: The developer aims to refactor the code for better readability, maintainability, and adherence to best practices.
-- **URL Aesthetics**: Look forward to cleaner and more aesthetically pleasing URLs for an improved user experience.
-- **Visual Perfection**: Embracing frontend strategies for visual perfection, the goal is to create a rounder, cleaner experience.
+- **Code Refinement**: I aim to refactor the code for better readability, maintainability, and adherence to best practices.
+- **URL Aesthetics**: Look forward to cleaner and more aesthetically pleasing URLs for an improved user experience. This is referring to how there's no proper routing and each URL ends with index.html.
+- **Visual Perfection**: Embracing frontend strategies for visual perfection, the goal is to create a rounder, cleaner experience and not at the cost of this websites quirky features.
 
 ## Getting Started 🚀
 
