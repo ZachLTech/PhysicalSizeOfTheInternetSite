@@ -50,7 +50,7 @@ So aside from learning HTML, CSS, and Javascript, I was mainly stumped for a whi
 
 ## Important Note ⚠️
 
-**Device Compatibility and Bugs Alert**: As my project was created with limited web development experience, the website might not be optimized for all devices. Users may need to adjust zoom settings on their devices to ensure proper display. Additionally, there is a known bug affecting the main navigation on some devices, causing glitches. I appreciate your understanding and patience, and my condolences to mobile users who won't be able to check this out for themselves 😢.
+**Device Compatibility and Bugs Alert**: As my project was created with limited web development experience, the website might not be optimized for all devices. Users may need to adjust zoom settings on their devices to ensure proper display. Additionally, there is a known bug affecting the main navigation on some devices, causing glitches. I appreciate your understanding and patience, and my condolences to mobile users who won't be able to check this out for themselves 😢. (P.S. RealStr1ke is NOT actually a contributor to this project, I'm pretty sure github just says that as I might've accidentally pushed a commit to this repository with his github credentials 😅)
 
 ## Future Changes and Possibilities 🤔
 
