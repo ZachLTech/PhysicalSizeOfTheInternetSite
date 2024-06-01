@@ -1,11 +1,11 @@
 # 🌐PhysicalSizeOfTheInternetSite🌐
 
-Welcome to the PhysicalSizeOfTheInternetSite repository! Explore the intricacies of the internet's physical size with real-time updates on [internetsize.site](https://internetsize.site).
+Welcome to the PhysicalSizeOfTheInternetSite repository! Explore the intricacies of the internet's physical size with real-time updates on [the live website](https://zachltech.github.io/PhysicalSizeOfTheInternetSite/).
 
 ## Purpose 💡
 
 ### Idea Origin
-Have you ever wondered about the physical size of the internet? This project originated from a simple, yet intriguing, thought during a moment of boredom. Picture this: pondering with friends about the possibility of downloading the entire internet onto local drives. A few Google searches, some mathematical calculations, and a spark of curiosity later, the idea evolved into a fully automated website. Now, it's here for anyone else who might be crazy enough to ask, "How big is the internet—physically?". I also mention this on the [disclaimer page](https://internetsize.site/Why/Index.html)
+Have you ever wondered about the physical size of the internet? This project originated from a simple, yet intriguing, thought during a moment of boredom. Picture this: pondering with friends about the possibility of downloading the entire internet onto local drives. A few Google searches, some mathematical calculations, and a spark of curiosity later, the idea evolved into a fully automated website. Now, it's here for anyone else who might be crazy enough to ask, "How big is the internet—physically?". I also mention this on the [disclaimer page](https://zachltech.github.io/PhysicalSizeOfTheInternetSite/Why/Index.html)
 
 ### Main Challenge
 Although it started as me simply thinking "oh how big is the internet physically" and me punching in numbers to a calculator, once I started to actually look at the calculations for the size physically, it just didn't make sense. This along with the fact that I wanted to make the calculations dynamic to variables such as how many storage mediums are stacked and lined up made me realize how complex the math would actually be.
@@ -17,8 +17,8 @@ So aside from learning HTML, CSS, and Javascript, I was mainly stumped for a whi
 - 🔄 **Real-time updates:** Witness the dynamic changes in the physical size of the internet and the cost it takes to store the entire internet.
 - 📊 **Multiple Storage Statistics:** Explore internet sizes stored in various devices, from M.2 SSDs to floppy disks!
 - 📏 **Adjustable units and values:** From Terabytes to kilobytes, miles to inches, thousands of stacked devices to tens—customize units for all your curiosities.
-- 📐 **Golden Ratio Integration:** Ensure a visually appealing datacenter with calculations following the [golden ratio](https://www.britannica.com/science/golden-ratio), detailed in the [calculations page](https://internetsize.site/TheMath/index.html).
-- ℹ️ **Detailed help page:** Navigate confusion with the [help page](https://internetsize.site/Help/Index.html), explaining every option, button, and feature across all storage device pages.
+- 📐 **Golden Ratio Integration:** Ensure a visually appealing datacenter with calculations following the [golden ratio](https://www.britannica.com/science/golden-ratio), detailed in the [calculations page](https://zachltech.github.io/PhysicalSizeOfTheInternetSite/TheMath/index.html).
+- ℹ️ **Detailed help page:** Navigate confusion with the [help page](https://zachltech.github.io/PhysicalSizeOfTheInternetSite/Help/Index.html), explaining every option, button, and feature across all storage device pages.
 - 🔄 **Unique navigation:** Utilize a fancy drag-to-move parallax carousel menu to navigate through pages.
 - 🎨 **Homemade Vanilla JS Animations:** Enjoy animations and moving parts made purely with vanilla JavaScript and CSS, excluding the main navigation page which utilizes [gsap](https://gsap.com/).
 - 🌈 **Visually enjoyable pages:** Each page is packed with either fancy and unique navigation or colors specific to that page.
@@ -64,7 +64,7 @@ Given my passion for this project, future improvements are possible in the futur
 
 ## Getting Started 🚀
 
-To explore the site and its real-time statistics, visit [internetsize.site](https://internetsize.site). If you're interested in contributing or diving into the code, follow the steps below:
+To explore the site and its real-time statistics, visit [this site](https://zachltech.github.io/PhysicalSizeOfTheInternetSite/). If you're interested in contributing or diving into the code, follow the steps below:
 
 1. Clone the repository.
    ```bash
